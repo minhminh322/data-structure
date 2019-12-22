@@ -1,0 +1,75 @@
+/**
+ * 
+ */
+
+package programs;
+
+/**
+ * Word class.
+ * @author minhphan
+ * @version Winter 2019.
+ * 
+ */
+public class Word  {
+
+    /** word variable. **/
+    private String myWord;
+    /** word counter variable. **/
+    private int myWordCount;
+
+    /**
+     * Default constructor.
+     */
+    public Word() {
+
+    }
+
+    /**
+     * Main Word contructor. 
+     * @param theWord pass the word. 
+     */
+    public Word(final String theWord) {
+        myWord = theWord;
+        myWordCount = 1;
+    }
+
+    /**
+     * Word getter method.
+     * @return word string.
+     */
+    public String getWord() {
+        return myWord;
+    }
+    
+    /**
+     * Word counter getter method.
+     * @return word count integer.
+     */
+    public int getWordCount() {
+        return myWordCount;
+    }
+
+    /**
+     * Increase word counter by 1 method.
+     */
+    public void increaseWordCount() {
+        myWordCount++;
+    }
+
+//    @Override
+//    public int compareTo(Word obj) {
+////        return Comparator.comparing(Word::getWordCount).compare(this, obj);
+//        return myWord.compareTo(obj.getWord());
+//    }
+
+    /**
+     * toString method to represent string.
+     * @return string.
+     */
+    public String toString() {
+        return myWord + "\t (" + myWordCount + ")";
+    }
+    
+    
+
+}

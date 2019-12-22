@@ -1,0 +1,623 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+AbstractArrayList	Tree/src/structures/AbstractArrayList.java	/^    public AbstractArrayList() {$/;"	m	class:AbstractArrayList
+AbstractArrayList	Tree/src/structures/AbstractArrayList.java	/^    public AbstractArrayList(final int theInitialCapacity) {$/;"	m	class:AbstractArrayList
+AbstractArrayList	Tree/src/structures/AbstractArrayList.java	/^public abstract class AbstractArrayList<T> implements ListADT<T>, Iterable<T> {$/;"	c
+AdjMatrixDiGraph	Graph/src/structures/AdjMatrixDiGraph.java	/^    public AdjMatrixDiGraph() {$/;"	m	class:AdjMatrixDiGraph
+AdjMatrixDiGraph	Graph/src/structures/AdjMatrixDiGraph.java	/^public class AdjMatrixDiGraph<T> implements Graph<T> {$/;"	c
+AdjMatrixDiGraphTest	Graph/src/tests/AdjMatrixDiGraphTest.java	/^public class AdjMatrixDiGraphTest extends TestCase {$/;"	c
+AdjMatrixGraph	Graph/src/structures/AdjMatrixGraph.java	/^public class AdjMatrixGraph<T> extends AdjMatrixDiGraph<T> {$/;"	c
+ArrayListIterator	Tree/src/structures/AbstractArrayList.java	/^        ArrayListIterator() {$/;"	m	class:AbstractArrayList.ArrayListIterator
+ArrayListIterator	Tree/src/structures/AbstractArrayList.java	/^    private class ArrayListIterator implements Iterator<T> {$/;"	c	class:AbstractArrayList
+ArrayMinHeap	Graph/src/structures/ArrayMinHeap.java	/^    public ArrayMinHeap(final Collection<? extends E> theCollection,$/;"	m	class:ArrayMinHeap
+ArrayMinHeap	Graph/src/structures/ArrayMinHeap.java	/^    public ArrayMinHeap(final Comparator<? super E> theComparator) {$/;"	m	class:ArrayMinHeap
+ArrayMinHeap	Graph/src/structures/ArrayMinHeap.java	/^public class ArrayMinHeap<E> implements Heap<E> {$/;"	c
+ArrayStack	Tree/src/structures/ArrayStack.java	/^    public ArrayStack() {$/;"	m	class:ArrayStack
+ArrayStack	Tree/src/structures/ArrayStack.java	/^    public ArrayStack(final int theInitialCapacity) {$/;"	m	class:ArrayStack
+ArrayStack	Tree/src/structures/ArrayStack.java	/^public class ArrayStack<E> implements StackADT<E> {$/;"	c
+ArrayUnorderedList	Tree/src/structures/ArrayUnorderedList.java	/^    public ArrayUnorderedList() {$/;"	m	class:ArrayUnorderedList
+ArrayUnorderedList	Tree/src/structures/ArrayUnorderedList.java	/^    public ArrayUnorderedList(final int theInitialCapacity) {$/;"	m	class:ArrayUnorderedList
+ArrayUnorderedList	Tree/src/structures/ArrayUnorderedList.java	/^public class ArrayUnorderedList<T> extends AbstractArrayList<T>$/;"	c
+BFSSearcher	Graph/src/structures/BFSSearcher.java	/^    public BFSSearcher(final Graph<T> theGraph) {$/;"	m	class:BFSSearcher
+BFSSearcher	Graph/src/structures/BFSSearcher.java	/^public class BFSSearcher<T> {$/;"	c
+BinaryTreeADT	Tree/src/structures/BinaryTreeADT.java	/^public interface BinaryTreeADT<T> {$/;"	i
+BinaryTreeNode	Tree/src/structures/BinaryTreeNode.java	/^    public BinaryTreeNode(final T theElement) {$/;"	m	class:BinaryTreeNode
+BinaryTreeNode	Tree/src/structures/BinaryTreeNode.java	/^    public BinaryTreeNode(final T theElement, final LinkedBinaryTree<T> theLeft,$/;"	m	class:BinaryTreeNode
+BinaryTreeNode	Tree/src/structures/BinaryTreeNode.java	/^public class BinaryTreeNode<T> {$/;"	c
+Convert	Stack/src/program/Convert.java	/^	private Convert() {$/;"	m	class:Convert	file:
+Convert	Stack/src/program/Convert.java	/^public final class Convert {$/;"	c
+ConvertTest	Stack/src/tests/ConvertTest.java	/^class ConvertTest {$/;"	c
+DEFAULT_CAPACITY	Graph/src/structures/Queue.java	/^    int DEFAULT_CAPACITY = 100;$/;"	f	interface:Queue
+DEFAULT_CAPACITY	Tree/src/structures/AbstractArrayList.java	/^    private static final int DEFAULT_CAPACITY = 100;$/;"	f	class:AbstractArrayList	file:
+DEFAULT_FILE_NAME	Graph/src/application/FileIO.java	/^    private static final String DEFAULT_FILE_NAME = "distances.txt";$/;"	f	class:FileIO	file:
+DEFAULT_HEAP_SIZE	Graph/src/structures/ArrayMinHeap.java	/^    private static final int DEFAULT_HEAP_SIZE = 100;$/;"	f	class:ArrayMinHeap	file:
+DEFAULT_SIZE	Tree/src/structures/ArrayStack.java	/^    private static final int DEFAULT_SIZE = 10;$/;"	f	class:ArrayStack	file:
+DEFAULT_WEIGHT	Graph/src/structures/WeightedAdjMatrixGraph.java	/^    public static final float DEFAULT_WEIGHT = (float) 1.0;$/;"	f	class:WeightedAdjMatrixGraph
+DFSSearcher	Graph/src/structures/DFSSearcher.java	/^    public DFSSearcher(final Graph<T> theGraph) {$/;"	m	class:DFSSearcher
+DFSSearcher	Graph/src/structures/DFSSearcher.java	/^public class DFSSearcher<T> {$/;"	c
+DisplayCostsMain	Graph/DisplayCostsMain.java	/^    private DisplayCostsMain() {$/;"	m	class:DisplayCostsMain	file:
+DisplayCostsMain	Graph/DisplayCostsMain.java	/^public final class DisplayCostsMain {$/;"	c
+DisplayCostsMain	Graph/src/application/DisplayCostsMain.java	/^    private DisplayCostsMain() {$/;"	m	class:DisplayCostsMain	file:
+DisplayCostsMain	Graph/src/application/DisplayCostsMain.java	/^public final class DisplayCostsMain {$/;"	c
+EMPTY_MESSAGE	Queue/src/applications/QueueDemoGUI.java	/^\/*$/;"	f	class:QueueDemoGUI	file:
+ElementNotFoundException	Tree/src/exceptions/ElementNotFoundException.java	/^    public ElementNotFoundException(final String theCollection) {$/;"	m	class:ElementNotFoundException
+ElementNotFoundException	Tree/src/exceptions/ElementNotFoundException.java	/^public class ElementNotFoundException extends RuntimeException {$/;"	c
+EmptyCollectionException	Queue/src/exceptions/EmptyCollectionException.java	/^    public EmptyCollectionException(final String theCollection) {$/;"	m	class:EmptyCollectionException
+EmptyCollectionException	Queue/src/exceptions/EmptyCollectionException.java	/^public class EmptyCollectionException extends RuntimeException {$/;"	c
+EmptyCollectionException	Tree/src/exceptions/EmptyCollectionException.java	/^    public EmptyCollectionException(final String theCollection) {$/;"	m	class:EmptyCollectionException
+EmptyCollectionException	Tree/src/exceptions/EmptyCollectionException.java	/^public class EmptyCollectionException extends RuntimeException {$/;"	c
+EmptyHeapException	Graph/src/structures/EmptyHeapException.java	/^    public EmptyHeapException() {$/;"	m	class:EmptyHeapException
+EmptyHeapException	Graph/src/structures/EmptyHeapException.java	/^    public EmptyHeapException(final String theErrorMsg) {$/;"	m	class:EmptyHeapException
+EmptyHeapException	Graph/src/structures/EmptyHeapException.java	/^public class EmptyHeapException extends RuntimeException {$/;"	c
+EmptyPriorityQueueException	Graph/src/structures/EmptyPriorityQueueException.java	/^    public EmptyPriorityQueueException() {$/;"	m	class:EmptyPriorityQueueException
+EmptyPriorityQueueException	Graph/src/structures/EmptyPriorityQueueException.java	/^    public EmptyPriorityQueueException(final String theMessage) {$/;"	m	class:EmptyPriorityQueueException
+EmptyPriorityQueueException	Graph/src/structures/EmptyPriorityQueueException.java	/^public class EmptyPriorityQueueException extends RuntimeException {$/;"	c
+EmptyQueueException	Graph/src/structures/EmptyQueueException.java	/^    public EmptyQueueException() {$/;"	m	class:EmptyQueueException
+EmptyQueueException	Graph/src/structures/EmptyQueueException.java	/^    public EmptyQueueException(final String theErrorMsg) {$/;"	m	class:EmptyQueueException
+EmptyQueueException	Graph/src/structures/EmptyQueueException.java	/^public class EmptyQueueException extends RuntimeException {$/;"	c
+ExpressionTree	Tree/src/programs/ExpressionTree.java	/^    public ExpressionTree() {$/;"	m	class:ExpressionTree
+ExpressionTree	Tree/src/programs/ExpressionTree.java	/^    public ExpressionTree(final ExpressionTreeOp theElement,$/;"	m	class:ExpressionTree
+ExpressionTree	Tree/src/programs/ExpressionTree.java	/^public class ExpressionTree extends LinkedBinaryTree<ExpressionTreeOp> {$/;"	c
+ExpressionTreeOp	Tree/src/programs/ExpressionTreeOp.java	/^    public ExpressionTreeOp(final int theType, final char theOp, final int theVal) $/;"	m	class:ExpressionTreeOp
+ExpressionTreeOp	Tree/src/programs/ExpressionTreeOp.java	/^public class ExpressionTreeOp $/;"	c
+FileIO	Graph/src/application/FileIO.java	/^    private FileIO() {$/;"	m	class:FileIO	file:
+FileIO	Graph/src/application/FileIO.java	/^public final class FileIO {$/;"	c
+FullQueueException	Graph/src/structures/FullQueueException.java	/^    public FullQueueException() {$/;"	m	class:FullQueueException
+FullQueueException	Graph/src/structures/FullQueueException.java	/^    public FullQueueException(final String theErrorMsg) {$/;"	m	class:FullQueueException
+FullQueueException	Graph/src/structures/FullQueueException.java	/^public class FullQueueException extends RuntimeException {$/;"	c
+Graph	Graph/src/structures/Graph.java	/^public interface Graph<T> {$/;"	i
+GraphTest	Graph/src/tests/GraphTest.java	/^public class GraphTest extends TestCase {$/;"	c
+GuessingGame	GuessingGame/src/GuessingGame.java	/^    private GuessingGame() {$/;"	m	class:GuessingGame	file:
+GuessingGame	GuessingGame/src/GuessingGame.java	/^public final class GuessingGame {$/;"	c
+Heap	Graph/src/structures/Heap.java	/^public interface Heap<E> {$/;"	i
+HeapPriorityQueue	Graph/src/structures/HeapPriorityQueue.java	/^    public HeapPriorityQueue(final Collection<? extends E> theCollection,$/;"	m	class:HeapPriorityQueue
+HeapPriorityQueue	Graph/src/structures/HeapPriorityQueue.java	/^    public HeapPriorityQueue(final Comparator<? super E> theComparator)$/;"	m	class:HeapPriorityQueue
+HeapPriorityQueue	Graph/src/structures/HeapPriorityQueue.java	/^public class HeapPriorityQueue<E> implements PriorityQueue<E> {$/;"	c
+LinkedBinaryTree	Tree/src/structures/LinkedBinaryTree.java	/^    public LinkedBinaryTree() {$/;"	m	class:LinkedBinaryTree
+LinkedBinaryTree	Tree/src/structures/LinkedBinaryTree.java	/^    public LinkedBinaryTree(final T theElement) {$/;"	m	class:LinkedBinaryTree
+LinkedBinaryTree	Tree/src/structures/LinkedBinaryTree.java	/^    public LinkedBinaryTree(final T theElement, final LinkedBinaryTree<T> theLeft,$/;"	m	class:LinkedBinaryTree
+LinkedBinaryTree	Tree/src/structures/LinkedBinaryTree.java	/^public class LinkedBinaryTree<T> implements BinaryTreeADT<T>, Iterable<T> {$/;"	c
+LinkedOutputRestrictedDeque	Queue/src/structures/LinkedOutputRestrictedDeque.java	/^public class LinkedOutputRestrictedDeque<E> extends LinkedQueue<E>$/;"	c
+LinkedQueue	Queue/src/structures/LinkedQueue.java	/^    public LinkedQueue() {$/;"	m	class:LinkedQueue
+LinkedQueue	Queue/src/structures/LinkedQueue.java	/^public class LinkedQueue<E> implements QueueADT<E> {$/;"	c
+ListADT	Tree/src/structures/ListADT.java	/^public interface ListADT<T> extends Iterable<T> {$/;"	i
+ListQueue	Graph/src/structures/ListQueue.java	/^    public ListQueue() {$/;"	m	class:ListQueue
+ListQueue	Graph/src/structures/ListQueue.java	/^    public ListQueue(final int theMaxElements) {$/;"	m	class:ListQueue
+ListQueue	Graph/src/structures/ListQueue.java	/^public class ListQueue<E> implements Queue<E> {$/;"	c
+MAX_NUMBER	GuessingGame/src/GuessingGame.java	/^    public static final int MAX_NUMBER = 50;$/;"	f	class:GuessingGame
+MAX_NUM_LEN	Queue/src/applications/RadixSortDemo.java	/^    private static int MAX_NUM_LEN;$/;"	f	class:RadixSortDemo	file:
+NOT_FOUND	Tree/src/structures/AbstractArrayList.java	/^    private static final int NOT_FOUND = -1;$/;"	f	class:AbstractArrayList	file:
+NO_CHILD	Graph/src/structures/ArrayMinHeap.java	/^    private static final int NO_CHILD = -1;$/;"	f	class:ArrayMinHeap	file:
+Node	Queue/src/structures/LinkedQueue.java	/^        Node(final T theData) {$/;"	m	class:LinkedQueue.Node
+Node	Queue/src/structures/LinkedQueue.java	/^        Node(final T theData, final Node<T> theNext) {$/;"	m	class:LinkedQueue.Node
+Node	Queue/src/structures/LinkedQueue.java	/^    public class Node<T> {$/;"	c	class:LinkedQueue
+OutputRestrictedDequeADT	Queue/src/structures/OutputRestrictedDequeADT.java	/^public interface OutputRestrictedDequeADT<E> extends QueueADT<E> {$/;"	i
+OutputRestrictedDequeTest	Queue/src/tests/OutputRestrictedDequeTest.java	/^public class OutputRestrictedDequeTest {$/;"	c
+PADDING	Queue/src/applications/QueueDemoGUI.java	/^\/*$/;"	f	class:QueueDemoGUI	file:
+Pair	Graph/src/structures/Pair.java	/^    public Pair() {$/;"	m	class:Pair
+Pair	Graph/src/structures/Pair.java	/^    public Pair(final T e1, final T e2) {$/;"	m	class:Pair
+Pair	Graph/src/structures/Pair.java	/^public class Pair<T> {$/;"	c
+PostfixEvaluator	Tree/src/programs/PostfixEvaluator.java	/^    public PostfixEvaluator() {$/;"	m	class:PostfixEvaluator
+PostfixEvaluator	Tree/src/programs/PostfixEvaluator.java	/^public class PostfixEvaluator {$/;"	c
+PostfixTesterMain	Tree/src/programs/PostfixTesterMain.java	/^    private PostfixTesterMain() {$/;"	m	class:PostfixTesterMain	file:
+PostfixTesterMain	Tree/src/programs/PostfixTesterMain.java	/^public final class PostfixTesterMain {$/;"	c
+PriorityQueue	Graph/src/structures/PriorityQueue.java	/^public interface PriorityQueue<E> {$/;"	i
+QUIT_OPTION	Graph/DisplayCostsMain.java	/^    private static final int QUIT_OPTION = 0;$/;"	f	class:DisplayCostsMain	file:
+QUIT_OPTION	Graph/src/application/DisplayCostsMain.java	/^    private static final int QUIT_OPTION = 0;$/;"	f	class:DisplayCostsMain	file:
+QUOTE	Queue/src/applications/QueueDemoGUI.java	/^\/*$/;"	f	class:QueueDemoGUI	file:
+Queue	Graph/src/structures/Queue.java	/^public interface Queue<E> extends java.io.Serializable {$/;"	i
+QueueADT	Queue/src/structures/QueueADT.java	/^public interface QueueADT<E> {$/;"	i
+QueueDemoGUI	Queue/src/applications/QueueDemoGUI.java	/^\/*$/;"	c
+QueueDemoGUI	Queue/src/applications/QueueDemoGUI.java	/^\/*$/;"	m	class:QueueDemoGUI
+QueueDemoMain	Queue/src/applications/QueueDemoMain.java	/^    private QueueDemoMain() {$/;"	m	class:QueueDemoMain	file:
+QueueDemoMain	Queue/src/applications/QueueDemoMain.java	/^public final class QueueDemoMain {$/;"	c
+RadixSortDemo	Queue/src/applications/RadixSortDemo.java	/^    private RadixSortDemo() {$/;"	m	class:RadixSortDemo	file:
+RadixSortDemo	Queue/src/applications/RadixSortDemo.java	/^public final class RadixSortDemo {$/;"	c
+SIZE	Graph/src/structures/AdjMatrixDiGraph.java	/^    protected static final int SIZE = 10;$/;"	f	class:AdjMatrixDiGraph
+StackADT	Tree/src/structures/StackADT.java	/^public interface StackADT<E> {$/;"	i
+TEN_DIGITS	Queue/src/applications/RadixSortDemo.java	/^    private static final int TEN_DIGITS = 10;$/;"	f	class:RadixSortDemo	file:
+TEXT_HEIGHT	Queue/src/applications/QueueDemoGUI.java	/^\/*$/;"	f	class:QueueDemoGUI	file:
+TEXT_WIDTH	Queue/src/applications/QueueDemoGUI.java	/^\/*$/;"	f	class:QueueDemoGUI	file:
+TOP_OF_HEAP	Graph/src/structures/ArrayMinHeap.java	/^    private static final int TOP_OF_HEAP = 0;$/;"	f	class:ArrayMinHeap	file:
+TreeIterator	Tree/src/structures/LinkedBinaryTree.java	/^        TreeIterator(final Iterator<T> theIter) {$/;"	m	class:LinkedBinaryTree.TreeIterator
+TreeIterator	Tree/src/structures/LinkedBinaryTree.java	/^    private class TreeIterator implements Iterator<T> {$/;"	c	class:LinkedBinaryTree
+Tuple	Graph/src/structures/Tuple.java	/^    public Tuple(final T element1, final U element2) throws IllegalArgumentException {$/;"	m	class:Tuple
+Tuple	Graph/src/structures/Tuple.java	/^public class Tuple<T, U> {$/;"	c
+UnorderedListADT	Tree/src/structures/UnorderedListADT.java	/^public interface UnorderedListADT<T> extends ListADT<T> {$/;"	i
+Vertex	Graph/src/structures/Vertex.java	/^    public Vertex(final E theLabel) {$/;"	m	class:Vertex
+Vertex	Graph/src/structures/Vertex.java	/^public class Vertex<E> {$/;"	c
+WeightedAdjMatrixDiGraph	Graph/src/structures/WeightedAdjMatrixDiGraph.java	/^    public WeightedAdjMatrixDiGraph() {$/;"	m	class:WeightedAdjMatrixDiGraph
+WeightedAdjMatrixDiGraph	Graph/src/structures/WeightedAdjMatrixDiGraph.java	/^public class WeightedAdjMatrixDiGraph<T> extends AdjMatrixDiGraph<T> implements$/;"	c
+WeightedAdjMatrixDiGraphTest	Graph/src/tests/WeightedAdjMatrixDiGraphTest.java	/^public class WeightedAdjMatrixDiGraphTest extends TestCase {$/;"	c
+WeightedAdjMatrixGraph	Graph/src/structures/WeightedAdjMatrixGraph.java	/^    public WeightedAdjMatrixGraph() {$/;"	m	class:WeightedAdjMatrixGraph
+WeightedAdjMatrixGraph	Graph/src/structures/WeightedAdjMatrixGraph.java	/^public class WeightedAdjMatrixGraph<T> extends AdjMatrixGraph<T> implements WeightedGraph<T> {$/;"	c
+WeightedAdjMatrixTest	Graph/src/tests/WeightedAdjMatrixTest.java	/^public class WeightedAdjMatrixTest extends TestCase {$/;"	c
+WeightedGraph	Graph/src/structures/WeightedGraph.java	/^public interface WeightedGraph<T> extends Graph<T> {$/;"	i
+add	Graph/src/structures/ArrayMinHeap.java	/^    public void add(final E theElement) {$/;"	m	class:ArrayMinHeap
+add	Graph/src/structures/Heap.java	/^    void add(E theElement);$/;"	m	interface:Heap
+addAfter	Tree/src/structures/ArrayUnorderedList.java	/^    public void addAfter(final T theElement, final T theTarget) {$/;"	m	class:ArrayUnorderedList
+addAfter	Tree/src/structures/UnorderedListADT.java	/^    void addAfter(T theElement, T theTarget);$/;"	m	interface:UnorderedListADT
+addEdge	Graph/src/structures/AdjMatrixDiGraph.java	/^    public void addEdge(final Vertex<T> v1, final Vertex<T> v2) {$/;"	m	class:AdjMatrixDiGraph
+addEdge	Graph/src/structures/AdjMatrixGraph.java	/^    public void addEdge(final Vertex<T> v1, final Vertex<T> v2) {$/;"	m	class:AdjMatrixGraph
+addEdge	Graph/src/structures/Graph.java	/^    void addEdge(Vertex<T> v1, Vertex<T> v2);$/;"	m	interface:Graph
+addEdge	Graph/src/structures/WeightedAdjMatrixDiGraph.java	/^    public void addEdge(final Vertex<T> v1, final Vertex<T> v2) {$/;"	m	class:WeightedAdjMatrixDiGraph
+addEdge	Graph/src/structures/WeightedAdjMatrixDiGraph.java	/^    public void addEdge(final Vertex<T> v1, final double theWeight, final Vertex<T> v2) {$/;"	m	class:WeightedAdjMatrixDiGraph
+addEdge	Graph/src/structures/WeightedAdjMatrixGraph.java	/^    public void addEdge(final Vertex<T> v1, final Vertex<T> v2) {$/;"	m	class:WeightedAdjMatrixGraph
+addEdge	Graph/src/structures/WeightedAdjMatrixGraph.java	/^    public void addEdge(final Vertex<T> v1, final double theWeight, final Vertex<T> v2) {$/;"	m	class:WeightedAdjMatrixGraph
+addEdge	Graph/src/structures/WeightedGraph.java	/^    void addEdge(Vertex<T> v1, double theWeight, Vertex<T> v2);$/;"	m	interface:WeightedGraph
+addToFront	Tree/src/structures/ArrayUnorderedList.java	/^    public void addToFront(final T theElement) {$/;"	m	class:ArrayUnorderedList
+addToFront	Tree/src/structures/UnorderedListADT.java	/^    void addToFront(T theElement);$/;"	m	interface:UnorderedListADT
+addToRear	Tree/src/structures/ArrayUnorderedList.java	/^    public void addToRear(final T theElement) {$/;"	m	class:ArrayUnorderedList
+addToRear	Tree/src/structures/UnorderedListADT.java	/^    void addToRear(T theElement);$/;"	m	interface:UnorderedListADT
+addVertex	Graph/src/structures/AdjMatrixDiGraph.java	/^    public void addVertex(final Vertex<T> theVertex) {$/;"	m	class:AdjMatrixDiGraph
+addVertex	Graph/src/structures/Graph.java	/^    void addVertex(Vertex<T> theVertex);$/;"	m	interface:Graph
+application	Graph/DisplayCostsMain.java	/^package application;$/;"	p
+application	Graph/src/application/DisplayCostsMain.java	/^package application;$/;"	p
+application	Graph/src/application/FileIO.java	/^package application;$/;"	p
+applications	Queue/src/applications/QueueDemoGUI.java	/^\/*$/;"	p
+applications	Queue/src/applications/QueueDemoMain.java	/^package applications;$/;"	p
+applications	Queue/src/applications/RadixSortDemo.java	/^package applications;$/;"	p
+bfs	Graph/src/structures/BFSSearcher.java	/^    public List<Vertex<T>> bfs(final Vertex<T> theStartVertex) {$/;"	m	class:BFSSearcher
+binaryToDecimal	Stack/src/program/Convert.java	/^	public static int binaryToDecimal(String theBinary) {$/;"	m	class:Convert
+buildHeap	Graph/src/structures/ArrayMinHeap.java	/^    private void buildHeap(final Collection<? extends E> theCollection) {$/;"	m	class:ArrayMinHeap	file:
+calculateDiameter	Graph/src/application/DisplayCostsMain.java	/^	private double calculateDiameter() {$/;"	m	class:DisplayCostsMain	file:
+capacity	Graph/src/structures/ListQueue.java	/^    public int capacity() {$/;"	m	class:ListQueue
+capacity	Graph/src/structures/Queue.java	/^    int capacity();$/;"	m	interface:Queue
+clear	Graph/src/structures/ArrayMinHeap.java	/^    public void clear() {$/;"	m	class:ArrayMinHeap
+clear	Graph/src/structures/Heap.java	/^    void clear();$/;"	m	interface:Heap
+clear	Graph/src/structures/HeapPriorityQueue.java	/^    public void clear() {$/;"	m	class:HeapPriorityQueue
+clear	Graph/src/structures/ListQueue.java	/^    public void clear() {$/;"	m	class:ListQueue
+clear	Graph/src/structures/PriorityQueue.java	/^    void clear();$/;"	m	interface:PriorityQueue
+clear	Graph/src/structures/Queue.java	/^    void clear();$/;"	m	interface:Queue
+computeTerm	Tree/src/programs/ExpressionTree.java	/^    private static int computeTerm(final char theOperator, final int theOperand1,$/;"	m	class:ExpressionTree	file:
+contains	Tree/src/structures/AbstractArrayList.java	/^    public boolean contains(final T theTarget) {$/;"	m	class:AbstractArrayList
+contains	Tree/src/structures/BinaryTreeADT.java	/^    boolean contains(T theTargetElement);$/;"	m	interface:BinaryTreeADT
+contains	Tree/src/structures/LinkedBinaryTree.java	/^    public boolean contains(final T theTargetElement) {$/;"	m	class:LinkedBinaryTree
+contains	Tree/src/structures/ListADT.java	/^    boolean contains(T theTarget);$/;"	m	interface:ListADT
+containsPath	Graph/src/structures/BFSSearcher.java	/^    public boolean containsPath(final Vertex<T> v1, final Vertex<T> v2) {$/;"	m	class:BFSSearcher
+containsPath	Graph/src/structures/DFSSearcher.java	/^    public boolean containsPath(final Vertex<T> v1, final Vertex<T> v2) {$/;"	m	class:DFSSearcher
+convert2sCompToDecimal	Stack/src/program/Convert.java	/^	public static int convert2sCompToDecimal(char[] bits) {$/;"	m	class:Convert
+convertDecimalTo2sComp	Stack/src/program/Convert.java	/^	public static char[] convertDecimalTo2sComp(int decimal) {$/;"	m	class:Convert
+countHeight	Tree/src/structures/LinkedBinaryTree.java	/^    protected int countHeight(final BinaryTreeNode<T> theNode) {$/;"	m	class:LinkedBinaryTree
+countLeafNodes	Tree/src/structures/BinaryTreeADT.java	/^    int countLeafNodes();$/;"	m	interface:BinaryTreeADT
+countLeafNodes	Tree/src/structures/LinkedBinaryTree.java	/^    public int countLeafNodes() {$/;"	m	class:LinkedBinaryTree
+countSize	Tree/src/structures/LinkedBinaryTree.java	/^    protected int countSize(final BinaryTreeNode<T> theNode) {$/;"	m	class:LinkedBinaryTree
+createGraphFromFile	Graph/src/application/FileIO.java	/^    public static void createGraphFromFile(final WeightedGraph<String> theGraph) {$/;"	m	class:FileIO
+decimalToBinary	Stack/src/program/Convert.java	/^	public static String decimalToBinary(final int theNumber) {$/;"	m	class:Convert
+dequeue	Graph/src/structures/HeapPriorityQueue.java	/^    public E dequeue() {$/;"	m	class:HeapPriorityQueue
+dequeue	Graph/src/structures/ListQueue.java	/^    public E dequeue() {$/;"	m	class:ListQueue
+dequeue	Graph/src/structures/PriorityQueue.java	/^    E dequeue();$/;"	m	interface:PriorityQueue
+dequeue	Graph/src/structures/Queue.java	/^    E dequeue();$/;"	m	interface:Queue
+dequeue	Queue/src/structures/LinkedQueue.java	/^    public E dequeue() {$/;"	m	class:LinkedQueue
+dequeue	Queue/src/structures/QueueADT.java	/^    E dequeue();$/;"	m	interface:QueueADT
+dfs	Graph/src/structures/DFSSearcher.java	/^    private void dfs(final Vertex<T> theOrigin, final Vertex<T> theTarget) {$/;"	m	class:DFSSearcher	file:
+display	Queue/src/applications/QueueDemoGUI.java	/^\/*$/;"	m	class:QueueDemoGUI
+displayIntro	Graph/DisplayCostsMain.java	/^    public void displayIntro() {$/;"	m	class:DisplayCostsMain
+displayIntro	Graph/src/application/DisplayCostsMain.java	/^    public void displayIntro() {$/;"	m	class:DisplayCostsMain
+displayIntro	GuessingGame/src/GuessingGame.java	/^    public static void displayIntro() {$/;"	m	class:GuessingGame
+displayIntro	Stack/src/program/Convert.java	/^	public static void displayIntro() {$/;"	m	class:Convert
+displayPathLength	Graph/DisplayCostsMain.java	/^    private void displayPathLength(final Vertex<String> thePoint1,$/;"	m	class:DisplayCostsMain	file:
+displayPathLength	Graph/src/application/DisplayCostsMain.java	/^    private void displayPathLength(final Vertex<String> thePoint1,$/;"	m	class:DisplayCostsMain	file:
+displayTreeInfo	Tree/src/programs/PostfixTesterMain.java	/^    private static void displayTreeInfo(final ExpressionTree theTree) {$/;"	m	class:PostfixTesterMain	file:
+doDFS	Graph/src/structures/DFSSearcher.java	/^    private void doDFS(final Vertex<T> theOrigin, final Vertex<T> theTarget) {$/;"	m	class:DFSSearcher	file:
+enqueue	Graph/src/structures/HeapPriorityQueue.java	/^    public void enqueue(final E theElement) {$/;"	m	class:HeapPriorityQueue
+enqueue	Graph/src/structures/ListQueue.java	/^    public void enqueue(final E theElement) {$/;"	m	class:ListQueue
+enqueue	Graph/src/structures/PriorityQueue.java	/^    void enqueue(E theElement);$/;"	m	interface:PriorityQueue
+enqueue	Graph/src/structures/Queue.java	/^    void enqueue(E theElement);$/;"	m	interface:Queue
+enqueue	Queue/src/structures/LinkedQueue.java	/^    public void enqueue(final E theElement) {$/;"	m	class:LinkedQueue
+enqueue	Queue/src/structures/QueueADT.java	/^    void enqueue(E theElement);$/;"	m	interface:QueueADT
+enqueueAtFront	Queue/src/structures/LinkedOutputRestrictedDeque.java	/^    public void enqueueAtFront(final E theElement) {$/;"	m	class:LinkedOutputRestrictedDeque
+enqueueAtFront	Queue/src/structures/OutputRestrictedDequeADT.java	/^    void enqueueAtFront(E theElement);$/;"	m	interface:OutputRestrictedDequeADT
+equals	Graph/src/structures/Vertex.java	/^    public boolean equals(final Object theObject) {$/;"	m	class:Vertex
+evaluate	Tree/src/programs/PostfixEvaluator.java	/^    public int evaluate(final String theExpression) {$/;"	m	class:PostfixEvaluator
+evaluateNode	Tree/src/programs/ExpressionTree.java	/^    public int evaluateNode(final BinaryTreeNode<ExpressionTreeOp> theRoot) {$/;"	m	class:ExpressionTree
+evaluateTree	Tree/src/programs/ExpressionTree.java	/^    public int evaluateTree() {$/;"	m	class:ExpressionTree
+exceptions	Queue/src/exceptions/EmptyCollectionException.java	/^package exceptions;$/;"	p
+exceptions	Tree/src/exceptions/ElementNotFoundException.java	/^package exceptions;$/;"	p
+exceptions	Tree/src/exceptions/EmptyCollectionException.java	/^package exceptions;$/;"	p
+expandCapacity	Tree/src/structures/AbstractArrayList.java	/^    protected void expandCapacity() {$/;"	m	class:AbstractArrayList
+expandCapacity	Tree/src/structures/ArrayStack.java	/^    private void expandCapacity() {$/;"	m	class:ArrayStack	file:
+find	Tree/src/structures/AbstractArrayList.java	/^    private int find(final T theTarget) {$/;"	m	class:AbstractArrayList	file:
+find	Tree/src/structures/BinaryTreeADT.java	/^    T find(T theTargetElement);$/;"	m	interface:BinaryTreeADT
+find	Tree/src/structures/LinkedBinaryTree.java	/^    public T find(final T theTargetElement) throws ElementNotFoundException {$/;"	m	class:LinkedBinaryTree
+findNode	Tree/src/structures/LinkedBinaryTree.java	/^    private BinaryTreeNode<T> findNode(final T theTargetElement,$/;"	m	class:LinkedBinaryTree	file:
+first	Queue/src/structures/LinkedQueue.java	/^    public E first() {$/;"	m	class:LinkedQueue
+first	Queue/src/structures/QueueADT.java	/^    E first();$/;"	m	interface:QueueADT
+first	Tree/src/structures/AbstractArrayList.java	/^    public T first() throws EmptyCollectionException {$/;"	m	class:AbstractArrayList
+first	Tree/src/structures/ListADT.java	/^    T first();$/;"	m	interface:ListADT
+fixHeap	Graph/src/structures/ArrayMinHeap.java	/^    private void fixHeap(final int theParent) {$/;"	m	class:ArrayMinHeap	file:
+floydShortestPaths	Graph/src/structures/WeightedAdjMatrixGraph.java	/^    public static double[][] floydShortestPaths($/;"	m	class:WeightedAdjMatrixGraph
+getEdgeWeight	Graph/src/structures/WeightedAdjMatrixDiGraph.java	/^    public double getEdgeWeight(final Vertex<T> v1, final Vertex<T> v2) {$/;"	m	class:WeightedAdjMatrixDiGraph
+getEdgeWeight	Graph/src/structures/WeightedAdjMatrixGraph.java	/^    public double getEdgeWeight(final Vertex<T> v1, final Vertex<T> v2) {$/;"	m	class:WeightedAdjMatrixGraph
+getEdgeWeight	Graph/src/structures/WeightedGraph.java	/^    double getEdgeWeight(Vertex<T> v1, Vertex<T> v2);$/;"	m	interface:WeightedGraph
+getElement	Tree/src/structures/BinaryTreeNode.java	/^    public T getElement() {$/;"	m	class:BinaryTreeNode
+getFirstElement	Graph/src/structures/Pair.java	/^    public T getFirstElement() {$/;"	m	class:Pair
+getFirstElement	Graph/src/structures/Tuple.java	/^    public T getFirstElement() {$/;"	m	class:Tuple
+getFreeVertexPosition	Graph/src/structures/AdjMatrixDiGraph.java	/^    protected int getFreeVertexPosition() {$/;"	m	class:AdjMatrixDiGraph
+getHeight	Tree/src/structures/LinkedBinaryTree.java	/^    public int getHeight() {$/;"	m	class:LinkedBinaryTree
+getInt	Graph/DisplayCostsMain.java	/^    private int getInt(final Scanner theConsole, final String thePrompt) {$/;"	m	class:DisplayCostsMain	file:
+getInt	Graph/src/application/DisplayCostsMain.java	/^    private int getInt(final Scanner theConsole, final String thePrompt) {$/;"	m	class:DisplayCostsMain	file:
+getInt	GuessingGame/src/GuessingGame.java	/^    public static int getInt(final Scanner theConsole, final String thePrompt) {$/;"	m	class:GuessingGame
+getLabel	Graph/src/structures/Vertex.java	/^    public E getLabel() {$/;"	m	class:Vertex
+getLeft	Tree/src/structures/BinaryTreeNode.java	/^    public BinaryTreeNode<T> getLeft() {$/;"	m	class:BinaryTreeNode
+getMax	Queue/src/applications/RadixSortDemo.java	/^    public static int getMax(final LinkedOutputRestrictedDeque<Integer> theQueue) {$/;"	m	class:RadixSortDemo
+getNeighbors	Graph/src/structures/AdjMatrixDiGraph.java	/^    public List<Vertex<T>> getNeighbors(final Vertex<T> theVertex) {$/;"	m	class:AdjMatrixDiGraph
+getNeighbors	Graph/src/structures/Graph.java	/^    List<Vertex<T>> getNeighbors(Vertex<T> theVertex);$/;"	m	interface:Graph
+getNumberOfEdges	Graph/src/structures/AdjMatrixDiGraph.java	/^    public int getNumberOfEdges() {$/;"	m	class:AdjMatrixDiGraph
+getNumberOfEdges	Graph/src/structures/Graph.java	/^    int getNumberOfEdges();$/;"	m	interface:Graph
+getNumberOfVertices	Graph/src/structures/AdjMatrixDiGraph.java	/^    public int getNumberOfVertices() {$/;"	m	class:AdjMatrixDiGraph
+getNumberOfVertices	Graph/src/structures/Graph.java	/^    int getNumberOfVertices();$/;"	m	interface:Graph
+getOperand	Tree/src/programs/PostfixEvaluator.java	/^    private ExpressionTree getOperand(final ArrayStack<ExpressionTree> theTreeStack) {$/;"	m	class:PostfixEvaluator	file:
+getOperator	Tree/src/programs/ExpressionTreeOp.java	/^    public char getOperator() $/;"	m	class:ExpressionTreeOp
+getPath	Graph/src/structures/BFSSearcher.java	/^    public List<Vertex<T>> getPath(final Vertex<T> v1, final Vertex<T> v2) {$/;"	m	class:BFSSearcher
+getPath	Graph/src/structures/DFSSearcher.java	/^    public List<Vertex<T>> getPath(final Vertex<T> v1, final Vertex<T> v2) {$/;"	m	class:DFSSearcher
+getPathLength	Graph/src/structures/BFSSearcher.java	/^    public int getPathLength(final Vertex<T> v1, final Vertex<T> v2) {$/;"	m	class:BFSSearcher
+getPathLength	Graph/src/structures/DFSSearcher.java	/^    public int getPathLength(final Vertex<T> v1, final Vertex<T> v2) {$/;"	m	class:DFSSearcher
+getRight	Tree/src/structures/BinaryTreeNode.java	/^    public BinaryTreeNode<T> getRight() {$/;"	m	class:BinaryTreeNode
+getRootElement	Tree/src/structures/BinaryTreeADT.java	/^    T getRootElement();$/;"	m	interface:BinaryTreeADT
+getRootElement	Tree/src/structures/LinkedBinaryTree.java	/^    public T getRootElement() throws EmptyCollectionException {$/;"	m	class:LinkedBinaryTree
+getRootNode	Tree/src/structures/LinkedBinaryTree.java	/^    protected BinaryTreeNode<T> getRootNode() throws EmptyCollectionException {$/;"	m	class:LinkedBinaryTree
+getSecondElement	Graph/src/structures/Pair.java	/^    public T getSecondElement() {$/;"	m	class:Pair
+getSecondElement	Graph/src/structures/Tuple.java	/^    public U getSecondElement() {$/;"	m	class:Tuple
+getTree	Tree/src/programs/PostfixEvaluator.java	/^    public ExpressionTree getTree() {$/;"	m	class:PostfixEvaluator
+getValue	Tree/src/programs/ExpressionTreeOp.java	/^    public int getValue() $/;"	m	class:ExpressionTreeOp
+getVertices	Graph/src/structures/AdjMatrixDiGraph.java	/^    public Vertex<T>[] getVertices() {$/;"	m	class:AdjMatrixDiGraph
+getVertices	Graph/src/structures/Graph.java	/^    Vertex<T>[] getVertices();$/;"	m	interface:Graph
+getVerticesIndexFor	Graph/src/structures/AdjMatrixDiGraph.java	/^    protected int getVerticesIndexFor(final Vertex<T> theVertex) {$/;"	m	class:AdjMatrixDiGraph
+hasNext	Tree/src/structures/AbstractArrayList.java	/^        public boolean hasNext() throws ConcurrentModificationException {$/;"	m	class:AbstractArrayList.ArrayListIterator
+hasNext	Tree/src/structures/LinkedBinaryTree.java	/^        public boolean hasNext() throws ConcurrentModificationException {$/;"	m	class:LinkedBinaryTree.TreeIterator
+hashCode	Graph/src/structures/Vertex.java	/^    public int hashCode() {$/;"	m	class:Vertex
+inOrder	Tree/src/structures/LinkedBinaryTree.java	/^    protected void inOrder(final BinaryTreeNode<T> theNode,$/;"	m	class:LinkedBinaryTree
+invertBinary	Stack/src/program/Convert.java	/^	public static String invertBinary(String theBinary) {$/;"	m	class:Convert
+isEmpty	Graph/src/structures/ArrayMinHeap.java	/^    public boolean isEmpty() {$/;"	m	class:ArrayMinHeap
+isEmpty	Graph/src/structures/Heap.java	/^    boolean isEmpty();$/;"	m	interface:Heap
+isEmpty	Graph/src/structures/HeapPriorityQueue.java	/^    public boolean isEmpty() {$/;"	m	class:HeapPriorityQueue
+isEmpty	Graph/src/structures/ListQueue.java	/^    public boolean isEmpty() {$/;"	m	class:ListQueue
+isEmpty	Graph/src/structures/PriorityQueue.java	/^    boolean isEmpty();$/;"	m	interface:PriorityQueue
+isEmpty	Graph/src/structures/Queue.java	/^    boolean isEmpty();$/;"	m	interface:Queue
+isEmpty	Queue/src/structures/LinkedQueue.java	/^    public boolean isEmpty() {$/;"	m	class:LinkedQueue
+isEmpty	Queue/src/structures/QueueADT.java	/^    boolean isEmpty();$/;"	m	interface:QueueADT
+isEmpty	Tree/src/structures/AbstractArrayList.java	/^    public boolean isEmpty() {$/;"	m	class:AbstractArrayList
+isEmpty	Tree/src/structures/ArrayStack.java	/^    public boolean isEmpty() {$/;"	m	class:ArrayStack
+isEmpty	Tree/src/structures/BinaryTreeADT.java	/^    boolean isEmpty();$/;"	m	interface:BinaryTreeADT
+isEmpty	Tree/src/structures/LinkedBinaryTree.java	/^    public boolean isEmpty() {$/;"	m	class:LinkedBinaryTree
+isEmpty	Tree/src/structures/ListADT.java	/^    boolean isEmpty();$/;"	m	interface:ListADT
+isEmpty	Tree/src/structures/StackADT.java	/^    boolean isEmpty();$/;"	m	interface:StackADT
+isFull	Graph/src/structures/ListQueue.java	/^    public boolean isFull() {$/;"	m	class:ListQueue
+isFull	Graph/src/structures/Queue.java	/^    boolean isFull();$/;"	m	interface:Queue
+isOperator	Tree/src/programs/ExpressionTreeOp.java	/^    public boolean isOperator() $/;"	m	class:ExpressionTreeOp
+iterator	Tree/src/structures/AbstractArrayList.java	/^    public Iterator<T> iterator() {$/;"	m	class:AbstractArrayList
+iterator	Tree/src/structures/BinaryTreeADT.java	/^    Iterator<T> iterator();$/;"	m	interface:BinaryTreeADT
+iterator	Tree/src/structures/LinkedBinaryTree.java	/^    public Iterator<T> iterator() {$/;"	m	class:LinkedBinaryTree
+iterator	Tree/src/structures/ListADT.java	/^    Iterator<T> iterator();$/;"	m	interface:ListADT
+iteratorInOrder	Tree/src/structures/BinaryTreeADT.java	/^    Iterator<T> iteratorInOrder();$/;"	m	interface:BinaryTreeADT
+iteratorInOrder	Tree/src/structures/LinkedBinaryTree.java	/^    public Iterator<T> iteratorInOrder() {$/;"	m	class:LinkedBinaryTree
+iteratorLevelOrder	Tree/src/structures/BinaryTreeADT.java	/^    Iterator<T> iteratorLevelOrder();$/;"	m	interface:BinaryTreeADT
+iteratorLevelOrder	Tree/src/structures/LinkedBinaryTree.java	/^    public Iterator<T> iteratorLevelOrder() {$/;"	m	class:LinkedBinaryTree
+iteratorPostOrder	Tree/src/structures/BinaryTreeADT.java	/^    Iterator<T> iteratorPostOrder();$/;"	m	interface:BinaryTreeADT
+iteratorPostOrder	Tree/src/structures/LinkedBinaryTree.java	/^    public Iterator<T> iteratorPostOrder() {$/;"	m	class:LinkedBinaryTree
+iteratorPreOrder	Tree/src/structures/BinaryTreeADT.java	/^    Iterator<T> iteratorPreOrder();$/;"	m	interface:BinaryTreeADT
+iteratorPreOrder	Tree/src/structures/LinkedBinaryTree.java	/^    public Iterator<T> iteratorPreOrder() {$/;"	m	class:LinkedBinaryTree
+keyboard	Queue/src/applications/RadixSortDemo.java	/^    private static Scanner keyboard;$/;"	f	class:RadixSortDemo	file:
+last	Tree/src/structures/AbstractArrayList.java	/^    public T last() throws EmptyCollectionException {$/;"	m	class:AbstractArrayList
+last	Tree/src/structures/ListADT.java	/^    T last();$/;"	m	interface:ListADT
+leafNodes	Tree/src/structures/LinkedBinaryTree.java	/^    protected int leafNodes(final BinaryTreeNode<T> theNode) {$/;"	m	class:LinkedBinaryTree
+main	Graph/DisplayCostsMain.java	/^    public static void main(final String[] theArgs) {$/;"	m	class:DisplayCostsMain
+main	Graph/src/application/DisplayCostsMain.java	/^    public static void main(final String[] theArgs) {$/;"	m	class:DisplayCostsMain
+main	GuessingGame/src/GuessingGame.java	/^    public static void main(final String[] theArgs) {$/;"	m	class:GuessingGame
+main	Queue/src/applications/QueueDemoMain.java	/^    public static void main(final String[] theArgs) {$/;"	m	class:QueueDemoMain
+main	Queue/src/applications/RadixSortDemo.java	/^    public static void main(final String[] theArgs) {$/;"	m	class:RadixSortDemo
+main	Stack/src/program/Convert.java	/^	public static void main(final String[] theArgs) {$/;"	m	class:Convert
+main	Tree/src/programs/PostfixTesterMain.java	/^    public static void main(final String[] theArgs) {$/;"	m	class:PostfixTesterMain
+minimalPath	Graph/src/structures/WeightedAdjMatrixGraph.java	/^    public double minimalPath(final Vertex<T> theSource, final Vertex<T> theDestination) {$/;"	m	class:WeightedAdjMatrixGraph
+myActionArea	Queue/src/applications/QueueDemoGUI.java	/^\/*$/;"	f	class:QueueDemoGUI	file:
+myAdjMatrix	Graph/src/structures/AdjMatrixDiGraph.java	/^    protected int[][] myAdjMatrix;$/;"	f	class:AdjMatrixDiGraph
+myBFSGraph	Graph/src/tests/GraphTest.java	/^    private AdjMatrixGraph<String> myBFSGraph = null;$/;"	f	class:GraphTest	file:
+myCapacity	Graph/src/structures/ListQueue.java	/^    private int myCapacity;$/;"	f	class:ListQueue	file:
+myComparator	Graph/src/structures/ArrayMinHeap.java	/^    private final Comparator<? super E> myComparator;$/;"	f	class:ArrayMinHeap	file:
+myComparator	Graph/src/structures/HeapPriorityQueue.java	/^    private final Comparator<? super E> myComparator;$/;"	f	class:HeapPriorityQueue	file:
+myCurrent	Tree/src/structures/AbstractArrayList.java	/^        private int myCurrent;$/;"	f	class:AbstractArrayList.ArrayListIterator	file:
+myData	Graph/src/structures/HeapPriorityQueue.java	/^    private final ArrayMinHeap<E> myData;$/;"	f	class:HeapPriorityQueue	file:
+myData	Queue/src/structures/LinkedQueue.java	/^        protected T myData;$/;"	f	class:LinkedQueue.Node
+myElement	Tree/src/structures/BinaryTreeNode.java	/^    protected T myElement;$/;"	f	class:BinaryTreeNode
+myElements	Tree/src/structures/ArrayStack.java	/^    private E[] myElements;$/;"	f	class:ArrayStack	file:
+myEnqueueButton	Queue/src/applications/QueueDemoGUI.java	/^\/*$/;"	f	class:QueueDemoGUI	file:
+myExpectedModCount	Tree/src/structures/LinkedBinaryTree.java	/^        private final int myExpectedModCount;$/;"	f	class:LinkedBinaryTree.TreeIterator	file:
+myFirstElement	Graph/src/structures/Pair.java	/^    private T myFirstElement;$/;"	f	class:Pair	file:
+myFirstElement	Graph/src/structures/Tuple.java	/^    private T myFirstElement;$/;"	f	class:Tuple	file:
+myFront	Queue/src/structures/LinkedQueue.java	/^    protected Node<E> myFront;$/;"	f	class:LinkedQueue
+myGraph	Graph/DisplayCostsMain.java	/^    private final WeightedGraph<String> myGraph;$/;"	f	class:DisplayCostsMain	file:
+myGraph	Graph/src/application/DisplayCostsMain.java	/^    private final WeightedGraph<String> myGraph;$/;"	f	class:DisplayCostsMain	file:
+myGraph	Graph/src/structures/BFSSearcher.java	/^    private final Graph<T> myGraph;$/;"	f	class:BFSSearcher	file:
+myGraph	Graph/src/structures/DFSSearcher.java	/^    private final Graph<T> myGraph;$/;"	f	class:DFSSearcher	file:
+myGraph	Graph/src/tests/AdjMatrixDiGraphTest.java	/^    private AdjMatrixDiGraph<String> myGraph = null;$/;"	f	class:AdjMatrixDiGraphTest	file:
+myGraph	Graph/src/tests/GraphTest.java	/^    private AdjMatrixGraph<String> myGraph = null;$/;"	f	class:GraphTest	file:
+myGraph	Graph/src/tests/WeightedAdjMatrixDiGraphTest.java	/^    private WeightedAdjMatrixDiGraph<String> myGraph = null;$/;"	f	class:WeightedAdjMatrixDiGraphTest	file:
+myGraph1	Graph/src/tests/WeightedAdjMatrixTest.java	/^    private WeightedAdjMatrixGraph<String> myGraph1 = null;$/;"	f	class:WeightedAdjMatrixTest	file:
+myGraph2	Graph/src/tests/GraphTest.java	/^    private AdjMatrixGraph<String> myGraph2 = null;$/;"	f	class:GraphTest	file:
+myGraph2	Graph/src/tests/WeightedAdjMatrixTest.java	/^    private WeightedAdjMatrixGraph<String> myGraph2 = null;$/;"	f	class:WeightedAdjMatrixTest	file:
+myHeap	Graph/src/structures/ArrayMinHeap.java	/^    private E[] myHeap;$/;"	f	class:ArrayMinHeap	file:
+myInput	Queue/src/applications/RadixSortDemo.java	/^    private static Scanner myInput;$/;"	f	class:RadixSortDemo	file:
+myInputText	Queue/src/applications/QueueDemoGUI.java	/^\/*$/;"	f	class:QueueDemoGUI	file:
+myIter	Tree/src/structures/LinkedBinaryTree.java	/^        private final Iterator<T> myIter;$/;"	f	class:LinkedBinaryTree.TreeIterator	file:
+myIteratorModCount	Tree/src/structures/AbstractArrayList.java	/^        private final int myIteratorModCount;$/;"	f	class:AbstractArrayList.ArrayListIterator	file:
+myLabel	Graph/src/structures/Vertex.java	/^    private final E myLabel;$/;"	f	class:Vertex	file:
+myLeft	Tree/src/structures/BinaryTreeNode.java	/^    protected BinaryTreeNode<T> myLeft;$/;"	f	class:BinaryTreeNode
+myList	Tree/src/structures/AbstractArrayList.java	/^    protected T[] myList;$/;"	f	class:AbstractArrayList
+myModCount	Tree/src/structures/AbstractArrayList.java	/^    protected int myModCount;$/;"	f	class:AbstractArrayList
+myModCount	Tree/src/structures/LinkedBinaryTree.java	/^    protected int myModCount;$/;"	f	class:LinkedBinaryTree
+myNext	Queue/src/structures/LinkedQueue.java	/^        protected Node<T> myNext;$/;"	f	class:LinkedQueue.Node
+myNumberOfEdges	Graph/src/structures/AdjMatrixDiGraph.java	/^    protected int myNumberOfEdges;$/;"	f	class:AdjMatrixDiGraph
+myNumberOfVertices	Graph/src/structures/AdjMatrixDiGraph.java	/^    protected int myNumberOfVertices;$/;"	f	class:AdjMatrixDiGraph
+myOperator	Tree/src/programs/ExpressionTreeOp.java	/^    private final char myOperator;$/;"	f	class:ExpressionTreeOp	file:
+myPathFound	Graph/src/structures/DFSSearcher.java	/^    private boolean myPathFound;$/;"	f	class:DFSSearcher	file:
+myQueue	Graph/src/structures/ListQueue.java	/^    private List<E> myQueue;$/;"	f	class:ListQueue	file:
+myQueue	Queue/src/applications/QueueDemoGUI.java	/^\/*$/;"	f	class:QueueDemoGUI	file:
+myQueue	Queue/src/applications/RadixSortDemo.java	/^    private static LinkedOutputRestrictedDeque<Integer> myQueue;$/;"	f	class:RadixSortDemo	file:
+myQueue	Queue/src/tests/OutputRestrictedDequeTest.java	/^    private LinkedOutputRestrictedDeque<Integer> myQueue;$/;"	f	class:OutputRestrictedDequeTest	file:
+myQueueArea	Queue/src/applications/QueueDemoGUI.java	/^\/*$/;"	f	class:QueueDemoGUI	file:
+myRear	Queue/src/structures/LinkedQueue.java	/^    protected Node<E> myRear;$/;"	f	class:LinkedQueue
+myRear	Tree/src/structures/AbstractArrayList.java	/^    protected int myRear;$/;"	f	class:AbstractArrayList
+myRight	Tree/src/structures/BinaryTreeNode.java	/^    protected BinaryTreeNode<T> myRight;$/;"	f	class:BinaryTreeNode
+myRoot	Tree/src/structures/LinkedBinaryTree.java	/^    protected BinaryTreeNode<T> myRoot;$/;"	f	class:LinkedBinaryTree
+mySecondElement	Graph/src/structures/Pair.java	/^    private T mySecondElement;$/;"	f	class:Pair	file:
+mySecondElement	Graph/src/structures/Tuple.java	/^    private U mySecondElement;$/;"	f	class:Tuple	file:
+mySize	Graph/src/structures/ArrayMinHeap.java	/^    private int mySize;$/;"	f	class:ArrayMinHeap	file:
+mySize	Queue/src/structures/LinkedQueue.java	/^    protected int mySize;$/;"	f	class:LinkedQueue
+mySize	Tree/src/structures/ArrayStack.java	/^    private int mySize; \/\/ mySize also indicates the next available (open) array$/;"	f	class:ArrayStack	file:
+myTermType	Tree/src/programs/ExpressionTreeOp.java	/^    private final int myTermType;$/;"	f	class:ExpressionTreeOp	file:
+myTreeStack	Tree/src/programs/PostfixEvaluator.java	/^    private final ArrayStack<ExpressionTree> myTreeStack;$/;"	f	class:PostfixEvaluator	file:
+myV1Pos	Graph/src/structures/AdjMatrixDiGraph.java	/^    protected int myV1Pos;$/;"	f	class:AdjMatrixDiGraph
+myV2Pos	Graph/src/structures/AdjMatrixDiGraph.java	/^    protected int myV2Pos;$/;"	f	class:AdjMatrixDiGraph
+myValue	Tree/src/programs/ExpressionTreeOp.java	/^    private final int myValue;$/;"	f	class:ExpressionTreeOp	file:
+myVertices	Graph/src/structures/AdjMatrixDiGraph.java	/^    protected Vertex<T>[] myVertices;$/;"	f	class:AdjMatrixDiGraph
+myVisited	Graph/src/structures/BFSSearcher.java	/^    private Map<Vertex<T>, Vertex<T>> myVisited;$/;"	f	class:BFSSearcher	file:
+myVisited	Graph/src/structures/DFSSearcher.java	/^    private Map<Vertex<T>, Vertex<T>> myVisited;$/;"	f	class:DFSSearcher	file:
+myVisitedVertices	Graph/src/structures/BFSSearcher.java	/^    private final int[] myVisitedVertices;$/;"	f	class:BFSSearcher	file:
+myWeights	Graph/src/structures/WeightedAdjMatrixDiGraph.java	/^    protected double[][] myWeights;$/;"	f	class:WeightedAdjMatrixDiGraph
+myWeights	Graph/src/structures/WeightedAdjMatrixGraph.java	/^    protected double[][] myWeights;$/;"	f	class:WeightedAdjMatrixGraph
+next	Tree/src/structures/AbstractArrayList.java	/^        public T next() throws ConcurrentModificationException {$/;"	m	class:AbstractArrayList.ArrayListIterator
+next	Tree/src/structures/LinkedBinaryTree.java	/^        public T next() throws NoSuchElementException {$/;"	m	class:LinkedBinaryTree.TreeIterator
+numChildren	Tree/src/structures/BinaryTreeNode.java	/^    public int numChildren() {$/;"	m	class:BinaryTreeNode
+peek	Graph/src/structures/ArrayMinHeap.java	/^    public E peek() {$/;"	m	class:ArrayMinHeap
+peek	Graph/src/structures/Heap.java	/^    E peek();$/;"	m	interface:Heap
+peek	Graph/src/structures/HeapPriorityQueue.java	/^    public E peek() {$/;"	m	class:HeapPriorityQueue
+peek	Graph/src/structures/ListQueue.java	/^    public E peek() {$/;"	m	class:ListQueue
+peek	Graph/src/structures/PriorityQueue.java	/^    E peek();$/;"	m	interface:PriorityQueue
+peek	Graph/src/structures/Queue.java	/^    E peek();$/;"	m	interface:Queue
+peek	Tree/src/structures/ArrayStack.java	/^    public E peek() {$/;"	m	class:ArrayStack
+peek	Tree/src/structures/StackADT.java	/^    E peek();$/;"	m	interface:StackADT
+playAgain	GuessingGame/src/GuessingGame.java	/^    public static boolean playAgain(final Scanner theConsole) {$/;"	m	class:GuessingGame
+playGame	GuessingGame/src/GuessingGame.java	/^    public static int playGame(final Scanner theConsole) {$/;"	m	class:GuessingGame
+pop	Tree/src/structures/ArrayStack.java	/^    public E pop() {$/;"	m	class:ArrayStack
+pop	Tree/src/structures/StackADT.java	/^    E pop();$/;"	m	interface:StackADT
+postOrder	Tree/src/structures/LinkedBinaryTree.java	/^    protected void postOrder(final BinaryTreeNode<T> theNode,$/;"	m	class:LinkedBinaryTree
+preOrder	Tree/src/structures/LinkedBinaryTree.java	/^    protected void preOrder(final BinaryTreeNode<T> theNode,$/;"	m	class:LinkedBinaryTree
+printTree	Tree/src/programs/ExpressionTree.java	/^    public String printTree() {$/;"	m	class:ExpressionTree
+program	Stack/src/program/Convert.java	/^package program;$/;"	p
+programs	Tree/src/programs/ExpressionTree.java	/^package programs;$/;"	p
+programs	Tree/src/programs/ExpressionTreeOp.java	/^package programs;$/;"	p
+programs	Tree/src/programs/PostfixEvaluator.java	/^package programs;$/;"	p
+programs	Tree/src/programs/PostfixTesterMain.java	/^package programs;$/;"	p
+promptForChoice	Graph/DisplayCostsMain.java	/^    private int promptForChoice(final Scanner theConsole, final String thePrompt) {$/;"	m	class:DisplayCostsMain	file:
+promptForChoice	Graph/src/application/DisplayCostsMain.java	/^    private int promptForChoice(final Scanner theConsole, final String thePrompt) {$/;"	m	class:DisplayCostsMain	file:
+push	Tree/src/structures/ArrayStack.java	/^    public void push(final E theElement) {$/;"	m	class:ArrayStack
+push	Tree/src/structures/StackADT.java	/^    void push(E theElement);$/;"	m	interface:StackADT
+radixSort	Queue/src/applications/RadixSortDemo.java	/^    public static LinkedOutputRestrictedDeque<Integer> radixSort(final $/;"	m	class:RadixSortDemo
+readFile	Queue/src/applications/RadixSortDemo.java	/^    private static void readFile(final File theInput) {$/;"	m	class:RadixSortDemo	file:
+remove	Tree/src/structures/AbstractArrayList.java	/^        public void remove() throws UnsupportedOperationException {$/;"	m	class:AbstractArrayList.ArrayListIterator
+remove	Tree/src/structures/AbstractArrayList.java	/^    public T remove(final T theElement) {$/;"	m	class:AbstractArrayList
+remove	Tree/src/structures/LinkedBinaryTree.java	/^        public void remove() {$/;"	m	class:LinkedBinaryTree.TreeIterator
+remove	Tree/src/structures/ListADT.java	/^    T remove(T theElement);$/;"	m	interface:ListADT
+removeEdge	Graph/src/structures/AdjMatrixDiGraph.java	/^    public void removeEdge(final Vertex<T> v1, final Vertex<T> v2) {$/;"	m	class:AdjMatrixDiGraph
+removeEdge	Graph/src/structures/AdjMatrixGraph.java	/^    public void removeEdge(final Vertex<T> v1, final Vertex<T> v2) {$/;"	m	class:AdjMatrixGraph
+removeEdge	Graph/src/structures/Graph.java	/^    void removeEdge(Vertex<T> v1, Vertex<T> v2);$/;"	m	interface:Graph
+removeFirst	Tree/src/structures/AbstractArrayList.java	/^    public T removeFirst() throws EmptyCollectionException {$/;"	m	class:AbstractArrayList
+removeFirst	Tree/src/structures/ListADT.java	/^    T removeFirst();$/;"	m	interface:ListADT
+removeLast	Tree/src/structures/AbstractArrayList.java	/^    public T removeLast() throws EmptyCollectionException {$/;"	m	class:AbstractArrayList
+removeLast	Tree/src/structures/ListADT.java	/^    T removeLast();$/;"	m	interface:ListADT
+removeVertex	Graph/src/structures/AdjMatrixDiGraph.java	/^    public void removeVertex(final Vertex<T> theVertex) {$/;"	m	class:AdjMatrixDiGraph
+removeVertex	Graph/src/structures/AdjMatrixGraph.java	/^    public void removeVertex(final Vertex<T> theVertex) {$/;"	m	class:AdjMatrixGraph
+removeVertex	Graph/src/structures/Graph.java	/^    void removeVertex(Vertex<T> theVertex);$/;"	m	interface:Graph
+reportResults	GuessingGame/src/GuessingGame.java	/^    public static void reportResults(final int theGames,$/;"	m	class:GuessingGame
+resize	Graph/src/structures/ArrayMinHeap.java	/^    private void resize() {$/;"	m	class:ArrayMinHeap	file:
+serialVersionUID	Graph/src/structures/EmptyHeapException.java	/^    private static final long serialVersionUID = 2730871658944628181L;$/;"	f	class:EmptyHeapException	file:
+serialVersionUID	Graph/src/structures/EmptyPriorityQueueException.java	/^    private static final long serialVersionUID = -5288309290889409167L;$/;"	f	class:EmptyPriorityQueueException	file:
+serialVersionUID	Graph/src/structures/EmptyQueueException.java	/^    private static final long serialVersionUID = 4462115152899433351L;$/;"	f	class:EmptyQueueException	file:
+serialVersionUID	Graph/src/structures/FullQueueException.java	/^    private static final long serialVersionUID = 2907816576465171344L;$/;"	f	class:FullQueueException	file:
+serialVersionUID	Queue/src/applications/QueueDemoGUI.java	/^\/*$/;"	f	class:QueueDemoGUI	file:
+serialVersionUID	Queue/src/exceptions/EmptyCollectionException.java	/^    private static final long serialVersionUID = -6409273709413115088L;$/;"	f	class:EmptyCollectionException	file:
+serialVersionUID	Tree/src/exceptions/ElementNotFoundException.java	/^    private static final long serialVersionUID = -8985982736375193844L;$/;"	f	class:ElementNotFoundException	file:
+serialVersionUID	Tree/src/exceptions/EmptyCollectionException.java	/^    private static final long serialVersionUID = -6409273709413115088L;$/;"	f	class:EmptyCollectionException	file:
+setEdgeWeight	Graph/src/structures/WeightedAdjMatrixDiGraph.java	/^    public void setEdgeWeight(final Vertex<T> theSource,$/;"	m	class:WeightedAdjMatrixDiGraph
+setEdgeWeight	Graph/src/structures/WeightedAdjMatrixGraph.java	/^    public void setEdgeWeight(final Vertex<T> v1,$/;"	m	class:WeightedAdjMatrixGraph
+setEdgeWeight	Graph/src/structures/WeightedGraph.java	/^    void setEdgeWeight(Vertex<T> v1, double theNewWeight, Vertex<T> v2);$/;"	m	interface:WeightedGraph
+setFirstElement	Graph/src/structures/Pair.java	/^    public void setFirstElement(final T theNewFirst) {$/;"	m	class:Pair
+setFirstElement	Graph/src/structures/Tuple.java	/^    public void setFirstElement(final T theElement) throws IllegalArgumentException {$/;"	m	class:Tuple
+setLeft	Tree/src/structures/BinaryTreeNode.java	/^    public void setLeft(final BinaryTreeNode<T> theNode) {$/;"	m	class:BinaryTreeNode
+setRight	Tree/src/structures/BinaryTreeNode.java	/^    public void setRight(final BinaryTreeNode<T> theNode) {$/;"	m	class:BinaryTreeNode
+setSecondElement	Graph/src/structures/Pair.java	/^    public void setSecondElement(final T theNewSecond) {$/;"	m	class:Pair
+setSecondElement	Graph/src/structures/Tuple.java	/^    public void setSecondElement(final U theElement) throws IllegalArgumentException {$/;"	m	class:Tuple
+setUp	Graph/src/tests/AdjMatrixDiGraphTest.java	/^    protected void setUp() throws Exception {$/;"	m	class:AdjMatrixDiGraphTest
+setUp	Graph/src/tests/GraphTest.java	/^    protected void setUp() throws Exception {$/;"	m	class:GraphTest
+setUp	Graph/src/tests/WeightedAdjMatrixDiGraphTest.java	/^    protected void setUp() throws Exception {$/;"	m	class:WeightedAdjMatrixDiGraphTest
+setUp	Graph/src/tests/WeightedAdjMatrixTest.java	/^    protected void setUp() throws Exception {$/;"	m	class:WeightedAdjMatrixTest
+setUp	Queue/src/tests/OutputRestrictedDequeTest.java	/^    public void setUp() {$/;"	m	class:OutputRestrictedDequeTest
+setUp	Stack/src/tests/ConvertTest.java	/^    public void setUp() {$/;"	m	class:ConvertTest
+setupComponets	Queue/src/applications/QueueDemoGUI.java	/^\/*$/;"	m	class:QueueDemoGUI	file:
+size	Graph/src/structures/ArrayMinHeap.java	/^    public int size() {$/;"	m	class:ArrayMinHeap
+size	Graph/src/structures/Heap.java	/^    int size();$/;"	m	interface:Heap
+size	Graph/src/structures/HeapPriorityQueue.java	/^    public int size() {$/;"	m	class:HeapPriorityQueue
+size	Graph/src/structures/ListQueue.java	/^    public int size() {$/;"	m	class:ListQueue
+size	Graph/src/structures/PriorityQueue.java	/^    int size();$/;"	m	interface:PriorityQueue
+size	Graph/src/structures/Queue.java	/^    int size();$/;"	m	interface:Queue
+size	Queue/src/structures/LinkedQueue.java	/^    public int size() {$/;"	m	class:LinkedQueue
+size	Queue/src/structures/QueueADT.java	/^    int size();$/;"	m	interface:QueueADT
+size	Tree/src/structures/AbstractArrayList.java	/^    public int size() {$/;"	m	class:AbstractArrayList
+size	Tree/src/structures/ArrayStack.java	/^    public int size() {$/;"	m	class:ArrayStack
+size	Tree/src/structures/BinaryTreeADT.java	/^    int size();$/;"	m	interface:BinaryTreeADT
+size	Tree/src/structures/LinkedBinaryTree.java	/^    public int size() {$/;"	m	class:LinkedBinaryTree
+size	Tree/src/structures/ListADT.java	/^    int size();$/;"	m	interface:ListADT
+size	Tree/src/structures/StackADT.java	/^    int size();$/;"	m	interface:StackADT
+smallestChild	Graph/src/structures/ArrayMinHeap.java	/^    private int smallestChild(final int theParent) {$/;"	m	class:ArrayMinHeap	file:
+start	Graph/DisplayCostsMain.java	/^    private void start() {$/;"	m	class:DisplayCostsMain	file:
+start	Graph/src/application/DisplayCostsMain.java	/^	private void start() {$/;"	m	class:DisplayCostsMain	file:
+structures	Graph/src/structures/AdjMatrixDiGraph.java	/^package structures;$/;"	p
+structures	Graph/src/structures/AdjMatrixGraph.java	/^package structures;$/;"	p
+structures	Graph/src/structures/ArrayMinHeap.java	/^package structures;$/;"	p
+structures	Graph/src/structures/BFSSearcher.java	/^package structures;$/;"	p
+structures	Graph/src/structures/DFSSearcher.java	/^package structures;$/;"	p
+structures	Graph/src/structures/EmptyHeapException.java	/^package structures;$/;"	p
+structures	Graph/src/structures/EmptyPriorityQueueException.java	/^package structures;$/;"	p
+structures	Graph/src/structures/EmptyQueueException.java	/^package structures;$/;"	p
+structures	Graph/src/structures/FullQueueException.java	/^package structures;$/;"	p
+structures	Graph/src/structures/Graph.java	/^package structures;$/;"	p
+structures	Graph/src/structures/Heap.java	/^package structures;$/;"	p
+structures	Graph/src/structures/HeapPriorityQueue.java	/^package structures;$/;"	p
+structures	Graph/src/structures/ListQueue.java	/^package structures;$/;"	p
+structures	Graph/src/structures/Pair.java	/^package structures;$/;"	p
+structures	Graph/src/structures/PriorityQueue.java	/^package structures;$/;"	p
+structures	Graph/src/structures/Queue.java	/^package structures;$/;"	p
+structures	Graph/src/structures/Tuple.java	/^package structures;$/;"	p
+structures	Graph/src/structures/Vertex.java	/^package structures;$/;"	p
+structures	Graph/src/structures/WeightedAdjMatrixDiGraph.java	/^package structures;$/;"	p
+structures	Graph/src/structures/WeightedAdjMatrixGraph.java	/^package structures;$/;"	p
+structures	Graph/src/structures/WeightedGraph.java	/^package structures;$/;"	p
+structures	Queue/src/structures/LinkedOutputRestrictedDeque.java	/^package structures;$/;"	p
+structures	Queue/src/structures/LinkedQueue.java	/^package structures;$/;"	p
+structures	Queue/src/structures/OutputRestrictedDequeADT.java	/^package structures;$/;"	p
+structures	Queue/src/structures/QueueADT.java	/^package structures;$/;"	p
+structures	Tree/src/structures/AbstractArrayList.java	/^package structures;$/;"	p
+structures	Tree/src/structures/ArrayStack.java	/^package structures;$/;"	p
+structures	Tree/src/structures/ArrayUnorderedList.java	/^package structures;$/;"	p
+structures	Tree/src/structures/BinaryTreeADT.java	/^package structures;$/;"	p
+structures	Tree/src/structures/BinaryTreeNode.java	/^package structures;$/;"	p
+structures	Tree/src/structures/LinkedBinaryTree.java	/^package structures;$/;"	p
+structures	Tree/src/structures/ListADT.java	/^package structures;$/;"	p
+structures	Tree/src/structures/StackADT.java	/^package structures;$/;"	p
+structures	Tree/src/structures/UnorderedListADT.java	/^package structures;$/;"	p
+swapElements	Graph/src/structures/Pair.java	/^    public void swapElements() {$/;"	m	class:Pair
+tearDown	Graph/src/tests/AdjMatrixDiGraphTest.java	/^    protected void tearDown() throws Exception {$/;"	m	class:AdjMatrixDiGraphTest
+tearDown	Graph/src/tests/GraphTest.java	/^    protected void tearDown() throws Exception {$/;"	m	class:GraphTest
+tearDown	Graph/src/tests/WeightedAdjMatrixDiGraphTest.java	/^    protected void tearDown() throws Exception {$/;"	m	class:WeightedAdjMatrixDiGraphTest
+tearDown	Graph/src/tests/WeightedAdjMatrixTest.java	/^    protected void tearDown() throws Exception {$/;"	m	class:WeightedAdjMatrixTest
+testAddBidirectionalEdges	Graph/src/tests/AdjMatrixDiGraphTest.java	/^    public void testAddBidirectionalEdges() {$/;"	m	class:AdjMatrixDiGraphTest
+testAddDuplicateEdge	Graph/src/tests/AdjMatrixDiGraphTest.java	/^    public void testAddDuplicateEdge() {$/;"	m	class:AdjMatrixDiGraphTest
+testAddEdgeDuplicate	Graph/src/tests/WeightedAdjMatrixTest.java	/^    public void testAddEdgeDuplicate() {$/;"	m	class:WeightedAdjMatrixTest
+testAddEdges	Graph/src/tests/WeightedAdjMatrixTest.java	/^    public void testAddEdges() {$/;"	m	class:WeightedAdjMatrixTest
+testAddNullVertex	Graph/src/tests/GraphTest.java	/^    public void testAddNullVertex() {$/;"	m	class:GraphTest
+testAddNullVertex	Graph/src/tests/WeightedAdjMatrixTest.java	/^    public void testAddNullVertex() {$/;"	m	class:WeightedAdjMatrixTest
+testAddVertexNotInGraph	Graph/src/tests/GraphTest.java	/^    public void testAddVertexNotInGraph() {$/;"	m	class:GraphTest
+testAddVertexNotInGraph	Graph/src/tests/WeightedAdjMatrixTest.java	/^    public void testAddVertexNotInGraph() {$/;"	m	class:WeightedAdjMatrixTest
+testAddVertexWithEdges	Graph/src/tests/WeightedAdjMatrixDiGraphTest.java	/^    public void testAddVertexWithEdges() {$/;"	m	class:WeightedAdjMatrixDiGraphTest
+testAddVertexWithEdges	Graph/src/tests/WeightedAdjMatrixTest.java	/^    public void testAddVertexWithEdges() {$/;"	m	class:WeightedAdjMatrixTest
+testAddVertexWithEdgesWeights	Graph/src/tests/WeightedAdjMatrixDiGraphTest.java	/^    public void testAddVertexWithEdgesWeights() {$/;"	m	class:WeightedAdjMatrixDiGraphTest
+testAddVertices	Graph/src/tests/AdjMatrixDiGraphTest.java	/^    public void testAddVertices() {$/;"	m	class:AdjMatrixDiGraphTest
+testAddVertices	Graph/src/tests/GraphTest.java	/^    public void testAddVertices() {$/;"	m	class:GraphTest
+testAddVertices	Graph/src/tests/WeightedAdjMatrixDiGraphTest.java	/^    public void testAddVertices() {$/;"	m	class:WeightedAdjMatrixDiGraphTest
+testAddVertices	Graph/src/tests/WeightedAdjMatrixTest.java	/^    public void testAddVertices() {$/;"	m	class:WeightedAdjMatrixTest
+testAddVerticesWithEdges	Graph/src/tests/AdjMatrixDiGraphTest.java	/^    public void testAddVerticesWithEdges() {$/;"	m	class:AdjMatrixDiGraphTest
+testAddVerticesWithEdges	Graph/src/tests/GraphTest.java	/^    public void testAddVerticesWithEdges() {$/;"	m	class:GraphTest
+testArrayStackOverloadedConstructor	Queue/src/tests/OutputRestrictedDequeTest.java	/^    public void testArrayStackOverloadedConstructor() {$/;"	m	class:OutputRestrictedDequeTest
+testConstructor	Graph/src/tests/AdjMatrixDiGraphTest.java	/^    public void testConstructor() {$/;"	m	class:AdjMatrixDiGraphTest
+testConstructor	Graph/src/tests/GraphTest.java	/^    public void testConstructor() {$/;"	m	class:GraphTest
+testConstructor	Graph/src/tests/WeightedAdjMatrixDiGraphTest.java	/^    public void testConstructor() {$/;"	m	class:WeightedAdjMatrixDiGraphTest
+testDequeue	Queue/src/tests/OutputRestrictedDequeTest.java	/^    public void testDequeue() {$/;"	m	class:OutputRestrictedDequeTest
+testDuplicateEdge	Graph/src/tests/GraphTest.java	/^    public void testDuplicateEdge() {$/;"	m	class:GraphTest
+testDuplicateEdge	Graph/src/tests/WeightedAdjMatrixTest.java	/^    public void testDuplicateEdge() {$/;"	m	class:WeightedAdjMatrixTest
+testDuplicateElement	Graph/src/tests/GraphTest.java	/^    public void testDuplicateElement() {$/;"	m	class:GraphTest
+testEnqueue	Queue/src/tests/OutputRestrictedDequeTest.java	/^    public void testEnqueue() {$/;"	m	class:OutputRestrictedDequeTest
+testEnqueueFront	Queue/src/tests/OutputRestrictedDequeTest.java	/^    public void testEnqueueFront() {$/;"	m	class:OutputRestrictedDequeTest
+testFirst	Queue/src/tests/OutputRestrictedDequeTest.java	/^    public void testFirst() {$/;"	m	class:OutputRestrictedDequeTest
+testGetPath	Graph/src/tests/AdjMatrixDiGraphTest.java	/^    public void testGetPath() {$/;"	m	class:AdjMatrixDiGraphTest
+testGetPath	Graph/src/tests/WeightedAdjMatrixDiGraphTest.java	/^    public void testGetPath() {$/;"	m	class:WeightedAdjMatrixDiGraphTest
+testGetPath	Graph/src/tests/WeightedAdjMatrixTest.java	/^    public void testGetPath() {$/;"	m	class:WeightedAdjMatrixTest
+testLinkedQueue	Queue/src/tests/OutputRestrictedDequeTest.java	/^    public void testLinkedQueue() {$/;"	m	class:OutputRestrictedDequeTest
+testMinimalPathAlgorithm	Graph/src/tests/WeightedAdjMatrixTest.java	/^    public void testMinimalPathAlgorithm() {$/;"	m	class:WeightedAdjMatrixTest
+testNegative2sComp	Stack/src/tests/ConvertTest.java	/^	public void testNegative2sComp() {$/;"	m	class:ConvertTest
+testNeighbors	Graph/src/tests/AdjMatrixDiGraphTest.java	/^    public void testNeighbors() {$/;"	m	class:AdjMatrixDiGraphTest
+testNeighbors	Graph/src/tests/GraphTest.java	/^    public void testNeighbors() {$/;"	m	class:GraphTest
+testNeighbors	Graph/src/tests/WeightedAdjMatrixDiGraphTest.java	/^    public void testNeighbors() {$/;"	m	class:WeightedAdjMatrixDiGraphTest
+testNeighbors	Graph/src/tests/WeightedAdjMatrixTest.java	/^    public void testNeighbors() {$/;"	m	class:WeightedAdjMatrixTest
+testNullAndMissingNeighbor	Graph/src/tests/GraphTest.java	/^    public void testNullAndMissingNeighbor() {$/;"	m	class:GraphTest
+testNullAndMissingNeighbor	Graph/src/tests/WeightedAdjMatrixTest.java	/^    public void testNullAndMissingNeighbor() {$/;"	m	class:WeightedAdjMatrixTest
+testPath	Graph/src/tests/AdjMatrixDiGraphTest.java	/^    public void testPath() {$/;"	m	class:AdjMatrixDiGraphTest
+testPath	Graph/src/tests/WeightedAdjMatrixDiGraphTest.java	/^    public void testPath() {$/;"	m	class:WeightedAdjMatrixDiGraphTest
+testPath	Graph/src/tests/WeightedAdjMatrixTest.java	/^    public void testPath() {$/;"	m	class:WeightedAdjMatrixTest
+testPathLength	Graph/src/tests/WeightedAdjMatrixTest.java	/^    public void testPathLength() {$/;"	m	class:WeightedAdjMatrixTest
+testPeekEmpty	Queue/src/tests/OutputRestrictedDequeTest.java	/^    public void testPeekEmpty() {$/;"	m	class:OutputRestrictedDequeTest
+testPopEmpty	Queue/src/tests/OutputRestrictedDequeTest.java	/^    public void testPopEmpty() {$/;"	m	class:OutputRestrictedDequeTest
+testPositive2sComp	Stack/src/tests/ConvertTest.java	/^	public void testPositive2sComp() {$/;"	m	class:ConvertTest
+testPositiveDecimal	Stack/src/tests/ConvertTest.java	/^	public void testPositiveDecimal() {$/;"	m	class:ConvertTest
+testRemoveEdgeExists	Graph/src/tests/AdjMatrixDiGraphTest.java	/^    public void testRemoveEdgeExists() {$/;"	m	class:AdjMatrixDiGraphTest
+testRemoveEdgeExists	Graph/src/tests/GraphTest.java	/^    public void testRemoveEdgeExists() {$/;"	m	class:GraphTest
+testRemoveEdgeExists	Graph/src/tests/WeightedAdjMatrixDiGraphTest.java	/^    public void testRemoveEdgeExists() {$/;"	m	class:WeightedAdjMatrixDiGraphTest
+testRemoveEdgeExists	Graph/src/tests/WeightedAdjMatrixTest.java	/^    public void testRemoveEdgeExists() {$/;"	m	class:WeightedAdjMatrixTest
+testRemoveEdgeNotExist	Graph/src/tests/AdjMatrixDiGraphTest.java	/^    public void testRemoveEdgeNotExist() {$/;"	m	class:AdjMatrixDiGraphTest
+testRemoveEdgeNotExist	Graph/src/tests/GraphTest.java	/^    public void testRemoveEdgeNotExist() {$/;"	m	class:GraphTest
+testRemoveEdgeNotExist	Graph/src/tests/WeightedAdjMatrixDiGraphTest.java	/^    public void testRemoveEdgeNotExist() {$/;"	m	class:WeightedAdjMatrixDiGraphTest
+testRemoveEdgeNotExist	Graph/src/tests/WeightedAdjMatrixTest.java	/^    public void testRemoveEdgeNotExist() {$/;"	m	class:WeightedAdjMatrixTest
+testRemoveNullAndMissingEdge	Graph/src/tests/GraphTest.java	/^    public void testRemoveNullAndMissingEdge() {$/;"	m	class:GraphTest
+testRemoveNullAndMissingEdge	Graph/src/tests/WeightedAdjMatrixTest.java	/^    public void testRemoveNullAndMissingEdge() {$/;"	m	class:WeightedAdjMatrixTest
+testRemoveNullAndMissingVertex	Graph/src/tests/GraphTest.java	/^    public void testRemoveNullAndMissingVertex() {$/;"	m	class:GraphTest
+testRemoveNullAndMissingVertex	Graph/src/tests/WeightedAdjMatrixTest.java	/^    public void testRemoveNullAndMissingVertex() {$/;"	m	class:WeightedAdjMatrixTest
+testRemoveVertex	Graph/src/tests/AdjMatrixDiGraphTest.java	/^    public void testRemoveVertex() {$/;"	m	class:AdjMatrixDiGraphTest
+testRemoveVertex	Graph/src/tests/WeightedAdjMatrixDiGraphTest.java	/^    public void testRemoveVertex() {$/;"	m	class:WeightedAdjMatrixDiGraphTest
+testRemoveVertex	Graph/src/tests/WeightedAdjMatrixTest.java	/^    public void testRemoveVertex() {$/;"	m	class:WeightedAdjMatrixTest
+testRemoveVertex1	Graph/src/tests/GraphTest.java	/^    public void testRemoveVertex1() {$/;"	m	class:GraphTest
+testRemoveVertex2	Graph/src/tests/GraphTest.java	/^    public void testRemoveVertex2() {$/;"	m	class:GraphTest
+testRemoveVertex3	Graph/src/tests/GraphTest.java	/^    public void testRemoveVertex3() {$/;"	m	class:GraphTest
+testSetWeightConstraint	Graph/src/tests/WeightedAdjMatrixDiGraphTest.java	/^    public void testSetWeightConstraint() {$/;"	m	class:WeightedAdjMatrixDiGraphTest
+testSetWeightConstraint	Graph/src/tests/WeightedAdjMatrixTest.java	/^    public void testSetWeightConstraint() {$/;"	m	class:WeightedAdjMatrixTest
+testbfsSearch	Graph/src/tests/GraphTest.java	/^    public void testbfsSearch() {$/;"	m	class:GraphTest
+testbfsSearchConatainsPathNotExists	Graph/src/tests/GraphTest.java	/^    public void testbfsSearchConatainsPathNotExists() {$/;"	m	class:GraphTest
+testbfsSearchContainsPathExists	Graph/src/tests/GraphTest.java	/^    public void testbfsSearchContainsPathExists() {$/;"	m	class:GraphTest
+testbfsSearchGetPathExists	Graph/src/tests/GraphTest.java	/^    public void testbfsSearchGetPathExists() {$/;"	m	class:GraphTest
+testbfsSearchGetPathLengthExists	Graph/src/tests/GraphTest.java	/^    public void testbfsSearchGetPathLengthExists() {$/;"	m	class:GraphTest
+testbfsSearchGetPathLengthNotExists	Graph/src/tests/GraphTest.java	/^    public void testbfsSearchGetPathLengthNotExists() {$/;"	m	class:GraphTest
+tests	Graph/src/tests/AdjMatrixDiGraphTest.java	/^package tests;$/;"	p
+tests	Graph/src/tests/GraphTest.java	/^package tests;$/;"	p
+tests	Graph/src/tests/WeightedAdjMatrixDiGraphTest.java	/^package tests;$/;"	p
+tests	Graph/src/tests/WeightedAdjMatrixTest.java	/^package tests;$/;"	p
+tests	Queue/src/tests/OutputRestrictedDequeTest.java	/^package tests;$/;"	p
+tests	Stack/src/tests/ConvertTest.java	/^package tests;$/;"	p
+toString	Graph/src/structures/AdjMatrixDiGraph.java	/^    public String toString() {$/;"	m	class:AdjMatrixDiGraph
+toString	Graph/src/structures/Pair.java	/^    public String toString() {$/;"	m	class:Pair
+toString	Graph/src/structures/Vertex.java	/^    public String toString() {$/;"	m	class:Vertex
+toString	Graph/src/structures/WeightedAdjMatrixGraph.java	/^    public String toString() {$/;"	m	class:WeightedAdjMatrixGraph
+toString	Queue/src/structures/LinkedOutputRestrictedDeque.java	/^    public String toString() {$/;"	m	class:LinkedOutputRestrictedDeque
+toString	Queue/src/structures/LinkedQueue.java	/^    public String toString() {$/;"	m	class:LinkedQueue
+toString	Tree/src/programs/ExpressionTreeOp.java	/^    public String toString()$/;"	m	class:ExpressionTreeOp
+toString	Tree/src/structures/AbstractArrayList.java	/^    public String toString() {$/;"	m	class:AbstractArrayList
+toString	Tree/src/structures/ArrayStack.java	/^    public String toString() {$/;"	m	class:ArrayStack
+toString	Tree/src/structures/BinaryTreeADT.java	/^    String toString();$/;"	m	interface:BinaryTreeADT
+toString	Tree/src/structures/LinkedBinaryTree.java	/^    public String toString() {$/;"	m	class:LinkedBinaryTree
+toString	Tree/src/structures/ListADT.java	/^    String toString();$/;"	m	interface:ListADT
+top	Graph/src/structures/ArrayMinHeap.java	/^    public E top() {$/;"	m	class:ArrayMinHeap
+top	Graph/src/structures/Heap.java	/^    E top();$/;"	m	interface:Heap
+v1	Graph/src/tests/AdjMatrixDiGraphTest.java	/^    private Vertex<String> v1;$/;"	f	class:AdjMatrixDiGraphTest	file:
+v1	Graph/src/tests/GraphTest.java	/^    private Vertex<String> v1;$/;"	f	class:GraphTest	file:
+v1	Graph/src/tests/WeightedAdjMatrixDiGraphTest.java	/^    private Vertex<String> v1, v2, v3, v4, v5, v6;$/;"	f	class:WeightedAdjMatrixDiGraphTest	file:
+v1	Graph/src/tests/WeightedAdjMatrixTest.java	/^    private Vertex<String> v1, v2, v3, v4, v5, v6;$/;"	f	class:WeightedAdjMatrixTest	file:
+v2	Graph/src/tests/AdjMatrixDiGraphTest.java	/^    private Vertex<String> v2;$/;"	f	class:AdjMatrixDiGraphTest	file:
+v2	Graph/src/tests/GraphTest.java	/^    private Vertex<String> v2;$/;"	f	class:GraphTest	file:
+v2	Graph/src/tests/WeightedAdjMatrixDiGraphTest.java	/^    private Vertex<String> v1, v2, v3, v4, v5, v6;$/;"	f	class:WeightedAdjMatrixDiGraphTest	file:
+v2	Graph/src/tests/WeightedAdjMatrixTest.java	/^    private Vertex<String> v1, v2, v3, v4, v5, v6;$/;"	f	class:WeightedAdjMatrixTest	file:
+v3	Graph/src/tests/AdjMatrixDiGraphTest.java	/^    private Vertex<String> v3;$/;"	f	class:AdjMatrixDiGraphTest	file:
+v3	Graph/src/tests/GraphTest.java	/^    private Vertex<String> v3;$/;"	f	class:GraphTest	file:
+v3	Graph/src/tests/WeightedAdjMatrixDiGraphTest.java	/^    private Vertex<String> v1, v2, v3, v4, v5, v6;$/;"	f	class:WeightedAdjMatrixDiGraphTest	file:
+v3	Graph/src/tests/WeightedAdjMatrixTest.java	/^    private Vertex<String> v1, v2, v3, v4, v5, v6;$/;"	f	class:WeightedAdjMatrixTest	file:
+v4	Graph/src/tests/AdjMatrixDiGraphTest.java	/^    private Vertex<String> v4;$/;"	f	class:AdjMatrixDiGraphTest	file:
+v4	Graph/src/tests/GraphTest.java	/^    private Vertex<String> v4;$/;"	f	class:GraphTest	file:
+v4	Graph/src/tests/WeightedAdjMatrixDiGraphTest.java	/^    private Vertex<String> v1, v2, v3, v4, v5, v6;$/;"	f	class:WeightedAdjMatrixDiGraphTest	file:
+v4	Graph/src/tests/WeightedAdjMatrixTest.java	/^    private Vertex<String> v1, v2, v3, v4, v5, v6;$/;"	f	class:WeightedAdjMatrixTest	file:
+v5	Graph/src/tests/GraphTest.java	/^    private Vertex<String> v5;$/;"	f	class:GraphTest	file:
+v5	Graph/src/tests/WeightedAdjMatrixDiGraphTest.java	/^    private Vertex<String> v1, v2, v3, v4, v5, v6;$/;"	f	class:WeightedAdjMatrixDiGraphTest	file:
+v5	Graph/src/tests/WeightedAdjMatrixTest.java	/^    private Vertex<String> v1, v2, v3, v4, v5, v6;$/;"	f	class:WeightedAdjMatrixTest	file:
+v6	Graph/src/tests/GraphTest.java	/^    private Vertex<String> v6;$/;"	f	class:GraphTest	file:
+v6	Graph/src/tests/WeightedAdjMatrixDiGraphTest.java	/^    private Vertex<String> v1, v2, v3, v4, v5, v6;$/;"	f	class:WeightedAdjMatrixDiGraphTest	file:
+v6	Graph/src/tests/WeightedAdjMatrixTest.java	/^    private Vertex<String> v1, v2, v3, v4, v5, v6;$/;"	f	class:WeightedAdjMatrixTest	file:

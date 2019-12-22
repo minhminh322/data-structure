@@ -1,0 +1,11 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - DisplayCostsMain",
+            "request": "launch",
+            "mainClass": "application.DisplayCostsMain",
+            "projectName": "username-assignment5"
+        }
+    ]
+}

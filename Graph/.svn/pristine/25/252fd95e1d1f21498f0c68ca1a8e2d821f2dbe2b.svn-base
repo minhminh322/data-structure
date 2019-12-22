@@ -1,0 +1,62 @@
+
+package structures;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.TreeMap;
+import programs.Word;
+
+/**
+ * HashMap implementation.
+ * @author minhphan
+ * @version Winter 2019
+ *
+ */
+public class HashMapADT {
+    /** Initialize empty <String, Word> map. **/
+    private HashMap<String, Word> myMap;
+    /** Initialize new TreeMap. **/
+    private Map<String, Word> myNewTree;
+
+    /**
+     * Default Constructor.
+     */
+    public HashMapADT() {
+        myMap = new HashMap<>();
+        myNewTree = new TreeMap<String, Word>();
+        
+    }
+
+    /**
+     * Store given List to HashMap.
+     * 
+     * @param theList pass the List.
+     */
+    public void addHashMap(final List<String> theList) {
+        Word wordValue;
+        /* place list words into a HashMap. */
+        for (String word : theList) {
+            wordValue = myMap.get(word);
+            if (wordValue == null) {
+                myMap.put(word, new Word(word));
+            } else {
+                wordValue.increaseWordCount();
+            }
+        }
+
+        final ValueComparator hashsort = new ValueComparator(myMap);
+        myNewTree = new TreeMap<String, Word>(hashsort);
+        myNewTree.putAll(myMap);
+
+    }
+    
+    /**
+     * Clear the map.
+     */
+    public void clearMap() {
+        myMap.clear();
+        myNewTree.clear();
+    }
+
+
+}

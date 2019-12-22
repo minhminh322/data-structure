@@ -1,0 +1,84 @@
+
+package structures;
+
+import java.util.List;
+import java.util.Map;
+import java.util.TreeMap;
+import programs.Word;
+
+/**
+ * TreeMap implementation.
+ * @author minhphan
+ * @version Winter 2019
+ *
+ */
+public class TreeMapADT {
+
+    /**
+     * Default Constructor.
+     */
+    public TreeMapADT() {
+
+    }
+
+    /**
+     * Store given List to TreeMap.
+     * 
+     * @param theList pass the List.
+     */
+    public void addTreeMap(final List<String> theList) {
+        final TreeMap<String, Word> treemap = new TreeMap<>();
+        Word wordValue;
+        /* place list words into a TreeMap. */
+        for (String word : theList) {
+            wordValue = treemap.get(word);
+            if (wordValue == null) {
+                treemap.put(word, new Word(word));
+            } else {
+                wordValue.increaseWordCount();
+            }
+        }
+
+        final ValueComparator treesort = new ValueComparator(treemap);
+        final Map<String, Word> newTree = new TreeMap<String, Word>(treesort);
+        newTree.putAll(treemap);
+
+        for (Word words : newTree.values()) {
+            System.out.println(words);
+        }
+    }
+
+    //
+    // /**
+    // * Inner static class for sort by value.
+    // * @author minhphan
+    // *
+    // */
+    // public static class ValueComparator implements Comparator<String> {
+    // /** base map. **/
+    // protected Map<String, Word> myBase;
+    //
+    // /**
+    // * Inner Constructor.
+    // * @param theBase pass the map.
+    // */
+    // ValueComparator(final Map<String, Word> theBase) {
+    // myBase = theBase;
+    // }
+    //
+    // /**
+    // * Method for comparing.
+    // * @param theK1 map key of object 1.
+    // * @param theK2 map key of object 2.
+    // * @return 1, -1, or 0.
+    // */
+    // public int compare(final String theK1, final String theK2) {
+    // if (myBase.get(theK1).getWordCount() >= myBase.get(theK2).getWordCount())
+    // {
+    // return -1;
+    // } else {
+    // return 1;
+    // } // returning 0 would merge keys
+    // }
+    // }
+}

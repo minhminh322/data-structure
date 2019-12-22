@@ -1,0 +1,51 @@
+/**
+ * 
+ */
+
+package programs;
+
+import java.util.Comparator;
+
+/**
+ * @author minhphan
+ *
+ */
+public class Word  {
+
+    private String myWord;
+    private int myWordCount;
+
+    public Word() {
+
+    }
+
+    public Word(String theWord) {
+        myWord = theWord;
+        myWordCount = 1;
+    }
+
+    public String getWord() {
+        return myWord;
+    }
+
+    public int getWordCount() {
+        return myWordCount;
+    }
+
+    public void increaseWordCount() {
+        myWordCount++;
+    }
+
+//    @Override
+//    public int compareTo(Word obj) {
+////        return Comparator.comparing(Word::getWordCount).compare(this, obj);
+//        return myWord.compareTo(obj.getWord());
+//    }
+
+    public String toString() {
+        return myWord + "\t (" + myWordCount + ")";
+    }
+    
+    
+
+}

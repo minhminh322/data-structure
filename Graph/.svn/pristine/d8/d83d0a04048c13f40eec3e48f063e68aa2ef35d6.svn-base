@@ -1,0 +1,161 @@
+/**
+ * 
+ */
+
+package programs;
+
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+import structures.HashMapADT;
+import structures.TreeMapADT;
+
+/**
+ * @author minhphan
+ * @version Winter 2019
+ */
+public final class WordMain {
+    
+    /** Constant number of iterations. **/
+    private static final int NUM_ITERATIONS = 10;
+    /** Constant number of ms. **/
+    private static final double NUMM = 1000d;
+    /** Scanner variable. */
+    private static Scanner myInput;
+    /** ArrayList to store string words. **/
+    private static List<String> wordsList;
+
+    /**
+     * Default Constructor. 
+     */
+    private WordMain() {
+
+    }
+
+    /**
+     * @param theArgs main.
+     */
+    public static void main(final String[] theArgs) {
+
+        System.out.println("Word counting is used in many applications, including"
+                        + " text analysis, text indexing, text compression, and cryptography."
+                        + "In this programming assignment, you will read a text file and"
+                        + " discover what words appear in that file and how many times \n"
+                           + "each word appears.\n" + "");
+
+        final TreeMapADT treemap = new TreeMapADT();
+        final HashMapADT hashmap = new HashMapADT();
+
+        @SuppressWarnings("resource")
+        final Scanner keyboard = new Scanner(System.in);
+
+        /** input file directory. */
+        File fileInput;
+        String filename;
+        String fileDirectory;
+        int topN;
+
+        do {
+            /* select any text file. */
+            System.out.println("Type the input filename(include extension) : ");
+            filename = keyboard.nextLine();
+            fileDirectory = "./" + filename;
+            fileInput = new File(fileDirectory);
+            // System.out.println("Try Again.");
+        }
+        while (!fileInput.exists());
+        do {
+            /* the "N" size of the top "N" list */
+            System.out.println("Type the top N words of the List: ");
+            topN = keyboard.nextInt();
+        }
+        while (topN < 0);
+        
+        /* call reader file method. */
+        readFile(fileInput);
+
+        
+        System.out.println("Done! \n");
+
+        long treeTime = 0;
+        for (int i = 0; i < NUM_ITERATIONS; i++) {
+            treemap.clearMap();
+            final long startTime = System.nanoTime();
+            treemap.addTreeMap(wordsList);
+            final long finishTime = System.nanoTime();
+            treeTime += (finishTime - startTime) / NUMM;
+        }
+        final int treeAve = (int) (treeTime / NUM_ITERATIONS);
+        System.out.println("Getting " + filename + " and using TreeMap Best time for "
+                        + "10 runs: " + treeAve + "ms\n");
+        
+        long hashTime = 0;
+        for (int i = 0; i < NUM_ITERATIONS; i++) {
+            hashmap.clearMap();
+            final long startTime = System.nanoTime();
+            hashmap.addHashMap(wordsList);
+            final long finishTime = System.nanoTime();
+            hashTime += (finishTime - startTime) / NUMM;
+        }
+        final int hashAve = (int) (hashTime / NUM_ITERATIONS);
+        System.out.println("--------------------------------------------------------------\n");
+        System.out.println("Using " + filename + " and using HashMap Best time for 10 runs: "
+                           + hashAve + "ms \n");
+       
+       
+        System.out.println("Total words: " + wordsList.size() + "\n");
+ 
+        /* List that store value of Map. */
+        final List<Word> test = new ArrayList<>();
+        for (Word words : treemap.getNewMap().values()) {
+            test.add(words);
+        }
+        /* Get top N words from user input. */
+        for (int i = 0; i < topN; i++) {
+            System.out.println(test.get(i));
+        }
+        
+    }
+
+    /**
+     * Helper method to read the file with FileReader.
+     * 
+     * @param theInput file input.
+     */
+    public static void readFile(final File theInput) {
+        FileReader reader = null;
+        try {
+            reader = new FileReader(theInput);
+        } catch (final FileNotFoundException e) {
+
+            e.printStackTrace();
+        }
+        /* Scan the input file. */
+        myInput = new Scanner(reader);
+
+        /* Store words into an ArrayList. */
+        wordsList = new ArrayList<>();
+        while (myInput.hasNext()) {
+            wordsList.add(replaceSpecialCharacters(myInput.next()));
+        }
+    }
+    
+    /**
+     * Helper method to ignore case and punctuation.
+     * @param theOrigin word from scanner
+     * @return word after replace.
+     */
+    public static String replaceSpecialCharacters(final String theOrigin) {
+        final char[] removal = new char[] {'?', '"', '.', ',', '!', '\''};
+        String newWord = theOrigin;
+        for (char character : removal) {
+            newWord = newWord.replace(character, ' ');
+        }
+        return newWord.trim();
+    }
+
+}
+

@@ -1,0 +1,77 @@
+
+package structures;
+
+import java.util.List;
+import java.util.Map;
+import java.util.TreeMap;
+import programs.Word;
+
+/**
+ * TreeMap implementation.
+ * @author minhphan
+ * @version Winter 2019
+ *
+ */
+public class TreeMapADT {
+    /** Initialize empty <String, Word> map. **/
+    private TreeMap<String, Word> myMap;
+    /** Initialize new TreeMap. **/
+    private Map<String, Word> myNewTree;
+
+    /**
+     * Default Constructor.
+     */
+    public TreeMapADT() {
+        myMap = new TreeMap<>();
+        myNewTree = new TreeMap<String, Word>();
+        
+    }
+
+    /**
+     * Store given List to TreeMap.
+     * 
+     * @param theList pass the List.
+     */
+    public void addTreeMap(final List<String> theList) {
+        Word wordValue;
+        /* place list words into a TreeMap. */
+        for (String word : theList) {
+            wordValue = myMap.get(word);
+            if (wordValue == null) {
+                myMap.put(word, new Word(word));
+            } else {
+                wordValue.increaseWordCount();
+            }
+        }
+
+        final ValueComparator treesort = new ValueComparator(myMap);
+        myNewTree = new TreeMap<String, Word>(treesort);
+        myNewTree.putAll(myMap);
+
+    }
+    
+    /**
+     * Clear the map.
+     */
+    public void clearMap() {
+        myMap.clear();
+        myNewTree.clear();
+    }
+    
+    /**
+     * Getter method to get the new map.
+     * @return new map.
+     */
+    public Map<String, Word> getNewMap() {
+        return myNewTree;
+    }
+    
+    /**
+     * Getter method to get number of key in map.
+     * @return key size.
+     */
+    public int getKeySize() {
+        return myNewTree.keySet().size();
+    }
+    
+}

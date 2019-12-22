@@ -1,0 +1,140 @@
+/**
+ * 
+ */
+
+package programs;
+
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.ArrayList;
+import java.util.Comparator;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.Scanner;
+import java.util.TreeMap;
+
+/**
+ * @author minhphan
+ *
+ */
+public class WordMain {
+
+    public WordMain() {
+
+    }
+
+    /**
+     * @param theArgs main.
+     */
+    public static void main(final String[] theArgs) {
+        // TODO Auto-generated method stub
+
+        final TreeMap<String, Word> treemap = new TreeMap<>();
+        final HashMap<String, Word> hashmap = new HashMap<>();
+        final List<String> wordsList = new ArrayList<>();
+
+        Word wordValue;
+        Scanner sc = null;
+        /* Scan the input file. */
+        try {
+            sc = new Scanner(new File("ASH.txt"));
+        } catch (final FileNotFoundException e) {
+            e.printStackTrace();
+        }
+        /* Store words into an ArrayList. */
+        while (sc.hasNext()) {
+            wordsList.add(sc.next());
+        }
+
+        /* place list words into a TreeMap. */
+        for (String word : wordsList) {
+            wordValue = treemap.get(word);
+            if (wordValue == null) {
+                treemap.put(word, new Word(word));
+            } else {
+                wordValue.increaseWordCount();
+            }
+        }
+
+        final ValueComparator treesort = new ValueComparator(treemap);
+        final Map<String, Word> newTree = new TreeMap<String, Word>(treesort);
+        newTree.putAll(treemap);
+
+        
+
+        /* place list of words into a HashMap. */
+        for (String word : wordsList) {
+            wordValue = hashmap.get(word);
+            if (wordValue == null) {
+                hashmap.put(word, new Word(word));
+            } else {
+                wordValue.increaseWordCount();
+            }
+        }
+
+        final ValueComparator hashsort = new ValueComparator(treemap);
+        final Map<String, Word> newHash = new TreeMap<String, Word>(hashsort);
+        newHash.putAll(treemap);
+
+        for (Word words : newHash.values()) {
+            System.out.println(words);
+        }
+
+        
+    }
+    
+    /**
+     * Inner static class for sort by value.
+     * @author minhphan
+     *
+     */
+    static class ValueComparator implements Comparator<String> {
+        /** base map. **/
+        protected Map<String, Word> myBase;
+        
+        /**
+         * Inner Constructor.
+         * @param theBase pass the map.
+         */
+        ValueComparator(final Map<String, Word> theBase) {
+            myBase = theBase;
+        }
+
+        /**
+         * Method for comparing.
+         * @param theK1 map key of object 1.
+         * @param theK2 map key of object 2.
+         * @return 1, -1, or 0.
+         */
+        public int compare(final String theK1, final String theK2) {
+            if (myBase.get(theK1).getWordCount() >= myBase.get(theK2).getWordCount()) {
+                return -1;
+            } else {
+                return 1;
+            } // returning 0 would merge keys
+        }
+    }
+    
+
+}
+
+
+
+
+
+//
+//public static <String, Word extends Comparable<Word>> Map<String, Word> sortByValues(final Map<String, Word> map) {
+//  Comparator<String> valueComparator =  new Comparator<String>() {
+//      public int compare(String k1, String k2) {
+//          if (((programs.Word) map.get(k1)).getWordCount() >= ((programs.Word) map.get(k2)).getWordCount()) {
+//              return 1;
+//          } else {
+//              return -1;
+//          } // returning 0 would merge keys
+//      }
+//  };
+//  Map<String, Word> sortedByValues = new TreeMap<String, Word>(valueComparator);
+//  sortedByValues.putAll(map);
+//  return sortedByValues;
+//}

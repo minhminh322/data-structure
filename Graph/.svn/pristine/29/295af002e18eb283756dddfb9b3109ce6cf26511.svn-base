@@ -1,0 +1,124 @@
+/**
+ * 
+ */
+
+package programs;
+
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.util.ArrayList;
+import java.util.Comparator;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.Scanner;
+import java.util.TreeMap;
+
+import structures.HashMapADT;
+import structures.TreeMapADT;
+
+/**
+ * @author minhphan
+ *
+ */
+public class WordMain {
+
+    private static final int NUM_ITERATIONS = 10;
+    /** Scanner variable. */
+    private static Scanner myInput;
+    
+    private static List<String> wordsList;
+
+    public WordMain() {
+
+    }
+
+    /**
+     * @param theArgs main.
+     */
+    public static void main(final String[] theArgs) {
+        // TODO Auto-generated method stub
+
+        // final TreeMap<String, Word> treemap = new TreeMap<>();
+        // final HashMap<String, Word> hashmap = new HashMap<>();
+
+        System.out.println("Word counting is used in many applications, including text analysis, text indexing, text compression, and cryptography. \n"
+                           + "In this programming assignment, you will read a text file and discover what words appear in that file and how many times \n"
+                           + "each word appears.\n" + "");
+
+        TreeMapADT treemap = new TreeMapADT();
+        HashMapADT hashmap = new HashMapADT();
+
+        Scanner keyboard = new Scanner(System.in);
+
+        /** input file directory. */
+        File fileInput;
+        String filename;
+        String fileDirectory;
+
+        do {
+            System.out.println("Type the input filename(include extension) : ");
+            filename = keyboard.nextLine();
+            fileDirectory = "./" + filename;
+
+            fileInput = new File(fileDirectory);
+            // System.out.println("Try Again.");
+        }
+        while (!fileInput.exists());
+
+        readFile(fileInput);
+        System.out.println("Done! \n");
+
+        treemap.addTreeMap(wordsList);
+//        hashmap.addHashMap(wordsList);
+        
+
+        
+    }
+
+    public static void readFile(final File theInput) {
+        /* Scan the input file. */
+        try {
+            myInput = new Scanner(theInput);
+        }
+        catch (final FileNotFoundException e) {
+            e.printStackTrace();
+        }
+        /* Store words into an ArrayList. */
+        
+        wordsList = new ArrayList<>();
+        while (myInput.hasNext()) {
+            wordsList.add(myInput.next());
+        }
+    }
+    
+
+}
+
+
+//long totaltime = 0;
+//for (int i = 0; i < NUM_ITERATIONS; i++) {
+//  long startTime = System.nanoTime();
+//
+//  long finishTime = System.nanoTime();
+//  totaltime += finishTime - startTime;
+//}
+
+
+
+//
+//public static <String, Word extends Comparable<Word>> Map<String, Word> sortByValues(final Map<String, Word> map) {
+//  Comparator<String> valueComparator =  new Comparator<String>() {
+//      public int compare(String k1, String k2) {
+//          if (((programs.Word) map.get(k1)).getWordCount() >= ((programs.Word) map.get(k2)).getWordCount()) {
+//              return 1;
+//          } else {
+//              return -1;
+//          } // returning 0 would merge keys
+//      }
+//  };
+//  Map<String, Word> sortedByValues = new TreeMap<String, Word>(valueComparator);
+//  sortedByValues.putAll(map);
+//  return sortedByValues;
+//}
