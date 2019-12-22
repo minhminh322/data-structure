@@ -1,0 +1,383 @@
+package id00;
+
+import java.io.PrintWriter;
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
+import java.util.TreeSet;
+
+public class Grader
+{
+	private static void checkSetMapValue(PrintWriter writer, Set<String> solution)
+	{	
+		Iterator<String> itersol = solution.iterator(); // iterator - solution
+		while (itersol.hasNext())
+		{
+			Score.total++;
+			writer.printf("\ncould not find %s in the map", itersol.next());
+		}
+	}
+	
+	private static void checkSetMapValue(PrintWriter writer, Set<String> solution, Set<String> student)
+	{	
+		Iterator<String> itersol = solution.iterator(); // iterator - solution
+		while (itersol.hasNext())
+		{
+			String element = itersol.next();
+			if (student.contains(element))
+				Score.correct++;
+			else writer.printf("\ncould not find %s in the map", element);
+			Score.total++;
+		}
+	}
+	
+	// STEP 1 - PART 2
+	public static void checkSetMap(PrintWriter writer, Map<Integer, Set<String>> solution, Map<Integer, Set<String>> student)
+	{
+		Iterator<Integer> itersol = solution.keySet().iterator(); // iterator - solution
+		Iterator<Integer> iterstd = student.keySet().iterator(); // iterator - student
+		
+		// A - B
+		while (itersol.hasNext())
+		{
+			Integer key = itersol.next();
+			Set<String> setstd = student.get(key); // set of string - student
+			
+			if (setstd == null)
+				checkSetMapValue(writer, solution.get(key));
+			else checkSetMapValue(writer, solution.get(key), student.get(key));
+		}
+		
+		// B - A
+		while (iterstd.hasNext())
+		{
+			Integer key = iterstd.next();
+			Set<String> setsol = solution.get(key); // set of string - student
+			
+			if (setsol == null)
+				checkSetMapValue(writer, student.get(key));
+			else checkSetMapValue(writer, student.get(key), solution.get(key));
+		}
+	}
+	
+	
+	
+	
+
+	private static void checkListMapValue(PrintWriter writer, List<String> solution)
+	{	
+		Iterator<String> itersol = solution.iterator(); // iterator - solution
+		while (itersol.hasNext())
+		{
+			Score.total++;
+			writer.printf("\ncould not find %s in the map", itersol.next());
+		}
+	}
+	
+	private static void checkListMapValue(PrintWriter writer, List<String> solution, Set<String> student)
+	{	
+		Iterator<String> itersol = solution.iterator(); // iterator - solution
+		while (itersol.hasNext())
+		{
+			String element = itersol.next();
+			if (student.contains(element))
+				Score.correct++;
+			else writer.printf("\ncould not find %s in the map", element);
+			Score.total++;
+		}
+	}
+	
+	private static void checkListMapValue2(PrintWriter writer, List<String> solution, List<String> student)
+	{	
+		Iterator<String> itersol = solution.iterator(); // iterator - solution
+		while (itersol.hasNext())
+		{
+			String element = itersol.next();
+			if (student.contains(element))
+				Score.correct++;
+			else writer.printf("\ncould not find %s in the map", element);
+			Score.total++;
+		}
+	}
+	
+	private static void checkListMapValue(PrintWriter writer, Set<String> student)
+	{	
+		Iterator<String> itersol = student.iterator(); // iterator - solution
+		while (itersol.hasNext())
+		{
+			Score.total++;
+			writer.printf("\ncould not find %s in the map", itersol.next());
+		}
+	}
+	
+	private static void checkListMapValue(PrintWriter writer, Set<String> student, List<String> solution)
+	{	
+		Iterator<String> itersol = solution.iterator(); // iterator - solution
+		while (itersol.hasNext())
+		{
+			String element = itersol.next();
+			if (student.contains(element))
+				Score.correct++;
+			else writer.printf("\ncould not find %s in the map", element);
+			Score.total++;
+		}
+	}
+	
+	// STEP 2 - PART 2
+	public static void checkListMap(PrintWriter writer, Map<String, List<String>> solution, Map<String, Set<String>> student)
+	{
+		Iterator<String> itersol = solution.keySet().iterator(); // iterator - solution
+		Iterator<String> iterstd = student.keySet().iterator(); // iterator - student
+		
+		// A - B
+		while (itersol.hasNext())
+		{
+			String key = itersol.next();
+			Set<String> setstd = student.get(key); // set of string - student
+			
+			if (setstd == null)
+				checkListMapValue(writer, solution.get(key));
+			else checkListMapValue(writer, solution.get(key), student.get(key));
+		}
+		
+		// B - A
+		while (iterstd.hasNext())
+		{
+			String key = iterstd.next();
+			List<String> setsol = solution.get(key); // set of string - student
+			
+			if (setsol == null)
+				checkListMapValue(writer, student.get(key));
+			else checkListMapValue(writer, student.get(key), solution.get(key));
+		}
+	}
+	
+	// STEP 2 - PART 2
+	public static void checkListMap3(PrintWriter writer, Map<String, List<String>> solution, Map<String, List<String>> student)
+	{
+		Iterator<String> itersol = solution.keySet().iterator(); // iterator - solution
+		Iterator<String> iterstd = student.keySet().iterator(); // iterator - student
+		
+		// A - B
+		while (itersol.hasNext())
+		{
+			String key = itersol.next();
+			List<String> setstd = student.get(key); // set of string - student
+			
+			if (setstd == null)
+				checkListMapValue(writer, solution.get(key));
+			else checkListMapValue2(writer, solution.get(key), student.get(key));
+		}
+		
+		// B - A
+		while (iterstd.hasNext())
+		{
+			String key = iterstd.next();
+			List<String> setsol = solution.get(key); // set of string - student
+			
+			if (setsol == null)
+				checkListMapValue(writer, student.get(key));
+			else checkListMapValue2(writer, student.get(key), solution.get(key));
+		}
+	}
+	
+	// STEP 2 - PART 2
+	public static void checkListMap2(PrintWriter writer, Map<Integer, List<String>> student, Map<Integer, Set<String>> solution)
+	{
+		Iterator<Integer> itersol = solution.keySet().iterator(); // iterator - solution
+		Iterator<Integer> iterstd = student.keySet().iterator(); // iterator - student
+		
+		// A - B
+		while (itersol.hasNext())
+		{
+			Integer key = itersol.next();
+			List<String> setstd = student.get(key); // set of string - student
+			
+			if (setstd == null)
+				checkListMapValue(writer, solution.get(key));
+			else checkListMapValue(writer, solution.get(key), student.get(key));
+		}
+		
+		// B - A
+		while (iterstd.hasNext())
+		{
+			Integer key = iterstd.next();
+			Set<String> setsol = solution.get(key); // set of string - student
+			
+			if (setsol == null)
+				checkListMapValue(writer, student.get(key));
+			else checkListMapValue(writer, student.get(key), solution.get(key));
+		}
+	}
+	
+	// STEP 2 - PART 6
+	public static void checkDistanceCalculation(int distance1, int distance2)
+	{
+		if (distance1 == distance2)
+			Score.correct++;
+		Score.total++;
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	public static List<Set<String>> getSetOfStringFromLengthMap(Map<Integer, Set<String>> map)
+	{
+		List<Set<String>> list = new ArrayList<Set<String>>();
+		
+		if (map == null)
+			return list;
+
+		Iterator<Integer> iterstd = map.keySet().iterator(); // iterator - student
+		while (iterstd.hasNext())
+		{
+			Integer key = iterstd.next();
+			list.add(map.get(key)); // set of strings
+		}
+		
+		return list;
+	}
+	
+	public static List<List<String>> getSetOfStringFromLengthMap2(Map<Integer, List<String>> map)
+	{
+		List<List<String>> list = new ArrayList<List<String>>();
+		
+		if (map == null)
+			return list;
+
+		Iterator<Integer> iterstd = map.keySet().iterator(); // iterator - student
+		while (iterstd.hasNext())
+		{
+			Integer key = iterstd.next();
+			list.add(map.get(key)); // set of strings
+		}
+		
+		return list;
+	}
+	
+	public static List<Set<String>> getSetOfStringFromDistanceMap(Map<String, Set<String>> map)
+	{
+		List<Set<String>> list = new ArrayList<Set<String>>();
+		
+		if (map == null)
+			return list;
+
+		Iterator<String> iterstd = map.keySet().iterator(); // iterator - student
+		while (iterstd.hasNext())
+		{
+			String key = iterstd.next();
+			list.add(map.get(key)); // set of strings
+		}
+		
+		return list;
+	}
+	
+	public static List<String> getWordFromLengthMap(Map<Integer, Set<String>> map)
+	{
+		List<String> list = new ArrayList<String>();
+		
+		if (map == null)
+			return list;
+
+		Iterator<Integer> iterstd = map.keySet().iterator(); // iterator - student
+		while (iterstd.hasNext())
+		{
+			Integer key = iterstd.next();
+			Set<String> ss = map.get(key);
+			for (String s: ss)
+				list.add(s);
+		}
+		
+		return list;
+	}
+	public static List<String> getWordFromLengthMap2(Map<Integer, List<String>> map)
+	{
+		List<String> list = new ArrayList<String>();
+		
+		if (map == null)
+			return list;
+
+		Iterator<Integer> iterstd = map.keySet().iterator(); // iterator - student
+		while (iterstd.hasNext())
+		{
+			Integer key = iterstd.next();
+			List<String> ss = map.get(key);
+			for (String s: ss)
+				list.add(s);
+		}
+		
+		return list;
+	}
+	
+	public static List<String> getWordFromLengthMap(Map<Integer, Set<String>> map, int length)
+	{
+		List<String> list = new ArrayList<String>();
+		
+		if (map == null)
+			return list;
+
+		Set<String> ss = map.get(length);
+		for (String s: ss)
+			list.add(s);
+		
+		return list;
+	}
+	
+	public static List<String> getWordFromLengthMap2(Map<Integer, List<String>> map, int length)
+	{
+		List<String> list = new ArrayList<String>();
+		
+		if (map == null)
+			return list;
+
+		List<String> ss = map.get(length);
+		for (String s: ss)
+			list.add(s);
+		
+		return list;
+	}
+	
+
+	
+	public static Set<String> convertListToSet(List<String> list)
+	{
+		Set<String> set = new TreeSet<>();
+		for (String string: list)
+			set.add(string);
+		return set;
+	}
+	
+	public static List<String> convertListToSet(Set<String> set)
+	{
+		List<String> list = new ArrayList<>();
+		for (String string: set)
+			list.add(string);
+		return list;
+	}
+	
+	
+	
+	public static void printScore(PrintWriter writer, String message)
+	{
+		double result = (double) Score.correct / Score.total * 100;
+		writer.printf("\n" + message + ": %.2f %%", result);
+		writer.printf("\n===========================================================");
+		Score.reset();
+	}
+}

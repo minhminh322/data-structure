@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="3.1.11" sequence="1" timestamp="1551762999140" analysisTimestamp="1551762996676" release="">
+  <Project projectName="minh1212-assignment4">
+    <Jar>/Users/minhphan/TCSS 342/hw4-project.zip_expanded/username-assignment4/bin</Jar>
+    <AuxClasspathEntry>/Users/minhphan/TCSS 342/hw4-project.zip_expanded/username-assignment4/bin</AuxClasspathEntry>
+    <AuxClasspathEntry>/Users/minhphan/.p2/pool/plugins/org.junit_4.12.0.v201504281640/junit.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/Users/minhphan/.p2/pool/plugins/org.hamcrest.core_1.3.0.v20180420-1519.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/Library/Java/JavaVirtualMachines/jdk-11.jdk/Contents/Home/lib/jrt-fs.jar</AuxClasspathEntry>
+    <SrcDir>/Users/minhphan/TCSS 342/hw4-project.zip_expanded/username-assignment4/src</SrcDir>
+  </Project>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" rank="19" abbrev="Dm" category="I18N" first="1">
+    <Class classname="programs.WordMain">
+      <SourceLine classname="programs.WordMain" sourcefile="WordMain.java" sourcepath="programs/WordMain.java"/>
+    </Class>
+    <Method classname="programs.WordMain" name="main" signature="([Ljava/lang/String;)V" isStatic="true">
+      <SourceLine classname="programs.WordMain" start="43" end="121" startBytecode="0" endBytecode="1067" sourcefile="WordMain.java" sourcepath="programs/WordMain.java"/>
+    </Method>
+    <Method classname="java.util.Scanner" name="&lt;init&gt;" signature="(Ljava/io/InputStream;)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.util.Scanner" start="566" end="567" startBytecode="0" endBytecode="71" sourcefile="Scanner.java" sourcepath="java/util/Scanner.java"/>
+    </Method>
+    <SourceLine classname="programs.WordMain" start="53" end="53" startBytecode="31" endBytecode="31" sourcefile="WordMain.java" sourcepath="programs/WordMain.java"/>
+    <SourceLine classname="programs.WordMain" start="53" end="53" startBytecode="31" endBytecode="31" sourcefile="WordMain.java" sourcepath="programs/WordMain.java"/>
+  </BugInstance>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" rank="19" abbrev="Dm" category="I18N" first="1">
+    <Class classname="programs.WordMain">
+      <SourceLine classname="programs.WordMain" sourcefile="WordMain.java" sourcepath="programs/WordMain.java"/>
+    </Class>
+    <Method classname="programs.WordMain" name="readFile" signature="(Ljava/io/File;)V" isStatic="true">
+      <SourceLine classname="programs.WordMain" start="129" end="144" startBytecode="0" endBytecode="203" sourcefile="WordMain.java" sourcepath="programs/WordMain.java"/>
+    </Method>
+    <Method classname="java.io.FileReader" name="&lt;init&gt;" signature="(Ljava/io/File;)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.io.FileReader" start="75" end="76" startBytecode="0" endBytecode="68" sourcefile="FileReader.java" sourcepath="java/io/FileReader.java"/>
+    </Method>
+    <SourceLine classname="programs.WordMain" start="131" end="131" startBytecode="7" endBytecode="7" sourcefile="WordMain.java" sourcepath="programs/WordMain.java"/>
+    <SourceLine classname="programs.WordMain" start="131" end="131" startBytecode="7" endBytecode="7" sourcefile="WordMain.java" sourcepath="programs/WordMain.java"/>
+  </BugInstance>
+  <BugInstance type="NP_NULL_PARAM_DEREF" priority="2" rank="8" abbrev="NP" category="CORRECTNESS" first="1">
+    <Class classname="programs.WordMain">
+      <SourceLine classname="programs.WordMain" sourcefile="WordMain.java" sourcepath="programs/WordMain.java"/>
+    </Class>
+    <Method classname="programs.WordMain" name="readFile" signature="(Ljava/io/File;)V" isStatic="true">
+      <SourceLine classname="programs.WordMain" start="129" end="144" startBytecode="0" endBytecode="203" sourcefile="WordMain.java" sourcepath="programs/WordMain.java"/>
+    </Method>
+    <Method classname="java.util.Scanner" name="&lt;init&gt;" signature="(Ljava/lang/Readable;)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.util.Scanner" start="554" end="555" startBytecode="0" endBytecode="72" sourcefile="Scanner.java" sourcepath="java/util/Scanner.java"/>
+    </Method>
+    <Int value="1" role="INT_MAYBE_NULL_ARG"/>
+    <LocalVariable name="reader" register="1" pc="11" role="LOCAL_VARIABLE_VALUE_OF"/>
+    <SourceLine classname="programs.WordMain" start="137" end="137" startBytecode="24" endBytecode="24" sourcefile="WordMain.java" sourcepath="programs/WordMain.java" role="SOURCE_LINE_INVOKED"/>
+    <SourceLine classname="programs.WordMain" start="129" end="129" startBytecode="0" endBytecode="0" sourcefile="WordMain.java" sourcepath="programs/WordMain.java" role="SOURCE_LINE_NULL_VALUE"/>
+    <SourceLine classname="programs.WordMain" start="132" end="132" startBytecode="14" endBytecode="14" sourcefile="WordMain.java" sourcepath="programs/WordMain.java" role="SOURCE_LINE_KNOWN_NULL"/>
+    <SourceLine classname="programs.WordMain" start="134" end="134" startBytecode="16" endBytecode="16" sourcefile="WordMain.java" sourcepath="programs/WordMain.java" role="SOURCE_LINE_KNOWN_NULL"/>
+    <Property name="edu.umd.cs.findbugs.detect.NullDerefProperty.ALWAYS_ON_EXCEPTION_PATH" value="true"/>
+  </BugInstance>
+  <BugInstance type="OBL_UNSATISFIED_OBLIGATION" priority="2" rank="20" abbrev="OBL" category="EXPERIMENTAL" first="1">
+    <Class classname="programs.WordMain">
+      <SourceLine classname="programs.WordMain" sourcefile="WordMain.java" sourcepath="programs/WordMain.java"/>
+    </Class>
+    <Method classname="programs.WordMain" name="readFile" signature="(Ljava/io/File;)V" isStatic="true">
+      <SourceLine classname="programs.WordMain" start="129" end="144" startBytecode="0" endBytecode="203" sourcefile="WordMain.java" sourcepath="programs/WordMain.java"/>
+    </Method>
+    <Class classname="java.io.Reader" role="CLASS_REFTYPE">
+      <SourceLine classname="java.io.Reader" sourcefile="Reader.java" sourcepath="java/io/Reader.java"/>
+    </Class>
+    <Int value="1" role="INT_OBLIGATIONS_REMAINING"/>
+    <SourceLine classname="programs.WordMain" start="131" end="131" startBytecode="7" endBytecode="7" sourcefile="WordMain.java" sourcepath="programs/WordMain.java" role="SOURCE_LINE_OBLIGATION_CREATED"/>
+    <SourceLine classname="programs.WordMain" start="132" end="132" startBytecode="11" endBytecode="11" sourcefile="WordMain.java" sourcepath="programs/WordMain.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <SourceLine classname="programs.WordMain" start="137" end="137" startBytecode="19" endBytecode="19" sourcefile="WordMain.java" sourcepath="programs/WordMain.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <SourceLine classname="programs.WordMain" start="140" end="140" startBytecode="30" endBytecode="30" sourcefile="WordMain.java" sourcepath="programs/WordMain.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <SourceLine classname="programs.WordMain" start="141" end="141" startBytecode="40" endBytecode="40" sourcefile="WordMain.java" sourcepath="programs/WordMain.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <SourceLine classname="programs.WordMain" start="144" end="144" startBytecode="70" endBytecode="70" sourcefile="WordMain.java" sourcepath="programs/WordMain.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <String value="{Reader x 1}" role="STRING_REMAINING_OBLIGATIONS"/>
+  </BugInstance>
+  <BugInstance type="SE_COMPARATOR_SHOULD_BE_SERIALIZABLE" priority="2" rank="19" abbrev="Se" category="BAD_PRACTICE" first="1">
+    <Class classname="structures.ValueComparator">
+      <SourceLine classname="structures.ValueComparator" start="1" end="39" sourcefile="ValueComparator.java" sourcepath="structures/ValueComparator.java"/>
+    </Class>
+  </BugInstance>
+  <Errors errors="0" missingClasses="0"></Errors>
+  <FindBugsSummary timestamp="Mon, 4 Mar 2019 21:16:36 -0800" total_classes="5" referenced_classes="51" total_bugs="5" total_size="150" num_packages="2" java_version="11" vm_version="11+28" cpu_seconds="17.85" clock_seconds="2.47" peak_mbytes="517.95" alloc_mbytes="1024.00" gc_seconds="0.12" priority_2="3" priority_1="2">
+    <PackageStats package="programs" total_bugs="4" total_types="2" total_size="88" priority_2="2" priority_1="2">
+      <ClassStats class="programs.Word" sourceFile="Word.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="programs.WordMain" sourceFile="WordMain.java" interface="false" size="68" bugs="4" priority_2="2" priority_1="2"/>
+    </PackageStats>
+    <PackageStats package="structures" total_bugs="1" total_types="3" total_size="62" priority_2="1">
+      <ClassStats class="structures.HashMapADT" sourceFile="HashMapADT.java" interface="false" size="23" bugs="0"/>
+      <ClassStats class="structures.TreeMapADT" sourceFile="TreeMapADT.java" interface="false" size="27" bugs="0"/>
+      <ClassStats class="structures.ValueComparator" sourceFile="ValueComparator.java" interface="false" size="12" bugs="1" priority_2="1"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="705" invocations="575" avgMicrosecondsPerInvocation="1226" maxMicrosecondsPerInvocation="61696" standardDeviationMicrosecondsPerInvocation="3759"/>
+      <ClassProfile name="de.tobject.findbugs.builder.FindBugs2Eclipse" totalMilliseconds="305" invocations="2" avgMicrosecondsPerInvocation="152557" maxMicrosecondsPerInvocation="278749" standardDeviationMicrosecondsPerInvocation="126192"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="165" invocations="51" avgMicrosecondsPerInvocation="3249" maxMicrosecondsPerInvocation="36232" standardDeviationMicrosecondsPerInvocation="6643"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="118" invocations="576" avgMicrosecondsPerInvocation="205" maxMicrosecondsPerInvocation="16160" standardDeviationMicrosecondsPerInvocation="979"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="100" invocations="21" avgMicrosecondsPerInvocation="4801" maxMicrosecondsPerInvocation="94648" standardDeviationMicrosecondsPerInvocation="20094"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="85" invocations="51" avgMicrosecondsPerInvocation="1672" maxMicrosecondsPerInvocation="14815" standardDeviationMicrosecondsPerInvocation="2886"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="70" invocations="189" avgMicrosecondsPerInvocation="373" maxMicrosecondsPerInvocation="3446" standardDeviationMicrosecondsPerInvocation="429"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="63" invocations="21" avgMicrosecondsPerInvocation="3034" maxMicrosecondsPerInvocation="23835" standardDeviationMicrosecondsPerInvocation="5682"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="56" invocations="538" avgMicrosecondsPerInvocation="105" maxMicrosecondsPerInvocation="10461" standardDeviationMicrosecondsPerInvocation="527"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="54" invocations="21" avgMicrosecondsPerInvocation="2600" maxMicrosecondsPerInvocation="28482" standardDeviationMicrosecondsPerInvocation="6090"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="49" invocations="21" avgMicrosecondsPerInvocation="2339" maxMicrosecondsPerInvocation="20541" standardDeviationMicrosecondsPerInvocation="4571"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="44" invocations="83" avgMicrosecondsPerInvocation="532" maxMicrosecondsPerInvocation="14855" standardDeviationMicrosecondsPerInvocation="1948"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="43" invocations="51" avgMicrosecondsPerInvocation="852" maxMicrosecondsPerInvocation="5877" standardDeviationMicrosecondsPerInvocation="1280"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History>
+    <AppVersion sequence="0" timestamp="1551762999140" release="" codeSize="0" numClasses="0"/>
+  </History>
+</BugCollection>

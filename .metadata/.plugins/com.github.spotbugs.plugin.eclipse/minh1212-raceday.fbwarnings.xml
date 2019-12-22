@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="3.1.10" sequence="1" timestamp="1548814746744" analysisTimestamp="1548814741333" release="">
+  <Project projectName="minh1212-raceday">
+    <Jar>/Users/minhphan/Desktop/TCSS 305/minh1212-raceday/bin</Jar>
+    <AuxClasspathEntry>/Users/minhphan/Desktop/TCSS 305/minh1212-raceday/bin</AuxClasspathEntry>
+    <AuxClasspathEntry>/Users/minhphan/.p2/pool/plugins/org.junit_4.12.0.v201504281640/junit.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/Users/minhphan/.p2/pool/plugins/org.hamcrest.core_1.3.0.v20180420-1519.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/Users/minhphan/Desktop/TCSS 305/minh1212-raceday/track.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/Library/Java/JavaVirtualMachines/jdk-11.jdk/Contents/Home/lib/jrt-fs.jar</AuxClasspathEntry>
+    <SrcDir>/Users/minhphan/Desktop/TCSS 305/minh1212-raceday/images</SrcDir>
+    <SrcDir>/Users/minhphan/Desktop/TCSS 305/minh1212-raceday/src</SrcDir>
+  </Project>
+  <BugInstance type="ST_WRITE_TO_STATIC_FROM_INSTANCE_METHOD" priority="1" rank="15" abbrev="ST" category="STYLE" first="1">
+    <Class classname="controller.RaceDOS">
+      <SourceLine classname="controller.RaceDOS" sourcefile="RaceDOS.java" sourcepath="controller/RaceDOS.java"/>
+    </Class>
+    <Method classname="controller.RaceDOS" name="&lt;init&gt;" signature="()V" isStatic="false">
+      <SourceLine classname="controller.RaceDOS" start="51" end="57" startBytecode="0" endBytecode="91" sourcefile="RaceDOS.java" sourcepath="controller/RaceDOS.java"/>
+    </Method>
+    <Field classname="controller.RaceDOS" name="myDos" signature="Ljavax/swing/JTextArea;" isStatic="true">
+      <SourceLine classname="controller.RaceDOS" sourcefile="RaceDOS.java" sourcepath="controller/RaceDOS.java"/>
+    </Field>
+    <SourceLine classname="controller.RaceDOS" start="53" end="53" startBytecode="26" endBytecode="26" sourcefile="RaceDOS.java" sourcepath="controller/RaceDOS.java"/>
+    <SourceLine classname="controller.RaceDOS" start="53" end="53" startBytecode="26" endBytecode="26" sourcefile="RaceDOS.java" sourcepath="controller/RaceDOS.java"/>
+  </BugInstance>
+  <BugInstance type="ST_WRITE_TO_STATIC_FROM_INSTANCE_METHOD" priority="2" rank="17" abbrev="ST" category="STYLE" first="1">
+    <Class classname="controller.RaceTimer">
+      <SourceLine classname="controller.RaceTimer" sourcefile="RaceTimer.java" sourcepath="controller/RaceTimer.java"/>
+    </Class>
+    <Method classname="controller.RaceTimer" name="&lt;init&gt;" signature="()V" isStatic="false">
+      <SourceLine classname="controller.RaceTimer" start="58" end="65" startBytecode="0" endBytecode="86" sourcefile="RaceTimer.java" sourcepath="controller/RaceTimer.java"/>
+    </Method>
+    <Field classname="controller.RaceTimer" name="myTimerLabel" signature="Ljavax/swing/JLabel;" isStatic="true">
+      <SourceLine classname="controller.RaceTimer" sourcefile="RaceTimer.java" sourcepath="controller/RaceTimer.java"/>
+    </Field>
+    <SourceLine classname="controller.RaceTimer" start="61" end="61" startBytecode="21" endBytecode="21" sourcefile="RaceTimer.java" sourcepath="controller/RaceTimer.java"/>
+    <SourceLine classname="controller.RaceTimer" start="61" end="61" startBytecode="21" endBytecode="21" sourcefile="RaceTimer.java" sourcepath="controller/RaceTimer.java"/>
+  </BugInstance>
+  <BugInstance type="DM_BOXED_PRIMITIVE_FOR_PARSING" priority="1" rank="16" abbrev="Bx" category="PERFORMANCE" first="1">
+    <Class classname="model.Race">
+      <SourceLine classname="model.Race" sourcefile="Race.java" sourcepath="model/Race.java"/>
+    </Class>
+    <Method classname="model.Race" name="readFile" signature="(Ljava/io/File;)V" isStatic="false">
+      <SourceLine classname="model.Race" start="167" end="249" startBytecode="0" endBytecode="1458" sourcefile="Race.java" sourcepath="model/Race.java"/>
+    </Method>
+    <Method classname="java.lang.Integer" name="intValue" signature="()I" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.lang.Integer" start="1123" end="1123" startBytecode="0" endBytecode="46" sourcefile="Integer.java" sourcepath="java/lang/Integer.java"/>
+    </Method>
+    <Method classname="java.lang.Integer" name="parseInt" signature="(Ljava/lang/String;)I" isStatic="true" role="SHOULD_CALL"/>
+    <SourceLine classname="model.Race" start="178" end="178" startBytecode="86" endBytecode="86" sourcefile="Race.java" sourcepath="model/Race.java"/>
+    <SourceLine classname="model.Race" start="178" end="178" startBytecode="86" endBytecode="86" sourcefile="Race.java" sourcepath="model/Race.java"/>
+  </BugInstance>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" rank="19" abbrev="Dm" category="I18N" first="1">
+    <Class classname="model.Race">
+      <SourceLine classname="model.Race" sourcefile="Race.java" sourcepath="model/Race.java"/>
+    </Class>
+    <Method classname="model.Race" name="readFile" signature="(Ljava/io/File;)V" isStatic="false">
+      <SourceLine classname="model.Race" start="167" end="249" startBytecode="0" endBytecode="1458" sourcefile="Race.java" sourcepath="model/Race.java"/>
+    </Method>
+    <Method classname="java.io.FileReader" name="&lt;init&gt;" signature="(Ljava/io/File;)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.io.FileReader" start="75" end="76" startBytecode="0" endBytecode="68" sourcefile="FileReader.java" sourcepath="java/io/FileReader.java"/>
+    </Method>
+    <SourceLine classname="model.Race" start="167" end="167" startBytecode="5" endBytecode="5" sourcefile="Race.java" sourcepath="model/Race.java"/>
+    <SourceLine classname="model.Race" start="167" end="167" startBytecode="5" endBytecode="5" sourcefile="Race.java" sourcepath="model/Race.java"/>
+  </BugInstance>
+  <BugInstance type="OBL_UNSATISFIED_OBLIGATION" priority="2" rank="20" abbrev="OBL" category="EXPERIMENTAL" first="1">
+    <Class classname="model.Race">
+      <SourceLine classname="model.Race" sourcefile="Race.java" sourcepath="model/Race.java"/>
+    </Class>
+    <Method classname="model.Race" name="readFile" signature="(Ljava/io/File;)V" isStatic="false">
+      <SourceLine classname="model.Race" start="167" end="249" startBytecode="0" endBytecode="1458" sourcefile="Race.java" sourcepath="model/Race.java"/>
+    </Method>
+    <Class classname="java.io.Reader" role="CLASS_REFTYPE">
+      <SourceLine classname="java.io.Reader" sourcefile="Reader.java" sourcepath="java/io/Reader.java"/>
+    </Class>
+    <Int value="1" role="INT_OBLIGATIONS_REMAINING"/>
+    <SourceLine classname="model.Race" start="167" end="167" startBytecode="5" endBytecode="5" sourcefile="Race.java" sourcepath="model/Race.java" role="SOURCE_LINE_OBLIGATION_CREATED"/>
+    <SourceLine classname="model.Race" start="168" end="168" startBytecode="9" endBytecode="9" sourcefile="Race.java" sourcepath="model/Race.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <SourceLine classname="model.Race" start="170" end="170" startBytecode="21" endBytecode="21" sourcefile="Race.java" sourcepath="model/Race.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <SourceLine classname="model.Race" start="172" end="172" startBytecode="31" endBytecode="31" sourcefile="Race.java" sourcepath="model/Race.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <SourceLine classname="model.Race" start="173" end="173" startBytecode="44" endBytecode="44" sourcefile="Race.java" sourcepath="model/Race.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <SourceLine classname="model.Race" start="174" end="174" startBytecode="49" endBytecode="49" sourcefile="Race.java" sourcepath="model/Race.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <SourceLine classname="model.Race" start="175" end="175" startBytecode="62" endBytecode="62" sourcefile="Race.java" sourcepath="model/Race.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <SourceLine classname="model.Race" start="176" end="176" startBytecode="67" endBytecode="67" sourcefile="Race.java" sourcepath="model/Race.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <SourceLine classname="model.Race" start="178" end="178" startBytecode="80" endBytecode="80" sourcefile="Race.java" sourcepath="model/Race.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <SourceLine classname="model.Race" start="179" end="179" startBytecode="91" endBytecode="91" sourcefile="Race.java" sourcepath="model/Race.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <SourceLine classname="model.Race" start="181" end="181" startBytecode="104" endBytecode="104" sourcefile="Race.java" sourcepath="model/Race.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <SourceLine classname="model.Race" start="182" end="182" startBytecode="115" endBytecode="115" sourcefile="Race.java" sourcepath="model/Race.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <SourceLine classname="model.Race" start="183" end="183" startBytecode="128" endBytecode="128" sourcefile="Race.java" sourcepath="model/Race.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <SourceLine classname="model.Race" start="184" end="184" startBytecode="139" endBytecode="139" sourcefile="Race.java" sourcepath="model/Race.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <SourceLine classname="model.Race" start="185" end="185" startBytecode="152" endBytecode="152" sourcefile="Race.java" sourcepath="model/Race.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <SourceLine classname="model.Race" start="186" end="186" startBytecode="163" endBytecode="163" sourcefile="Race.java" sourcepath="model/Race.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <SourceLine classname="model.Race" start="187" end="187" startBytecode="176" endBytecode="176" sourcefile="Race.java" sourcepath="model/Race.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <SourceLine classname="model.Race" start="189" end="189" startBytecode="187" endBytecode="187" sourcefile="Race.java" sourcepath="model/Race.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <SourceLine classname="model.Race" start="190" end="190" startBytecode="201" endBytecode="201" sourcefile="Race.java" sourcepath="model/Race.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <SourceLine classname="model.Race" start="189" end="189" startBytecode="206" endBytecode="206" sourcefile="Race.java" sourcepath="model/Race.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <SourceLine classname="model.Race" start="192" end="192" startBytecode="212" endBytecode="212" sourcefile="Race.java" sourcepath="model/Race.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <SourceLine classname="model.Race" start="194" end="194" startBytecode="233" endBytecode="233" sourcefile="Race.java" sourcepath="model/Race.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <SourceLine classname="model.Race" start="206" end="206" startBytecode="334" endBytecode="334" sourcefile="Race.java" sourcepath="model/Race.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <SourceLine classname="model.Race" start="249" end="249" startBytecode="721" endBytecode="721" sourcefile="Race.java" sourcepath="model/Race.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <String value="{Reader x 1}" role="STRING_REMAINING_OBLIGATIONS"/>
+  </BugInstance>
+  <BugInstance type="UPM_UNCALLED_PRIVATE_METHOD" priority="2" rank="18" abbrev="UPM" category="PERFORMANCE" first="1">
+    <Class classname="model.Race">
+      <SourceLine classname="model.Race" sourcefile="Race.java" sourcepath="model/Race.java"/>
+    </Class>
+    <Method classname="model.Race" name="extracted" signature="()V" isStatic="false">
+      <SourceLine classname="model.Race" start="384" end="384" startBytecode="0" endBytecode="49" sourcefile="Race.java" sourcepath="model/Race.java"/>
+    </Method>
+  </BugInstance>
+  <BugInstance type="ICAST_INT_2_LONG_AS_INSTANT" priority="2" rank="7" abbrev="ICAST" category="CORRECTNESS" first="1">
+    <Class classname="model.RaceInformation">
+      <SourceLine classname="model.RaceInformation" sourcefile="RaceInformation.java" sourcepath="model/RaceInformation.java"/>
+    </Class>
+    <Method classname="model.RaceInformation" name="getTimeString" signature="()Ljava/lang/String;" isStatic="false">
+      <SourceLine classname="model.RaceInformation" start="90" end="92" startBytecode="0" endBytecode="81" sourcefile="RaceInformation.java" sourcepath="model/RaceInformation.java"/>
+    </Method>
+    <Method classname="java.util.Date" name="&lt;init&gt;" signature="(J)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.util.Date" start="179" end="181" startBytecode="0" endBytecode="69" sourcefile="Date.java" sourcepath="java/util/Date.java"/>
+    </Method>
+    <LocalVariable name="time" register="1" pc="19" role="LOCAL_VARIABLE_NAMED"/>
+    <SourceLine classname="model.RaceInformation" start="92" end="92" startBytecode="19" endBytecode="19" sourcefile="RaceInformation.java" sourcepath="model/RaceInformation.java"/>
+  </BugInstance>
+  <BugInstance type="ST_WRITE_TO_STATIC_FROM_INSTANCE_METHOD" priority="1" rank="15" abbrev="ST" category="STYLE" first="1">
+    <Class classname="model.RaceInformation">
+      <SourceLine classname="model.RaceInformation" sourcefile="RaceInformation.java" sourcepath="model/RaceInformation.java"/>
+    </Class>
+    <Method classname="model.RaceInformation" name="&lt;init&gt;" signature="(Ljava/lang/String;Ljava/lang/String;II)V" isStatic="false">
+      <SourceLine classname="model.RaceInformation" start="40" end="51" startBytecode="0" endBytecode="123" sourcefile="RaceInformation.java" sourcepath="model/RaceInformation.java"/>
+    </Method>
+    <Field classname="model.RaceInformation" name="myOneDistance" signature="I" isStatic="true">
+      <SourceLine classname="model.RaceInformation" sourcefile="RaceInformation.java" sourcepath="model/RaceInformation.java"/>
+    </Field>
+    <SourceLine classname="model.RaceInformation" start="48" end="48" startBytecode="18" endBytecode="18" sourcefile="RaceInformation.java" sourcepath="model/RaceInformation.java"/>
+    <SourceLine classname="model.RaceInformation" start="48" end="48" startBytecode="18" endBytecode="18" sourcefile="RaceInformation.java" sourcepath="model/RaceInformation.java"/>
+  </BugInstance>
+  <BugInstance type="ST_WRITE_TO_STATIC_FROM_INSTANCE_METHOD" priority="1" rank="15" abbrev="ST" category="STYLE" first="1">
+    <Class classname="model.RaceInformation">
+      <SourceLine classname="model.RaceInformation" sourcefile="RaceInformation.java" sourcepath="model/RaceInformation.java"/>
+    </Class>
+    <Method classname="model.RaceInformation" name="&lt;init&gt;" signature="(Ljava/lang/String;Ljava/lang/String;II)V" isStatic="false">
+      <SourceLine classname="model.RaceInformation" start="40" end="51" startBytecode="0" endBytecode="123" sourcefile="RaceInformation.java" sourcepath="model/RaceInformation.java"/>
+    </Method>
+    <Field classname="model.RaceInformation" name="myTotalTime" signature="I" isStatic="true">
+      <SourceLine classname="model.RaceInformation" sourcefile="RaceInformation.java" sourcepath="model/RaceInformation.java"/>
+    </Field>
+    <SourceLine classname="model.RaceInformation" start="47" end="47" startBytecode="13" endBytecode="13" sourcefile="RaceInformation.java" sourcepath="model/RaceInformation.java"/>
+    <SourceLine classname="model.RaceInformation" start="47" end="47" startBytecode="13" endBytecode="13" sourcefile="RaceInformation.java" sourcepath="model/RaceInformation.java"/>
+  </BugInstance>
+  <BugInstance type="ST_WRITE_TO_STATIC_FROM_INSTANCE_METHOD" priority="1" rank="15" abbrev="ST" category="STYLE" first="1">
+    <Class classname="model.RaceInformation">
+      <SourceLine classname="model.RaceInformation" sourcefile="RaceInformation.java" sourcepath="model/RaceInformation.java"/>
+    </Class>
+    <Method classname="model.RaceInformation" name="&lt;init&gt;" signature="(Ljava/lang/String;Ljava/lang/String;II)V" isStatic="false">
+      <SourceLine classname="model.RaceInformation" start="40" end="51" startBytecode="0" endBytecode="123" sourcefile="RaceInformation.java" sourcepath="model/RaceInformation.java"/>
+    </Method>
+    <Field classname="model.RaceInformation" name="myTrackGeometry" signature="Ljava/lang/String;" isStatic="true">
+      <SourceLine classname="model.RaceInformation" sourcefile="RaceInformation.java" sourcepath="model/RaceInformation.java"/>
+    </Field>
+    <SourceLine classname="model.RaceInformation" start="46" end="46" startBytecode="9" endBytecode="9" sourcefile="RaceInformation.java" sourcepath="model/RaceInformation.java"/>
+    <SourceLine classname="model.RaceInformation" start="46" end="46" startBytecode="9" endBytecode="9" sourcefile="RaceInformation.java" sourcepath="model/RaceInformation.java"/>
+  </BugInstance>
+  <BugInstance type="ST_WRITE_TO_STATIC_FROM_INSTANCE_METHOD" priority="1" rank="15" abbrev="ST" category="STYLE" first="1">
+    <Class classname="model.RaceInformation">
+      <SourceLine classname="model.RaceInformation" sourcefile="RaceInformation.java" sourcepath="model/RaceInformation.java"/>
+    </Class>
+    <Method classname="model.RaceInformation" name="&lt;init&gt;" signature="(Ljava/lang/String;Ljava/lang/String;II)V" isStatic="false">
+      <SourceLine classname="model.RaceInformation" start="40" end="51" startBytecode="0" endBytecode="123" sourcefile="RaceInformation.java" sourcepath="model/RaceInformation.java"/>
+    </Method>
+    <Field classname="model.RaceInformation" name="myTrackName" signature="Ljava/lang/String;" isStatic="true">
+      <SourceLine classname="model.RaceInformation" sourcefile="RaceInformation.java" sourcepath="model/RaceInformation.java"/>
+    </Field>
+    <SourceLine classname="model.RaceInformation" start="45" end="45" startBytecode="5" endBytecode="5" sourcefile="RaceInformation.java" sourcepath="model/RaceInformation.java"/>
+    <SourceLine classname="model.RaceInformation" start="45" end="45" startBytecode="5" endBytecode="5" sourcefile="RaceInformation.java" sourcepath="model/RaceInformation.java"/>
+  </BugInstance>
+  <BugInstance type="NM_METHOD_NAMING_CONVENTION" priority="2" rank="16" abbrev="Nm" category="BAD_PRACTICE" first="1">
+    <Class classname="model.RaceParticipants">
+      <SourceLine classname="model.RaceParticipants" sourcefile="RaceParticipants.java" sourcepath="model/RaceParticipants.java"/>
+    </Class>
+    <Method classname="model.RaceParticipants" name="Idcheck" signature="(I)Z" isStatic="false">
+      <SourceLine classname="model.RaceParticipants" start="73" end="73" startBytecode="0" endBytecode="72" sourcefile="RaceParticipants.java" sourcepath="model/RaceParticipants.java"/>
+    </Method>
+  </BugInstance>
+  <BugInstance type="ST_WRITE_TO_STATIC_FROM_INSTANCE_METHOD" priority="1" rank="15" abbrev="ST" category="STYLE" first="1">
+    <Class classname="model.RaceTrackSize">
+      <SourceLine classname="model.RaceTrackSize" sourcefile="RaceTrackSize.java" sourcepath="model/RaceTrackSize.java"/>
+    </Class>
+    <Method classname="model.RaceTrackSize" name="&lt;init&gt;" signature="(II)V" isStatic="false">
+      <SourceLine classname="model.RaceTrackSize" start="13" end="17" startBytecode="0" endBytecode="86" sourcefile="RaceTrackSize.java" sourcepath="model/RaceTrackSize.java"/>
+    </Method>
+    <Field classname="model.RaceTrackSize" name="myTrackHeight" signature="I" isStatic="true">
+      <SourceLine classname="model.RaceTrackSize" sourcefile="RaceTrackSize.java" sourcepath="model/RaceTrackSize.java"/>
+    </Field>
+    <SourceLine classname="model.RaceTrackSize" start="16" end="16" startBytecode="9" endBytecode="9" sourcefile="RaceTrackSize.java" sourcepath="model/RaceTrackSize.java"/>
+    <SourceLine classname="model.RaceTrackSize" start="16" end="16" startBytecode="9" endBytecode="9" sourcefile="RaceTrackSize.java" sourcepath="model/RaceTrackSize.java"/>
+  </BugInstance>
+  <BugInstance type="ST_WRITE_TO_STATIC_FROM_INSTANCE_METHOD" priority="1" rank="15" abbrev="ST" category="STYLE" first="1">
+    <Class classname="model.RaceTrackSize">
+      <SourceLine classname="model.RaceTrackSize" sourcefile="RaceTrackSize.java" sourcepath="model/RaceTrackSize.java"/>
+    </Class>
+    <Method classname="model.RaceTrackSize" name="&lt;init&gt;" signature="(II)V" isStatic="false">
+      <SourceLine classname="model.RaceTrackSize" start="13" end="17" startBytecode="0" endBytecode="86" sourcefile="RaceTrackSize.java" sourcepath="model/RaceTrackSize.java"/>
+    </Method>
+    <Field classname="model.RaceTrackSize" name="myTrackWidth" signature="I" isStatic="true">
+      <SourceLine classname="model.RaceTrackSize" sourcefile="RaceTrackSize.java" sourcepath="model/RaceTrackSize.java"/>
+    </Field>
+    <SourceLine classname="model.RaceTrackSize" start="15" end="15" startBytecode="5" endBytecode="5" sourcefile="RaceTrackSize.java" sourcepath="model/RaceTrackSize.java"/>
+    <SourceLine classname="model.RaceTrackSize" start="15" end="15" startBytecode="5" endBytecode="5" sourcefile="RaceTrackSize.java" sourcepath="model/RaceTrackSize.java"/>
+  </BugInstance>
+  <BugInstance type="DLS_DEAD_LOCAL_STORE" priority="1" rank="15" abbrev="DLS" category="STYLE" first="1">
+    <Class classname="view.RaceDayView">
+      <SourceLine classname="view.RaceDayView" sourcefile="RaceDayView.java" sourcepath="view/RaceDayView.java"/>
+    </Class>
+    <Method classname="view.RaceDayView" name="setupComponents" signature="()V" isStatic="false">
+      <SourceLine classname="view.RaceDayView" start="43" end="61" startBytecode="0" endBytecode="27" sourcefile="RaceDayView.java" sourcepath="view/RaceDayView.java"/>
+    </Method>
+    <LocalVariable name="trackPanel" register="1" pc="26" role="LOCAL_VARIABLE_NAMED"/>
+    <SourceLine classname="view.RaceDayView" start="45" end="45" startBytecode="25" endBytecode="25" sourcefile="RaceDayView.java" sourcepath="view/RaceDayView.java"/>
+    <SourceLine classname="view.RaceDayView" start="45" end="45" startBytecode="25" endBytecode="25" sourcefile="RaceDayView.java" sourcepath="view/RaceDayView.java"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.DEAD_OBJECT_STORE" value="true"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.LOCAL_NAME" value="trackPanel"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.METHOD_RESULT" value="true"/>
+  </BugInstance>
+  <BugInstance type="ST_WRITE_TO_STATIC_FROM_INSTANCE_METHOD" priority="2" rank="17" abbrev="ST" category="STYLE" first="1">
+    <Class classname="view.RaceStatus">
+      <SourceLine classname="view.RaceStatus" sourcefile="RaceStatus.java" sourcepath="view/RaceStatus.java"/>
+    </Class>
+    <Method classname="view.RaceStatus" name="&lt;init&gt;" signature="()V" isStatic="false">
+      <SourceLine classname="view.RaceStatus" start="62" end="69" startBytecode="0" endBytecode="107" sourcefile="RaceStatus.java" sourcepath="view/RaceStatus.java"/>
+    </Method>
+    <Field classname="view.RaceStatus" name="myTimerLabel" signature="Ljavax/swing/JLabel;" isStatic="true">
+      <SourceLine classname="view.RaceStatus" sourcefile="RaceStatus.java" sourcepath="view/RaceStatus.java"/>
+    </Field>
+    <SourceLine classname="view.RaceStatus" start="64" end="64" startBytecode="19" endBytecode="19" sourcefile="RaceStatus.java" sourcepath="view/RaceStatus.java"/>
+    <SourceLine classname="view.RaceStatus" start="64" end="64" startBytecode="19" endBytecode="19" sourcefile="RaceStatus.java" sourcepath="view/RaceStatus.java"/>
+  </BugInstance>
+  <Errors errors="0" missingClasses="0"></Errors>
+  <FindBugsSummary timestamp="Tue, 29 Jan 2019 18:19:00 -0800" total_classes="28" referenced_classes="365" total_bugs="16" total_size="975" num_packages="4" java_version="11" vm_version="11+28" cpu_seconds="36.93" clock_seconds="5.42" peak_mbytes="658.63" alloc_mbytes="1024.00" gc_seconds="0.30" priority_2="6" priority_1="10">
+    <PackageStats package="application" total_bugs="0" total_types="2" total_size="22">
+      <ClassStats class="application.Main" sourceFile="Main.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="application.Main$1" sourceFile="Main.java" interface="false" size="6" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="controller" total_bugs="2" total_types="9" total_size="480" priority_2="1" priority_1="1">
+      <ClassStats class="controller.RaceDOS" sourceFile="RaceDOS.java" interface="false" size="28" bugs="1" priority_1="1"/>
+      <ClassStats class="controller.RaceDayController" sourceFile="RaceDayController.java" interface="false" size="279" bugs="0"/>
+      <ClassStats class="controller.RaceDayController$1" sourceFile="RaceDayController.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="controller.RaceDayController$2" sourceFile="RaceDayController.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="controller.RaceDayController$3" sourceFile="RaceDayController.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="controller.RaceRP" sourceFile="RaceRP.java" interface="false" size="30" bugs="0"/>
+      <ClassStats class="controller.RaceTimer" sourceFile="RaceTimer.java" interface="false" size="45" bugs="1" priority_2="1"/>
+      <ClassStats class="controller.SingleAction" sourceFile="SingleAction.java" interface="false" size="28" bugs="0"/>
+      <ClassStats class="controller.ToggleAction" sourceFile="ToggleAction.java" interface="false" size="42" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="model" total_bugs="12" total_types="13" total_size="325" priority_2="4" priority_1="8">
+      <ClassStats class="model.AbstractMessage" sourceFile="AbstractMessage.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="model.LeaderboardMessge" sourceFile="LeaderboardMessge.java" interface="false" size="23" bugs="0"/>
+      <ClassStats class="model.LineCrossingMessge" sourceFile="LineCrossingMessge.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="model.Message" sourceFile="Message.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="model.ParticipantsList" sourceFile="ParticipantsList.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="model.PropertyChangeEnabledRaceControls" sourceFile="PropertyChangeEnabledRaceControls.java" interface="true" size="13" bugs="0"/>
+      <ClassStats class="model.Race" sourceFile="Race.java" interface="false" size="138" bugs="4" priority_2="2" priority_1="2"/>
+      <ClassStats class="model.RaceControls" sourceFile="RaceControls.java" interface="true" size="6" bugs="0"/>
+      <ClassStats class="model.RaceInformation" sourceFile="RaceInformation.java" interface="false" size="26" bugs="5" priority_2="1" priority_1="4"/>
+      <ClassStats class="model.RaceMap" sourceFile="RaceMap.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="model.RaceParticipants" sourceFile="RaceParticipants.java" interface="false" size="20" bugs="1" priority_2="1"/>
+      <ClassStats class="model.RaceTrackSize" sourceFile="RaceTrackSize.java" interface="false" size="15" bugs="2" priority_1="2"/>
+      <ClassStats class="model.TelementryMessge" sourceFile="TelementryMessge.java" interface="false" size="40" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="view" total_bugs="2" total_types="4" total_size="148" priority_2="1" priority_1="1">
+      <ClassStats class="view.RaceDayView" sourceFile="RaceDayView.java" interface="false" size="21" bugs="1" priority_1="1"/>
+      <ClassStats class="view.RaceLeaderboard" sourceFile="RaceLeaderboard.java" interface="false" size="27" bugs="0"/>
+      <ClassStats class="view.RaceStatus" sourceFile="RaceStatus.java" interface="false" size="58" bugs="1" priority_2="1"/>
+      <ClassStats class="view.RaceTrack" sourceFile="RaceTrack.java" interface="false" size="42" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="875" invocations="1758" avgMicrosecondsPerInvocation="497" maxMicrosecondsPerInvocation="30699" standardDeviationMicrosecondsPerInvocation="1452"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="547" invocations="365" avgMicrosecondsPerInvocation="1500" maxMicrosecondsPerInvocation="40200" standardDeviationMicrosecondsPerInvocation="3619"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="494" invocations="365" avgMicrosecondsPerInvocation="1355" maxMicrosecondsPerInvocation="19644" standardDeviationMicrosecondsPerInvocation="2618"/>
+      <ClassProfile name="de.tobject.findbugs.builder.FindBugs2Eclipse" totalMilliseconds="484" invocations="2" avgMicrosecondsPerInvocation="242288" maxMicrosecondsPerInvocation="391519" standardDeviationMicrosecondsPerInvocation="149231"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="334" invocations="855" avgMicrosecondsPerInvocation="390" maxMicrosecondsPerInvocation="44733" standardDeviationMicrosecondsPerInvocation="1587"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="258" invocations="1762" avgMicrosecondsPerInvocation="146" maxMicrosecondsPerInvocation="6925" standardDeviationMicrosecondsPerInvocation="364"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="198" invocations="365" avgMicrosecondsPerInvocation="543" maxMicrosecondsPerInvocation="22942" standardDeviationMicrosecondsPerInvocation="1783"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="125" invocations="365" avgMicrosecondsPerInvocation="344" maxMicrosecondsPerInvocation="21183" standardDeviationMicrosecondsPerInvocation="1304"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="121" invocations="365" avgMicrosecondsPerInvocation="334" maxMicrosecondsPerInvocation="27389" standardDeviationMicrosecondsPerInvocation="1473"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="116" invocations="365" avgMicrosecondsPerInvocation="320" maxMicrosecondsPerInvocation="5249" standardDeviationMicrosecondsPerInvocation="648"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="110" invocations="1708" avgMicrosecondsPerInvocation="64" maxMicrosecondsPerInvocation="15246" standardDeviationMicrosecondsPerInvocation="400"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ExplicitSerialization" totalMilliseconds="108" invocations="365" avgMicrosecondsPerInvocation="297" maxMicrosecondsPerInvocation="19662" standardDeviationMicrosecondsPerInvocation="1501"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="97" invocations="473" avgMicrosecondsPerInvocation="205" maxMicrosecondsPerInvocation="12970" standardDeviationMicrosecondsPerInvocation="822"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="97" invocations="365" avgMicrosecondsPerInvocation="265" maxMicrosecondsPerInvocation="35914" standardDeviationMicrosecondsPerInvocation="1886"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="84" invocations="141" avgMicrosecondsPerInvocation="600" maxMicrosecondsPerInvocation="16606" standardDeviationMicrosecondsPerInvocation="1518"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History>
+    <AppVersion sequence="0" timestamp="1548814746743" release="" codeSize="0" numClasses="0"/>
+  </History>
+</BugCollection>

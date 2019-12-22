@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="3.1.11" sequence="1" timestamp="1551762998203" analysisTimestamp="1551762992717" release="">
+  <Project projectName="GuessingGame">
+    <Jar>/Users/minhphan/TCSS 342/GuessingGame.zip_expanded/GuessingGame/bin</Jar>
+    <AuxClasspathEntry>/Users/minhphan/TCSS 342/GuessingGame.zip_expanded/GuessingGame/bin</AuxClasspathEntry>
+    <AuxClasspathEntry>/Users/minhphan/.p2/pool/plugins/org.junit_4.12.0.v201504281640/junit.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/Users/minhphan/.p2/pool/plugins/org.hamcrest.core_1.3.0.v20180420-1519.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/Library/Java/JavaVirtualMachines/jdk-11.jdk/Contents/Home/lib/jrt-fs.jar</AuxClasspathEntry>
+    <SrcDir>/Users/minhphan/TCSS 342/GuessingGame.zip_expanded/GuessingGame/src</SrcDir>
+  </Project>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" rank="19" abbrev="Dm" category="I18N" first="1">
+    <Class classname="GuessingGame">
+      <SourceLine classname="GuessingGame" sourcefile="GuessingGame.java" sourcepath="GuessingGame.java"/>
+    </Class>
+    <Method classname="GuessingGame" name="main" signature="([Ljava/lang/String;)V" isStatic="true">
+      <SourceLine classname="GuessingGame" start="59" end="87" startBytecode="0" endBytecode="252" sourcefile="GuessingGame.java" sourcepath="GuessingGame.java"/>
+    </Method>
+    <Method classname="java.util.Scanner" name="&lt;init&gt;" signature="(Ljava/io/InputStream;)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.util.Scanner" start="566" end="567" startBytecode="0" endBytecode="71" sourcefile="Scanner.java" sourcepath="java/util/Scanner.java"/>
+    </Method>
+    <SourceLine classname="GuessingGame" start="59" end="59" startBytecode="7" endBytecode="7" sourcefile="GuessingGame.java" sourcepath="GuessingGame.java"/>
+    <SourceLine classname="GuessingGame" start="59" end="59" startBytecode="7" endBytecode="7" sourcefile="GuessingGame.java" sourcepath="GuessingGame.java"/>
+  </BugInstance>
+  <BugInstance type="VA_FORMAT_STRING_USES_NEWLINE" priority="2" rank="20" abbrev="FS" category="BAD_PRACTICE" first="1">
+    <Class classname="GuessingGame">
+      <SourceLine classname="GuessingGame" sourcefile="GuessingGame.java" sourcepath="GuessingGame.java"/>
+    </Class>
+    <Method classname="GuessingGame" name="reportResults" signature="(IIII)V" isStatic="true">
+      <SourceLine classname="GuessingGame" start="202" end="210" startBytecode="0" endBytecode="224" sourcefile="GuessingGame.java" sourcepath="GuessingGame.java"/>
+    </Method>
+    <Method classname="java.io.PrintStream" name="printf" signature="(Ljava/lang/String;[Ljava/lang/Object;)Ljava/io/PrintStream;" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.io.PrintStream" start="949" end="949" startBytecode="0" endBytecode="68" sourcefile="PrintStream.java" sourcepath="java/io/PrintStream.java"/>
+    </Method>
+    <String value="   average guesses/game = %.2f\n" role="STRING_FORMAT_STRING"/>
+    <SourceLine classname="GuessingGame" start="206" end="206" startBytecode="72" endBytecode="72" sourcefile="GuessingGame.java" sourcepath="GuessingGame.java"/>
+  </BugInstance>
+  <Errors errors="0" missingClasses="0"></Errors>
+  <FindBugsSummary timestamp="Mon, 4 Mar 2019 21:16:31 -0800" total_classes="1" referenced_classes="19" total_bugs="2" total_size="69" num_packages="1" java_version="11" vm_version="11+28" cpu_seconds="40.54" clock_seconds="5.49" peak_mbytes="495.57" alloc_mbytes="1024.00" gc_seconds="0.27" priority_2="1" priority_1="1">
+    <PackageStats package="" total_bugs="2" total_types="1" total_size="69" priority_2="1" priority_1="1">
+      <ClassStats class="GuessingGame" sourceFile="GuessingGame.java" interface="false" size="69" bugs="2" priority_2="1" priority_1="1"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="de.tobject.findbugs.builder.FindBugs2Eclipse" totalMilliseconds="1259" invocations="2" avgMicrosecondsPerInvocation="629776" maxMicrosecondsPerInvocation="889719" standardDeviationMicrosecondsPerInvocation="259943"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="753" invocations="409" avgMicrosecondsPerInvocation="1843" maxMicrosecondsPerInvocation="55329" standardDeviationMicrosecondsPerInvocation="4936"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="223" invocations="19" avgMicrosecondsPerInvocation="11753" maxMicrosecondsPerInvocation="77890" standardDeviationMicrosecondsPerInvocation="18286"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="133" invocations="19" avgMicrosecondsPerInvocation="7023" maxMicrosecondsPerInvocation="47196" standardDeviationMicrosecondsPerInvocation="13398"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="103" invocations="410" avgMicrosecondsPerInvocation="252" maxMicrosecondsPerInvocation="27464" standardDeviationMicrosecondsPerInvocation="1396"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="98" invocations="19" avgMicrosecondsPerInvocation="5162" maxMicrosecondsPerInvocation="35423" standardDeviationMicrosecondsPerInvocation="9780"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="96" invocations="374" avgMicrosecondsPerInvocation="256" maxMicrosecondsPerInvocation="29840" standardDeviationMicrosecondsPerInvocation="1871"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="79" invocations="81" avgMicrosecondsPerInvocation="983" maxMicrosecondsPerInvocation="7848" standardDeviationMicrosecondsPerInvocation="1353"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="76" invocations="41" avgMicrosecondsPerInvocation="1872" maxMicrosecondsPerInvocation="23582" standardDeviationMicrosecondsPerInvocation="4969"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="73" invocations="7" avgMicrosecondsPerInvocation="10478" maxMicrosecondsPerInvocation="69757" standardDeviationMicrosecondsPerInvocation="24202"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History>
+    <AppVersion sequence="0" timestamp="1551762998196" release="" codeSize="0" numClasses="0"/>
+  </History>
+</BugCollection>

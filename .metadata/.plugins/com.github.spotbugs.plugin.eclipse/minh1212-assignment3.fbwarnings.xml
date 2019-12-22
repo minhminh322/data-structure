@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="3.1.11" sequence="4" timestamp="1550354883825" analysisTimestamp="1550354883013" release="">
+  <Project projectName="minh1212-assignment3">
+    <Jar>/Users/minhphan/TCSS 342/hw3-project.zip_expanded/username-assignment3/bin/programs/PostfixTesterMain.class</Jar>
+    <AuxClasspathEntry>/Users/minhphan/TCSS 342/hw3-project.zip_expanded/username-assignment3/bin</AuxClasspathEntry>
+    <AuxClasspathEntry>/Users/minhphan/.p2/pool/plugins/org.junit_4.12.0.v201504281640/junit.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/Users/minhphan/.p2/pool/plugins/org.hamcrest.core_1.3.0.v20180420-1519.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/Library/Java/JavaVirtualMachines/jdk-11.jdk/Contents/Home/lib/jrt-fs.jar</AuxClasspathEntry>
+    <SrcDir>/Users/minhphan/TCSS 342/hw3-project.zip_expanded/username-assignment3/src</SrcDir>
+  </Project>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" rank="19" abbrev="Dm" category="I18N" first="1">
+    <Class classname="programs.PostfixTesterMain">
+      <SourceLine classname="programs.PostfixTesterMain" sourcefile="PostfixTesterMain.java" sourcepath="programs/PostfixTesterMain.java"/>
+    </Class>
+    <Method classname="programs.PostfixTesterMain" name="main" signature="([Ljava/lang/String;)V" isStatic="true">
+      <SourceLine classname="programs.PostfixTesterMain" start="41" end="78" startBytecode="0" endBytecode="443" sourcefile="PostfixTesterMain.java" sourcepath="programs/PostfixTesterMain.java"/>
+    </Method>
+    <Method classname="java.util.Scanner" name="&lt;init&gt;" signature="(Ljava/io/InputStream;)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.util.Scanner" start="566" end="567" startBytecode="0" endBytecode="71" sourcefile="Scanner.java" sourcepath="java/util/Scanner.java"/>
+    </Method>
+    <SourceLine classname="programs.PostfixTesterMain" start="41" end="41" startBytecode="7" endBytecode="7" sourcefile="PostfixTesterMain.java" sourcepath="programs/PostfixTesterMain.java"/>
+    <SourceLine classname="programs.PostfixTesterMain" start="41" end="41" startBytecode="7" endBytecode="7" sourcefile="PostfixTesterMain.java" sourcepath="programs/PostfixTesterMain.java"/>
+  </BugInstance>
+  <BugInstance type="SBSC_USE_STRINGBUFFER_CONCATENATION" priority="2" rank="18" abbrev="SBSC" category="PERFORMANCE" first="1">
+    <Class classname="structures.AbstractArrayList">
+      <SourceLine classname="structures.AbstractArrayList" sourcefile="AbstractArrayList.java" sourcepath="structures/AbstractArrayList.java"/>
+    </Class>
+    <Method classname="structures.AbstractArrayList" name="toString" signature="()Ljava/lang/String;" isStatic="false">
+      <SourceLine classname="structures.AbstractArrayList" start="255" end="261" startBytecode="0" endBytecode="161" sourcefile="AbstractArrayList.java" sourcepath="structures/AbstractArrayList.java"/>
+    </Method>
+    <SourceLine classname="structures.AbstractArrayList" start="259" end="259" startBytecode="8" endBytecode="8" sourcefile="AbstractArrayList.java" sourcepath="structures/AbstractArrayList.java"/>
+  </BugInstance>
+  <Errors errors="0" missingClasses="0"></Errors>
+  <FindBugsSummary timestamp="Sat, 16 Feb 2019 14:08:02 -0800" total_classes="1" referenced_classes="21" total_bugs="2" total_size="52" num_packages="2" java_version="11" vm_version="11+28" cpu_seconds="3.18" clock_seconds="0.81" peak_mbytes="599.97" alloc_mbytes="1024.00" gc_seconds="0.05" priority_2="1" priority_1="1">
+    <PackageStats package="programs" total_bugs="1" total_types="1" total_size="52" priority_1="1">
+      <ClassStats class="programs.PostfixTesterMain" sourceFile="PostfixTesterMain.java" interface="false" size="52" bugs="1" priority_1="1"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="270" invocations="402" avgMicrosecondsPerInvocation="673" maxMicrosecondsPerInvocation="21169" standardDeviationMicrosecondsPerInvocation="1654"/>
+      <ClassProfile name="de.tobject.findbugs.builder.FindBugs2Eclipse" totalMilliseconds="146" invocations="2" avgMicrosecondsPerInvocation="73045" maxMicrosecondsPerInvocation="137033" standardDeviationMicrosecondsPerInvocation="63988"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="38" invocations="21" avgMicrosecondsPerInvocation="1822" maxMicrosecondsPerInvocation="10308" standardDeviationMicrosecondsPerInvocation="2712"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="31" invocations="21" avgMicrosecondsPerInvocation="1485" maxMicrosecondsPerInvocation="13731" standardDeviationMicrosecondsPerInvocation="3050"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="30" invocations="21" avgMicrosecondsPerInvocation="1442" maxMicrosecondsPerInvocation="22750" standardDeviationMicrosecondsPerInvocation="4798"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.StreamResourceTracker" totalMilliseconds="28" invocations="26" avgMicrosecondsPerInvocation="1106" maxMicrosecondsPerInvocation="1810" standardDeviationMicrosecondsPerInvocation="382"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="25" invocations="70" avgMicrosecondsPerInvocation="371" maxMicrosecondsPerInvocation="2297" standardDeviationMicrosecondsPerInvocation="377"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="19" invocations="403" avgMicrosecondsPerInvocation="47" maxMicrosecondsPerInvocation="271" standardDeviationMicrosecondsPerInvocation="30"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="16" invocations="368" avgMicrosecondsPerInvocation="46" maxMicrosecondsPerInvocation="703" standardDeviationMicrosecondsPerInvocation="77"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History>
+    <AppVersion sequence="0" timestamp="1550177367149" release="" codeSize="0" numClasses="0"/>
+    <AppVersion sequence="1" timestamp="1550177367149" release="" codeSize="599" numClasses="17"/>
+    <AppVersion sequence="2" timestamp="1550183899478" release="" codeSize="148" numClasses="2"/>
+    <AppVersion sequence="3" timestamp="1550354857872" release="" codeSize="154" numClasses="2"/>
+  </History>
+</BugCollection>

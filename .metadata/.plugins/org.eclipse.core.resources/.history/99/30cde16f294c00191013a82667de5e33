@@ -1,0 +1,163 @@
+package id18;
+
+import java.io.*;
+import java.util.*;
+
+/**
+ * @author Sam Wong
+ * TCSS 143
+ */
+public class DistanceOneMap {
+	public Map<String,Set<String>> mop;
+	
+	public DistanceOneMap() {
+		mop = new HashMap<String,Set<String>>();
+		
+	}
+	
+	public Map<String,Set<String>> setToMap(Set<String> sap){		
+		//This takes a set from WordMap and makes a set of relevant words of each word it gets
+		
+		for (String word : sap) {
+		//this loop parses each word it gets and makes a new set to carry the relevant words
+			
+			Set<String> rel = new HashSet<String>();
+			
+			//this is where I look for relevant words and I stop when there's no more words to look at
+			Iterator<String> ita = sap.iterator();
+			while(ita.hasNext()) {
+				String bird= ita.next();
+				// a word is "relevant" when it only has one letter different from the word we're searching with
+				if ( oneDiff(bird,word) ) {
+					rel.add(bird);
+				}				
+			}
+			
+			mop.put(word,rel);
+						
+		}
+		
+		return mop;
+	}
+	
+	boolean oneDiff(String w1, String w2) {
+	//this helper class tells us if these words only have one difference
+		
+		int difCount = 0;
+		for (int i = 0; i < w1.length(); i++) {
+			if ( w1.charAt(i) != w2.charAt(i) ) {
+				difCount++;
+				}					
+		}
+		if (difCount == 1 ) {
+			return true;
+			}
+		
+		return false;
+	}
+	
+	private int howDiff(String w1, String w2) {
+		// when there's more than one difference, sometimes it's worth it to wonder exactly how far off are we in the first place?
+		int difCount = 0;
+		for (int i = 0; i < w1.length(); i++) {
+			if ( w1.charAt(i) != w2.charAt(i) ) {
+				difCount++;
+				}					
+		}
+
+		return difCount;
+	}
+		
+	public boolean inMap(String quest) {
+		
+		for (String vest : mop.keySet() ) {
+			if ( quest.equalsIgnoreCase(vest) ) {
+				return true;
+				
+			}			
+		}
+		
+		return false;
+	}
+	
+	public String toString() {
+		
+		String pos = "";
+		for(String key : mop.keySet() ) {
+			pos+= key+"="+mop.get(key);				
+		}
+		
+		return pos;
+	}
+	
+	public String pathFinder(String w1, String w2) throws FileNotFoundException{
+		
+		String paf = "";
+		if( w1.length() == w2.length() ) {
+			//we shouldn't be here if they aren't already the same length, but just in case
+			paf+=w1;
+			
+			while(! oneDiff(w1,w2) ) {
+			//well if the words aren't one letter off, we've gotta find the words in between and how many there are	
+				WordMap wap = new WordMap();
+				wap.readFile(new Scanner (new File("dictionary.txt")));
+				Map<String,Set<String>> hap = setToMap(wap.deepLen( w1.length() ) );
+				/*looking at this now, this probably wasn't the best way to do it but I tried to remove this and it turns out I need it so...
+				 * If I had more time, I would probably fix this 
+				 * Anyways a quick explanation: I need to find all the words relevant to my first word here
+				 * So I call upon my relevant set maker, setToMap which gets its set from all of the words of the same length
+				 * then I iterate through each word and since I want to find the minimum distance I also calculate how close I am to my final destination, word 2
+				 * (instead of just taking whichever relevant word and hoping for the best)
+				 * my default minimum distance is supposed to be replaced so it currently is 33, hoping there isn't any words longer than 33 letters and also more than that many letters different
+				 * rpw1 = replace word 1
+				 */
+				Set<String> pap = hap.get(w1);
+				Iterator<String> ira = pap.iterator();
+				
+				int minDif= 33;
+				String rpw1="";
+				
+				while(ira.hasNext()) {
+					String wrb= ira.next();
+					int md= howDiff(wrb,w2);
+					if (md<minDif) {
+						minDif= md;
+						rpw1=wrb;
+					}
+				}
+								
+				w1= rpw1;
+				paf+= ", "+ w1;
+								
+			}
+			paf+=", "+w2;
+			
+		}
+		
+		return paf;
+	}
+	
+	public int dist(String w1,String w2) throws FileNotFoundException{
+		int d= 0;
+		//if the words are the same, there's no distance btwn them 
+		if ( w1.equalsIgnoreCase(w2) ) {
+			d=0;
+		}
+		else {
+			String pof= pathFinder(w1,w2);
+			for (int i = 0; i< pof.length(); i++) {
+				if(pof.charAt(i)== ',') {
+					d++;
+				}								
+			}
+		}
+		
+		return d;
+	}
+
+	public Map<String, Set<String>> getInternalMap() {
+		// TODO Auto-generated method stub
+		return mop;
+	}
+
+}

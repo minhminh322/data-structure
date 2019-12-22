@@ -1,0 +1,61 @@
+package id19;
+/**
+ * Author :Tingfeng Xie
+ * This is project4 runner
+ * the try and catch is in 15-22
+ */
+import java.io.*;
+import java.util.*;
+
+
+public class Project4Runner {
+    public static void main(String[] args) throws IOException {
+        WordMap wordMap = new WordMap();
+        //Provide exception handling using try-catch statements
+        try {
+            Scanner fileScanner = new Scanner(new File("dictionary.txt"));
+            wordMap.readFile(fileScanner);
+            fileScanner.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+            return;
+        }
+
+        Scanner scanner = new Scanner(System.in);
+        //ask the user for two words using interactive input
+        System.out.println("This program uses a dictionary to compute distances between pairs of words.\n");
+        while (true) {
+            System.out.println("Enter a word:");
+            String word1 = scanner.next();
+            if (!wordMap.isPart(word1)) {
+                System.out.println("This word is not in the dictionary. Try again.");
+                break;
+            }
+            System.out.println("Enter the second word:");
+            String word2 = scanner.next();
+            if (word1.length() != word2.length()) {
+                System.out.println("The distance cannot be measured due to uneven word lengths. Try again.");
+                break;
+            }
+            if (!wordMap.isPart(word2)) {
+                System.out.println(word2 + " is not in the dictionary");
+                break;
+            }
+            int length = word1.length();
+            Set<String> words = wordMap.allWordsOfLength(length);
+            DistanceOneMap dom = new DistanceOneMap();
+            dom.createMap(words);
+            int distance = dom.calcDistance(word1, word2);
+            if (distance == -1) {
+                System.out.println("Could not find the distance based on the provided dictionary\n");
+            } else {
+                System.out.println("The distance between the two words is: " + distance);
+                if (distance != 0)
+                    System.out.println(dom.pathBetweenWords(word1, word2) + "\n");
+                else
+                    System.out.println();
+            }
+        }
+        scanner.close();
+    }
+}

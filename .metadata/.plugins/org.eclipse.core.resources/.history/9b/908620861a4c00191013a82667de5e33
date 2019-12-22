@@ -1,0 +1,138 @@
+/* Allysen Arntsen
+ * Object Oriented Programming
+ * Monica Sobolewska
+ * Project 4
+ */
+
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.LinkedList;
+import java.util.Map;
+import java.util.Queue;
+import java.util.Set;
+import java.util.Stack;
+
+public class DistanceOneMap {
+	//using a map to organize Strings to String Sets
+	Map<String, Set<String>> wordMap;
+	//using a stack to keep Strings in order with newest on top
+	Stack<String> out;
+	
+	public DistanceOneMap() {
+		// HashMap because order is not important, and there are many elements to process
+		wordMap = new HashMap<String, Set<String>>();
+	}
+	
+	public void buildMap(Set<String> input) {
+		// for each word of that many letters
+		for (String w : input) {
+			// create a new set of near words (one letter off) for that input word
+			Set<String> values = new HashSet<String>();
+			//put into the map the word and empty set
+			wordMap.put(w, values);
+			//iterate again through input set and find matches
+			for (String x : input) {
+				if (helper(w, x)) {
+					values.add(x);
+				}
+			}
+			//place all associated words in the map
+			wordMap.put(w, values);
+		}
+	}
+	
+	// helper method to tell if Strings are one letter different
+	public boolean helper(String first, String second) {
+		int countMatch = 0;
+		//count number of letter matches
+		for (int i = 0; i < first.length(); i++) {
+			if (first.charAt(i) == second.charAt(i)) {
+				countMatch++;
+			}
+		}
+		// returns true if they match all but one letter
+		if (countMatch + 1 == first.length()) {
+			return true;
+		} else {
+			return false;
+		}
+	}
+	
+	
+	public String toString() {
+		String output = "";
+		Set<String> keys = new HashSet<String>(wordMap.keySet());
+		
+		for (String k : keys) {
+			output += k + "\t\t" + wordMap.get(k) + "\n";
+		}
+		
+		return output;
+	}
+	
+	public String getPath() {
+		String path = "";
+		
+		while (out.size() > 1) {
+			path += out.pop() + ", ";
+		}
+		path += out.pop();
+		
+		return path;
+	}
+	
+	public int calculatePath(String start, String end) {
+		int distance = 0;
+		Queue<Stack<String>> q = new LinkedList<Stack<String>>();
+		Set<String> set = new HashSet<String>();
+		out = new Stack<String>();
+		
+		//Build stacks, based on the starting word and its neighbors, and enqueue them.
+		for (String s : wordMap.get(start)) {
+			Stack<String> stack = new Stack<String>();
+			//starting word
+			stack.push(start);
+			// one letter off of start
+			stack.push(s);
+			//put each stack in the q
+			q.add(stack);
+		}
+		//add starting word to set of processed words
+		set.add(start);
+		
+		while (q.size() > 0) {
+			Stack<String> current = q.poll();
+			String word = current.pop();
+			
+			//done if we found end word
+			if (word.equals(end)) {
+				out.addAll(current);
+				out.add(word);
+				return out.size() - 1;
+				
+			//if not already processed (also not end word)
+			} else if (!set.contains(word)) {
+				
+				//fetch the set of associated words with current test word
+				Set<String> wordSet = new HashSet<String>(wordMap.get(word));
+				
+				//iterate through set
+				for (String s : wordSet) {
+					
+					//if it hasn't already been tested
+					if (!set.contains(s)) {
+						//create a new stack and add it to q
+						Stack<String> nextStack = new Stack<String>();
+						nextStack.addAll(current);
+						nextStack.push(word);
+						nextStack.push(s);
+						q.add(nextStack);
+						set.add(word);
+					}
+					
+				}
+			}
+		}
+		return 0;
+	}
+}

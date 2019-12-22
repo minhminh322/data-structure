@@ -1,0 +1,64 @@
+import java.util.*;
+import java.io.*;
+
+/**
+ * @author Sam Wong
+ * TCSS 143
+ *
+ */
+public class Project4Runner {
+	
+	/**
+	 * @param args
+	 * @throws FileNotFoundException 
+	 */
+	public static void main(String[] args) throws FileNotFoundException{
+		run();
+		
+
+	}
+	
+	/*I seperated my run from the main so that if you want, you can use the main section like a driver,
+	 * like I did when I wanted to test out certain parts of my code.
+	 * 
+	 * Also, I don't know if it's taking a long time and my laptop cannot handle it, or if it doesn't work
+	 * but when I try pulse and price it doesn't load but it worked for everything else I've demo'd.
+	 */
+	
+	public static void run()  throws FileNotFoundException {
+		System.out.println("Please give me two words and I will give you the distance between them.");
+		System.out.println("If the words are different lengths, I will not be able to calculate their distance apart.");
+		
+		Scanner console= new Scanner(System.in);
+		String word1= "-";
+		String word2= "";
+		
+		WordMap dic = new WordMap();
+		dic.readFile(new Scanner (new File("dictionary.txt")));
+		
+		System.out.println("Please give me the first word now");
+		word1= console.next();
+		System.out.println("Please give me the second word now");
+		word2= console.next();	
+		
+		//loop until I can do what I gotta do with what the user has given me
+		while (!(word1.length() == word2.length() && dic.findWord(word1) && dic.findWord(word2) )) {
+			System.out.println("Hm. That didn't work. Let's try that again.");
+			System.out.println("Please give me the first word now");
+			word1= console.next();
+			System.out.println("Please give me the second word now");
+			word2= console.next();	
+		}
+		console.close();
+				
+		DistanceOneMap dom = new DistanceOneMap();
+		System.out.print("The distance between these words is: ");
+		System.out.println( dom.dist(word1, word2) );
+		if ( dom.dist(word1, word2) != 0 ) {
+			System.out.println( dom.pathFinder(word1, word2) );
+		}
+		
+		
+	}
+
+}

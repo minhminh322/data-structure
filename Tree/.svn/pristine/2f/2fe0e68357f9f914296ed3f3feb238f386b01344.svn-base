@@ -1,0 +1,158 @@
+/*
+ * StackUtilities.java
+ * 
+ * TCSS 342 - Winter 2019 Assignment 1
+ */
+
+package program;
+
+import java.util.Scanner;
+import structures.ArrayStack;
+
+/**
+ * This is interactive program which accepts a positive integer value from a
+ * user and then displays the binary equivalent of that value. The program
+ * should allow the user to repeat this process until the user chooses to quit.
+ * 
+ * @author minhphan
+ * @version Winter 2019
+ *
+ */
+public final class StackUtilities {
+
+    /**
+     * A private constructor to inhibit instantiation.
+     */
+    private StackUtilities() {
+        // do nothing
+    }
+
+    /**
+     * main runs the game repeatedly until the user chooses to quit.
+     * 
+     * @param theArgs - command line arguments - ignored in this program
+     */
+    public static void main(final String[] theArgs) {
+        int decimal;
+        final Scanner console = new Scanner(System.in);
+
+        // Display introduction
+        displayIntro();
+
+        for (;;) { // Loop until the user chooses to quit.
+            System.out.print("Enter a number: ");
+            decimal = inputInteger(console);
+            if (decimal > 0) {
+                final String result = decimalToBinary(decimal);
+                System.out.println("The binary equivalent of that value is: " + result);
+            } else {
+                System.out.println("Not a valid number");
+            }
+
+            if (!tryAgain(console)) {
+                break;
+            }
+
+        }
+
+    }
+
+    /**
+     * Explains the game to the user.
+     */
+    public static void displayIntro() {
+        System.out.println("The console will accepts a positive integer value from a "
+                           + "user and then displays the binary equivalent of that value. "
+                           + "The program should allow the user to repeat this process until "
+                           + "the user chooses to quit.\n");
+
+    }
+
+    /**
+     * Convert one decimal to binary.
+     * 
+     * @param theNumber a Scanner used to gather user input
+     * @return the number of guesses taken in this round of the game
+     */
+    public static String decimalToBinary(final int theNumber) {
+
+        final ArrayStack<Integer> stack = new ArrayStack<Integer>();
+
+        int remainder;
+        int decimal = theNumber;
+
+        while (decimal > 0) {
+            remainder = decimal % 2;
+            stack.push(remainder);
+            decimal = decimal / 2;
+
+        }
+
+        String result = "";
+        while (!stack.isEmpty()) {
+            result += stack.pop();
+        }
+
+        return result;
+    }
+
+    /**
+     * Asks if the user wants to convert another decimal.
+     * 
+     * @param theConsole a Scanner used to capture user input
+     * @return true if the user wants to convert more, false otherwise
+     */
+    public static boolean tryAgain(final Scanner theConsole) {
+        boolean response = false;
+
+        // Use the infinite below loop to prompt the user.
+        // Break out of the loop when valid input is given.
+
+        // Many software engineers recommend against ever using an infinite loop
+        // with an internal break statement such as this loop.
+        while (true) {
+            System.out.print("Do you want to convert more? Y/N: ");
+            final String again = theConsole.next();
+            if ("Y".equalsIgnoreCase(again)) {
+                response = true;
+                break;
+            } else if ("N".equalsIgnoreCase(again)) {
+                response = false;
+                break;
+            } else {
+                System.out.println("\nI did not understand your answer.");
+            }
+        }
+
+        return response;
+    }
+
+    /**
+     * Check if the input is integer or not.
+     * 
+     * @param theScanner user input.
+     * @return valid value.
+     */
+    public static int inputInteger(final Scanner theScanner) {
+        int value = 0;
+        boolean invalid = false;
+
+        try {
+            value = Integer.parseInt(theScanner.next());
+        } catch (final NumberFormatException e) {
+            invalid = true;
+        }
+
+        while (invalid) {
+            System.out.print("The input is not an integer. Please try again: ");
+            try {
+                value = Integer.parseInt(theScanner.next());
+                invalid = false;
+            } catch (final NumberFormatException e) {
+            }
+        }
+
+        return value;
+    }
+
+}

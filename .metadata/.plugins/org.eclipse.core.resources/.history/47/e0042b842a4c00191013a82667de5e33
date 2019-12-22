@@ -1,0 +1,305 @@
+package id17;
+
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
+import java.util.Scanner;
+import java.util.Set;
+
+import org.junit.After;
+import org.junit.Before;
+
+import id00.Distance1Map;
+import id00.Grader;
+import id00.LengthMap;
+import id00.Score;
+import junit.framework.TestCase;
+
+public class Test
+extends TestCase
+{
+	id00.LengthMap lmsol; // length map - solution
+	id19.WordMap lmstd; // length map - student
+	
+	id00.Distance1Map dmsol; // distance map - solution
+	id19.DistanceOneMap dmstd; // distance map - student
+
+	String filein;
+	String fileout;
+	Scanner scsol;
+	Scanner scstd;
+	
+	List<String> ls; // list of strings
+	List<Set<String>> lss; // list of set of strings
+	List<List<String>> lls; // list of list of strings
+	
+	PrintWriter pw;
+	FileWriter fw;
+	String[] notin = new String[] { "amazon", "google", "hp", "ibm", "microsoft", "varik" };
+	
+	String varik = "varik";
+	String[] list1 = new String[] { "Xarik", "vXrik", "vaXik", "varXk", "variX" };
+	String[] list2 = new String[] { "XXrik", "XaXik", "XarXk", "XariX", "vXXik", 
+									"vXrXk", "vXriX", "vaXXk", "vaXiX", "varXX" };
+	String[] list3 = new String[] { "XXXik", "XXrXk", "XXriX", "XaXXk", "XaXiX", 
+									"XarXX", "vXXXk", "vXXiX", "vXrXX", "vaXXX" };
+	
+	int limit; // distance calculation - test cases limit (use for dict1.txt)
+	
+	@Before
+	public void setUp() throws IOException
+	{
+		limit = 10000;
+		
+		filein = "files/dict1.txt";
+		fileout = "report/id01.txt";
+		
+		fw = new FileWriter(fileout, true);
+		pw = new PrintWriter(fw);
+	}
+	
+	@After
+	public void tearDown() throws IOException
+	{
+		if (scsol != null) scsol.close();
+		if (scstd != null) scstd.close();
+		pw.close();
+	}
+	
+	public void testLengthMapAddDictionary() throws FileNotFoundException
+	{
+		lmstd = new id17.WordMap();
+		
+		// solution
+		scsol = new Scanner(new File(filein));
+		lmsol = new LengthMap();
+		lmsol.addDictionary(scsol);
+		
+		// student
+		scstd = new Scanner(new File(filein));
+		lmstd = new id17.WordMap();
+		lmstd.readFile(scstd);
+		
+		Grader.checkListMap4(pw, lmstd.getInternalMap(), lmsol.getInternalMap());
+		Grader.printScore(pw, "Step1#Part2: testLengthMapAddDictionary");
+	}
+	
+	public void testDistanceMapBuildMap() throws FileNotFoundException
+	{
+		lss = new ArrayList<Set<String>>();
+		
+		// solution
+		scsol = new Scanner(new File(filein));
+		
+		// student
+		scstd = new Scanner(new File(filein));
+		lmstd = new id17.WordMap();
+		lmstd.readFile(scstd); // assume length map works correctly
+		
+		// Map<Integer, Set<String>>
+		lss = Grader.getSetOfStringFromLengthMap1(lmstd.getInternalMap());
+		for (Set<String> ss: lss) // ss: set of string
+		{
+			//Set<String> ss = Grader.convertListToSet(ls);
+			
+			dmsol = new Distance1Map();
+			dmstd = new id17.WordMap();
+			
+			dmsol.buildMap(ss);
+			dmstd.createMap(ss);
+			
+			Grader.checkListMap3(pw, dmsol.getInternalMap(), dmstd.getInternalMap());
+		}
+		
+		Grader.printScore(pw, "Step2#Part2: testDistanceMapBuildMap");
+	}
+	
+	public void testLengthMapContainWord() throws IOException
+	{
+		lmstd = new id17.WordMap();
+		
+		// student
+		scstd = new Scanner(new File(filein));
+		lmstd = new id17.WordMap();
+		lmstd.readFile(scstd);
+		
+		List<String> words = Grader.getWordFromLengthMap(lmstd.getInternalMap());
+		for (String word: words)
+		{
+			if (lmstd.isPart(word))
+				Score.correct++;
+			else pw.printf("\ncontain(%s) = false but expected true", word);
+			Score.total++;
+		}
+		
+		for (String s: notin)
+		{
+			if (!lmstd.isPart(s))
+				Score.correct++;
+			else pw.printf("\ncontain(%s) = true but expected false", s);
+			Score.total++;
+		}
+
+		Grader.printScore(pw, "Step1#Part5: testLengthMapContainWord");
+		pw.close();
+	}
+	
+	public void testDistanceMapContainWord() throws FileNotFoundException
+	{
+		lss = new ArrayList<Set<String>>();
+		
+//		// solution
+//		scsol = new Scanner(new File(file));
+//		lmsol = new LengthMap();
+//		lmsol.addDictionary(scsol);
+//		
+//		lss = Grader.getSetOfStringFromLengthMap(lmsol.getInternalMap());
+//		for (Set<String> ss: lss)
+//		{
+//			dmsol = new Distance1Map();
+//			dmsol.buildMap(ss);
+//			
+//			if (dmsol.getInternalMap().size() == 0)
+//				continue;
+//			
+//			for (String s: ss)
+//			{
+//				if (dmsol.contains(s))
+//					Score.correct++;
+//				Score.total++;
+//			}
+//		}
+				
+		// student
+		scstd = new Scanner(new File(filein));
+		lmstd = new id17.WordMap();
+		lmstd.readFile(scstd); // assume length map works correctly
+		
+		lss = Grader.getSetOfStringFromLengthMap1(lmstd.getInternalMap());
+		for (Set<String> ss: lss)
+		{
+			dmstd = new id17.WordMap();
+			dmstd.createMap(ss);
+			
+			if (dmstd.getInternalMap().size() == 0)
+				continue;
+			
+			for (String s: ss)
+			{
+				if (dmstd.contains(s))
+					Score.correct++;
+				else pw.printf("\ncontain(%s) = false but expected true", s);
+				Score.total++;
+			}
+		}
+		
+		for (String s: notin)
+		{
+			if (!dmstd.contains(s))
+				Score.correct++;
+			else pw.printf("\ncontain(%s) = true but expected false", s);
+			Score.total++;
+		}
+
+		Grader.printScore(pw, "Step2#Part3: testDistanceMapContainWord");
+	}
+	
+	public void testDistanceMapCalculateDistance() throws FileNotFoundException
+	{
+		lss = new ArrayList<Set<String>>();
+		
+		// solution
+		scsol = new Scanner(new File(filein));
+		lmsol = new LengthMap();
+		lmsol.addDictionary(scsol);
+		
+		// student
+		scstd = new Scanner(new File(filein));
+		lmstd = new id17.WordMap();
+		lmstd.readFile(scstd);
+		
+		lss = Grader.getSetOfStringFromLengthMap1(lmstd.getInternalMap());
+		for (Set<String> ss: lss)
+		{
+//			Set<String> ss = Grader.convertListToSet(ls);
+			
+			dmsol = new Distance1Map();
+			dmsol.buildMap(ss);
+			
+			dmstd = new id17.WordMap();
+			dmstd.createMap(ss);
+			
+			if (dmsol.getInternalMap().size() == 0)
+				continue;
+			
+			int length = dmsol.getInternalMap().keySet().iterator().next().length();
+			ls = Grader.getWordFromLengthMap(lmstd.getInternalMap(), length);
+			
+			int size = ls.size();
+			for (int i = 0; i < size - 1; i++)
+				for (int j = i + 1; j < size; j++)
+				{
+					int d1 = dmsol.checkMap(ls.get(i), ls.get(j));
+					int d2 = dmstd.calcDistance(ls.get(i), ls.get(j));
+					Grader.checkDistanceCalculation(d1, d2);
+					
+					if (d1 != d2)
+						pw.printf("\ndistance(" + ls.get(i) + 
+								", " + ls.get(j) + ") = " + d2 + " but expected " + d1);
+					
+					if (limit-- < 0)
+						break; // skip checking - too many failed test cases
+				}
+		}
+		
+		Grader.printScore(pw, "Step2#Part6: testDistanceMapCalculateDistance (fixed dict.txt)");
+	}
+	
+	public void testDistanceMapDifferByOne() throws FileNotFoundException
+	{
+		dmstd = new id17.WordMap();
+		
+		if (!dmstd.varyByOneLetter(varik, varik))
+			Score.correct++;
+		else pw.printf("\ndiffer-by-one(varik, varik) = true but expected false");
+		Score.total++;
+		
+		for (String word: list1)
+		{
+			if (dmstd.varyByOneLetter(varik, word))
+				Score.correct++;
+			else pw.printf("\ndiffer-by-one(varik, %s) = false but expected true", word);
+			Score.total++;
+		}
+		
+		for (String word: list2)
+		{
+			if (!dmstd.varyByOneLetter(varik, word))
+				Score.correct++;
+			else pw.printf("\ndiffer-by-one(varik, %s) = true but expected false", word);
+			Score.total++;
+		}
+		
+		for (String word: list3)
+		{
+			if (!dmstd.varyByOneLetter(varik, word))
+				Score.correct++;
+			else pw.printf("\ndiffer-by-one(varik, %s) = true but expected false", word);
+			Score.total++;
+		}
+		
+		Grader.printScore(pw, "Step2#Part5: testDistanceMapDifferByOne");
+	}
+	
+	public void testDistanceMapDifferByOneExtraCredit() throws FileNotFoundException
+	{
+		Grader.printScore(pw, "ExtraCredit#Part2: testDistanceMapDifferByOneExtraCredit");
+	}
+}
+
+

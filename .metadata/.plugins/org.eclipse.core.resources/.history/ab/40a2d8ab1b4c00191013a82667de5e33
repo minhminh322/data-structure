@@ -1,0 +1,136 @@
+package project4;
+/**
+ * author:Tingfeng Xie
+ * class:143 project 4
+ */
+import java.util.*;
+
+public class DistanceOneMap {
+    private Map<String, List<String>> map;
+    //parameterless constructor
+    DistanceOneMap() {
+        map = new HashMap<>();
+    }
+    //takes a set and creates a map out of it 
+    public void createMap(Set<String> words) {
+        for (String word: words) {
+            map.put(word, new LinkedList<>());
+            for (String simWord: words) {
+                if (varyByOneLetter(word, simWord)) {
+                    map.get(word).add(simWord);
+                }
+            }
+        }
+    }
+    
+    
+    @Override
+    public String toString() {
+        String output = "";
+        for (String word: map.keySet()) {
+            output += word + ":";
+            int wordCount = 0;
+            for (String simWord: map.get(word)) {
+                output += simWord;
+                wordCount += 1;
+                if (wordCount < map.get(word).size()) {
+                    output += ",";
+                }
+            }
+            output += "\n";
+        }
+        return output;
+    }
+    private boolean varyByOneLetter(String word1, String word2) {
+        int size = word1.length();
+        int diff = 0;
+        for (int i = 0;i < size; ++i) {
+            if (word1.charAt(i) != word2.charAt(i)) {
+                diff += 1;
+            }
+        }
+        return diff == 1;
+    }
+
+
+
+    public int calcDistance(String startWord, String endWord) {
+        int distance = 0;
+        if (startWord.equals(endWord)) {
+            return distance;
+        }
+        Set<String> visited = new HashSet<>();
+        Queue<String> queue1 = new LinkedList<>();
+        Queue<String> queue2 = new LinkedList<>();
+        queue1.offer(startWord);
+        visited.add(startWord);
+        while (!queue1.isEmpty()) {
+            String top = queue1.poll();
+            if (top.equals(endWord)) {
+                return distance;
+            }
+            if (!map.containsKey(top)) {
+                return -1;
+            }
+            for (String neibor: map.get(top)) {
+                if (!visited.contains(neibor)) {
+                    queue2.offer(neibor);
+                    visited.add(neibor);
+                }
+            }
+            if (queue1.isEmpty()) {
+                Queue<String> tmpQueue = queue1;
+                queue1 = queue2;
+                queue2 = tmpQueue;
+                distance += 1;
+            }
+        }
+        return -1;
+    }
+
+    public String pathBetweenWords(String startWord, String endWord) {
+        Map<String, String> parent = new HashMap<>();
+        if (startWord.equals(endWord)) {
+            return "";
+        }
+        Set<String> visited = new HashSet<>();
+        Queue<String> queue = new LinkedList<>();
+        queue.offer(startWord);
+        visited.add(startWord);
+        parent.put(startWord, null);
+        while (!queue.isEmpty()) {
+            String top = queue.poll();
+            if (top.equals(endWord)) {
+                return printPath(parent, endWord);
+            }
+            if (!map.containsKey(top)) {
+                return "";
+            }
+            for (String neibor: map.get(top)) {
+                if (!visited.contains(neibor)) {
+                    queue.offer(neibor);
+                    visited.add(neibor);
+                    parent.put(neibor, top);
+                }
+            }
+        }
+        return "";
+    }
+
+    private String printPath(Map<String, String> parentMap, String endWord) {
+        String currentWord = endWord;
+        String path = "";
+        while (currentWord != null) {
+            String parent = parentMap.get(currentWord);
+            if (parent == null) {
+                path = currentWord + path;
+            } else {
+                path = "," + currentWord + path;
+            }
+            currentWord = parent;
+        }
+        return path;
+    }
+
+}
+

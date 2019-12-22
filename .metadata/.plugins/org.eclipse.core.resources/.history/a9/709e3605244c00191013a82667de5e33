@@ -1,0 +1,5 @@
+xietingfeng
+
+* Change constructor to public in DistanceOneMap.
+* Change package name.
+* Change private to public varyByOneLetter()

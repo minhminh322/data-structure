@@ -1,0 +1,59 @@
+package id19;
+import java.util.*;
+/**
+ * author:Tingfeng Xie
+ * class:143 project 4
+ */
+public class WordMap {
+	
+    private Map<Integer, Set<String>> wordLenMap;
+    //parameterless constructor 
+    public WordMap() {
+        wordLenMap = new HashMap<>();
+    }
+    //takes a Scanner as an argument and reads the informationfrom the associated file into the map
+    public void readFile(Scanner scanner) {
+        while (scanner.hasNext()) {
+            String word = scanner.next().trim();
+            int len = word.length();
+            if (!wordLenMap.containsKey(len)) {
+                wordLenMap.put(len, new HashSet<>());
+            }
+            wordLenMap.get(len).add(word.toLowerCase());
+        }
+    }
+
+    @Override
+    public String toString() {
+        String output = "";
+        for (int len: wordLenMap.keySet()) {
+            output += len + ":";
+            int wordCount = 0;
+            for (String word: wordLenMap.get(len)) {
+                output += word;
+                wordCount += 1;
+                if (wordCount < wordLenMap.get(len).size()) {
+                    output += ",";
+                }
+            }
+            output += "\n";
+        }
+        return output;
+    }
+    //takes an integer as an argument and deep copy
+    Set<String> allWordsOfLength(int len) {
+        Set<String> words = new HashSet<>();
+        for (String word: wordLenMap.get(len)) {
+            words.add(word);
+        }
+        return words;
+    }
+    //takes a word as an argument and returns true if thatword is a part of the map, false otherwise
+    boolean isPart(String word) {
+        int len = word.length();
+        if (wordLenMap.containsKey(len)) {
+            return wordLenMap.get(len).contains(word);
+        }
+        return false;
+    }
+}

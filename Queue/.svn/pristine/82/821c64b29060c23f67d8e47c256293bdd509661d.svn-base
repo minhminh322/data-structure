@@ -1,0 +1,30 @@
+
+package structures;
+
+/**
+ * An output-restricted double-ended queue supports insertions from both ends,
+ * but accesses and deletions only from the front.
+ * 
+ * @author minhphan
+ * @version Winter 2019
+ *
+ * @param <E>
+ */
+public class LinkedOutputRestrictedDeque<E> extends LinkedQueue<E>
+                implements OutputRestrictedDequeADT<E> {
+
+    @Override
+    public void enqueueAtFront(final E theElement) {
+        final Node<E> node = new Node<E>(theElement);
+        if (mySize == 0) {
+            myFront = node;
+            myRear = myFront;
+        } else {
+            node.myNext = myFront;
+            myFront = node;
+
+        }
+        mySize++;
+    }
+
+}

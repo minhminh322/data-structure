@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="3.1.11" sequence="1" timestamp="1549962544909" analysisTimestamp="1549962544156" release="">
+  <Project projectName="minh1212-assignment">
+    <Jar>/Users/minhphan/TCSS 342/minh1212-assignment/bin</Jar>
+    <AuxClasspathEntry>/Users/minhphan/TCSS 342/minh1212-assignment/bin</AuxClasspathEntry>
+    <AuxClasspathEntry>/Library/Java/JavaVirtualMachines/jdk-11.jdk/Contents/Home/lib/jrt-fs.jar</AuxClasspathEntry>
+    <SrcDir>/Users/minhphan/TCSS 342/minh1212-assignment/src</SrcDir>
+  </Project>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" rank="19" abbrev="Dm" category="I18N" first="1">
+    <Class classname="programs.PostfixTesterMain">
+      <SourceLine classname="programs.PostfixTesterMain" sourcefile="PostfixTesterMain.java" sourcepath="programs/PostfixTesterMain.java"/>
+    </Class>
+    <Method classname="programs.PostfixTesterMain" name="main" signature="([Ljava/lang/String;)V" isStatic="true">
+      <SourceLine classname="programs.PostfixTesterMain" start="41" end="78" startBytecode="0" endBytecode="443" sourcefile="PostfixTesterMain.java" sourcepath="programs/PostfixTesterMain.java"/>
+    </Method>
+    <Method classname="java.util.Scanner" name="&lt;init&gt;" signature="(Ljava/io/InputStream;)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.util.Scanner" start="566" end="567" startBytecode="0" endBytecode="71" sourcefile="Scanner.java" sourcepath="java/util/Scanner.java"/>
+    </Method>
+    <SourceLine classname="programs.PostfixTesterMain" start="41" end="41" startBytecode="7" endBytecode="7" sourcefile="PostfixTesterMain.java" sourcepath="programs/PostfixTesterMain.java"/>
+    <SourceLine classname="programs.PostfixTesterMain" start="41" end="41" startBytecode="7" endBytecode="7" sourcefile="PostfixTesterMain.java" sourcepath="programs/PostfixTesterMain.java"/>
+  </BugInstance>
+  <BugInstance type="SBSC_USE_STRINGBUFFER_CONCATENATION" priority="2" rank="18" abbrev="SBSC" category="PERFORMANCE" first="1">
+    <Class classname="structures.AbstractArrayList">
+      <SourceLine classname="structures.AbstractArrayList" sourcefile="AbstractArrayList.java" sourcepath="structures/AbstractArrayList.java"/>
+    </Class>
+    <Method classname="structures.AbstractArrayList" name="toString" signature="()Ljava/lang/String;" isStatic="false">
+      <SourceLine classname="structures.AbstractArrayList" start="255" end="261" startBytecode="0" endBytecode="161" sourcefile="AbstractArrayList.java" sourcepath="structures/AbstractArrayList.java"/>
+    </Method>
+    <SourceLine classname="structures.AbstractArrayList" start="259" end="259" startBytecode="8" endBytecode="8" sourcefile="AbstractArrayList.java" sourcepath="structures/AbstractArrayList.java"/>
+  </BugInstance>
+  <Errors errors="0" missingClasses="0"></Errors>
+  <FindBugsSummary timestamp="Tue, 12 Feb 2019 01:07:45 -0800" total_classes="17" referenced_classes="65" total_bugs="2" total_size="597" num_packages="3" java_version="11" vm_version="11+28" cpu_seconds="1.98" clock_seconds="0.75" peak_mbytes="1007.84" alloc_mbytes="1024.00" gc_seconds="0.01" priority_2="1" priority_1="1">
+    <PackageStats package="exceptions" total_bugs="0" total_types="2" total_size="10">
+      <ClassStats class="exceptions.ElementNotFoundException" sourceFile="ElementNotFoundException.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="exceptions.EmptyCollectionException" sourceFile="EmptyCollectionException.java" interface="false" size="5" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="programs" total_bugs="1" total_types="4" total_size="182" priority_1="1">
+      <ClassStats class="programs.ExpressionTree" sourceFile="ExpressionTree.java" interface="false" size="75" bugs="0"/>
+      <ClassStats class="programs.ExpressionTreeOp" sourceFile="ExpressionTreeOp.java" interface="false" size="23" bugs="0"/>
+      <ClassStats class="programs.PostfixEvaluator" sourceFile="PostfixEvaluator.java" interface="false" size="32" bugs="0"/>
+      <ClassStats class="programs.PostfixTesterMain" sourceFile="PostfixTesterMain.java" interface="false" size="52" bugs="1" priority_1="1"/>
+    </PackageStats>
+    <PackageStats package="structures" total_bugs="1" total_types="11" total_size="405" priority_2="1">
+      <ClassStats class="structures.AbstractArrayList" sourceFile="AbstractArrayList.java" interface="false" size="78" bugs="1" priority_2="1"/>
+      <ClassStats class="structures.AbstractArrayList$ArrayListIterator" sourceFile="AbstractArrayList.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="structures.ArrayStack" sourceFile="ArrayStack.java" interface="false" size="47" bugs="0"/>
+      <ClassStats class="structures.ArrayUnorderedList" sourceFile="ArrayUnorderedList.java" interface="false" size="38" bugs="0"/>
+      <ClassStats class="structures.BinaryTreeADT" sourceFile="BinaryTreeADT.java" interface="true" size="13" bugs="0"/>
+      <ClassStats class="structures.BinaryTreeNode" sourceFile="BinaryTreeNode.java" interface="false" size="41" bugs="0"/>
+      <ClassStats class="structures.LinkedBinaryTree" sourceFile="LinkedBinaryTree.java" interface="false" size="126" bugs="0"/>
+      <ClassStats class="structures.LinkedBinaryTree$TreeIterator" sourceFile="LinkedBinaryTree.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="structures.ListADT" sourceFile="ListADT.java" interface="true" size="11" bugs="0"/>
+      <ClassStats class="structures.StackADT" sourceFile="StackADT.java" interface="true" size="6" bugs="0"/>
+      <ClassStats class="structures.UnorderedListADT" sourceFile="UnorderedListADT.java" interface="true" size="4" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="128" invocations="617" avgMicrosecondsPerInvocation="208" maxMicrosecondsPerInvocation="14903" standardDeviationMicrosecondsPerInvocation="707"/>
+      <ClassProfile name="de.tobject.findbugs.builder.FindBugs2Eclipse" totalMilliseconds="72" invocations="2" avgMicrosecondsPerInvocation="36258" maxMicrosecondsPerInvocation="60675" standardDeviationMicrosecondsPerInvocation="24417"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="42" invocations="65" avgMicrosecondsPerInvocation="660" maxMicrosecondsPerInvocation="5541" standardDeviationMicrosecondsPerInvocation="1216"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="39" invocations="65" avgMicrosecondsPerInvocation="605" maxMicrosecondsPerInvocation="5999" standardDeviationMicrosecondsPerInvocation="1275"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="32" invocations="302" avgMicrosecondsPerInvocation="107" maxMicrosecondsPerInvocation="1382" standardDeviationMicrosecondsPerInvocation="147"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="20" invocations="88" avgMicrosecondsPerInvocation="234" maxMicrosecondsPerInvocation="3689" standardDeviationMicrosecondsPerInvocation="493"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="20" invocations="88" avgMicrosecondsPerInvocation="231" maxMicrosecondsPerInvocation="2637" standardDeviationMicrosecondsPerInvocation="428"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.StreamResourceTracker" totalMilliseconds="18" invocations="26" avgMicrosecondsPerInvocation="729" maxMicrosecondsPerInvocation="1317" standardDeviationMicrosecondsPerInvocation="201"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="18" invocations="88" avgMicrosecondsPerInvocation="215" maxMicrosecondsPerInvocation="4068" standardDeviationMicrosecondsPerInvocation="493"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="18" invocations="88" avgMicrosecondsPerInvocation="205" maxMicrosecondsPerInvocation="2608" standardDeviationMicrosecondsPerInvocation="402"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="17" invocations="65" avgMicrosecondsPerInvocation="263" maxMicrosecondsPerInvocation="2643" standardDeviationMicrosecondsPerInvocation="497"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="16" invocations="88" avgMicrosecondsPerInvocation="190" maxMicrosecondsPerInvocation="1571" standardDeviationMicrosecondsPerInvocation="267"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="16" invocations="620" avgMicrosecondsPerInvocation="26" maxMicrosecondsPerInvocation="153" standardDeviationMicrosecondsPerInvocation="16"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="12" invocations="65" avgMicrosecondsPerInvocation="194" maxMicrosecondsPerInvocation="1996" standardDeviationMicrosecondsPerInvocation="396"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="12" invocations="73" avgMicrosecondsPerInvocation="171" maxMicrosecondsPerInvocation="1825" standardDeviationMicrosecondsPerInvocation="322"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="12" invocations="576" avgMicrosecondsPerInvocation="21" maxMicrosecondsPerInvocation="559" standardDeviationMicrosecondsPerInvocation="42"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="12" invocations="88" avgMicrosecondsPerInvocation="138" maxMicrosecondsPerInvocation="866" standardDeviationMicrosecondsPerInvocation="148"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History>
+    <AppVersion sequence="0" timestamp="1549962544909" release="" codeSize="0" numClasses="0"/>
+  </History>
+</BugCollection>

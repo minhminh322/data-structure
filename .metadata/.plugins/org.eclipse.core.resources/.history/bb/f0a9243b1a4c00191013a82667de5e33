@@ -1,0 +1,87 @@
+package id01;
+
+import java.util.*;
+
+public class LengthMap 
+{
+	private Map<Integer, List<String>> words;
+	public LengthMap()
+	{
+		words = new TreeMap<Integer, List<String>>();
+	}
+	
+	public void read(Scanner input)
+	{
+		while(input.hasNext())
+		{
+			String word = input.next();
+			int letters = word.length();
+			if (words.containsKey(letters))
+			{
+				ArrayList<String> x = new ArrayList<String>();
+				x.addAll(words.get(letters));
+				x.add(word);
+				Collections.sort(x);
+				words.replace(letters, x);
+			}
+			else
+			{ 
+				ArrayList<String> x = new ArrayList<String>();
+				x.add(word);
+				words.put(letters, x);
+			}
+
+		}
+	}
+	
+	public String toString()
+	{
+		String returnValue = "";
+		for (int i = 1; i < words.size(); i++)
+		{
+			returnValue = returnValue + "\n" + i + ": " + words.get(i);
+		}
+		return returnValue;
+	}
+	
+	public ArrayList<String> grab(int key)
+	{
+		ArrayList<String> x = new ArrayList<String>();
+		if (words.containsKey(key))
+		{
+			for(int i = 0; i < words.get(key).size(); i++)
+			{
+				x.add(words.get(key).get(i));
+			}
+		}
+		else
+		{
+			return new ArrayList<String>();
+		}
+		return x;
+	}
+	
+	public boolean hasWord(String word)
+	{
+		word = word.toLowerCase();
+		int letters = word.length();
+		boolean returnValue = false;
+		for (int i = 0; i < words.get(letters).size(); i++)
+		{
+			if(word.equals(words.get(letters).get(i)))
+			{
+				returnValue = true;
+			}
+		}
+		return returnValue;
+	}
+	
+	/**
+	 * The INTERNAL method returns the map (NOTE: Varik ADDED for grading)
+	 * @return the map
+	 */
+	public Map<Integer, List<String>> getInternalMap()
+	{
+		return words;
+	}
+}

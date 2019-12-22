@@ -1,0 +1,88 @@
+/* Allysen Arntsen
+ * Object Oriented Programming
+ * Monica Sobolewska
+ * Project 4
+ */
+
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.PrintStream;
+import java.util.Scanner;
+
+public class Project4Runner {
+
+	public static void main(String[] args) throws FileNotFoundException {
+		
+		System.out.println("This program uses a dictionary to compute distances between pairs of words.");
+		
+		String word1 = "", word2 = "";
+		boolean inDict = true, sameLength = false;
+		Scanner console = new Scanner(System.in);
+		Scanner dictionary = new Scanner(new File("dictionary.txt"));
+		
+		
+		WorldMap dictionaryMap = new WorldMap();
+		dictionaryMap.readFile(dictionary);
+		
+		while (!sameLength) {
+			System.out.println("Enter a word:");
+			word1 = console.next();
+			if (!dictionaryMap.inMap(word1)) {
+				inDict = false;
+			}
+			while (!inDict) {
+				System.out.println("This word is not in the dictionary. Try again.\n");
+				
+				System.out.println("Enter a word:");
+				word1 = console.next();
+				inDict = true;
+				if (!dictionaryMap.inMap(word1)) {
+					inDict = false;
+				}
+			}
+			
+			System.out.println("Enter a second word:");
+			word2 = console.next();
+			
+			if (!dictionaryMap.inMap(word2)) {
+				inDict = false;
+			}
+			while (!inDict) {
+				System.out.println("This word is not in the dictionary. Try again.\n");
+				
+				System.out.println("Enter a second word:");
+				word2 = console.next();
+				inDict = true;
+				if (!dictionaryMap.inMap(word2)) {
+					inDict = false;
+				}
+			}
+			sameLength = true;
+			if (!(word1.length() == word2.length())) {
+				sameLength = false;
+				System.out.println("The distance cannot be measured due to uneven word lengths. Try again.");
+			}
+		}
+		//set up path map
+		DistanceOneMap oneMap = new DistanceOneMap();
+		oneMap.buildMap(dictionaryMap.getWords(word1.length()));
+		int distance = oneMap.calculatePath(word1, word2);
+		if (word1.contentEquals(word2)) {
+			System.out.println("The distance between the two words is: 0");
+		} else if (distance == 0) {
+			System.out.println("The distance cannot be computed with given dictionary.");
+		} else {
+			System.out.println("The distance between the two words is: " + distance);
+			System.out.println(oneMap.getPath());
+		}
+		
+		
+		console.close();
+		
+		//write maps to output file
+		PrintStream output = new PrintStream(new File("myoutput.txt"));
+		output.println(dictionaryMap);
+		output.println(oneMap);
+	}
+
+}

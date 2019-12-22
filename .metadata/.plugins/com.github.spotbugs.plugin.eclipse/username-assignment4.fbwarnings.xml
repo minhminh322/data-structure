@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="3.1.11" sequence="1" timestamp="1550737319580" analysisTimestamp="1550737318376" release="">
+  <Project projectName="username-assignment4">
+    <Jar>/Users/minhphan/TCSS 342/hw4-project.zip_expanded/username-assignment4/bin</Jar>
+    <AuxClasspathEntry>/Users/minhphan/TCSS 342/hw4-project.zip_expanded/username-assignment4/bin</AuxClasspathEntry>
+    <AuxClasspathEntry>/Users/minhphan/.p2/pool/plugins/org.junit_4.12.0.v201504281640/junit.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/Users/minhphan/.p2/pool/plugins/org.hamcrest.core_1.3.0.v20180420-1519.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/Library/Java/JavaVirtualMachines/jdk-11.jdk/Contents/Home/lib/jrt-fs.jar</AuxClasspathEntry>
+    <SrcDir>/Users/minhphan/TCSS 342/hw4-project.zip_expanded/username-assignment4/src</SrcDir>
+  </Project>
+  <Errors errors="0" missingClasses="0"></Errors>
+  <FindBugsSummary timestamp="Thu, 21 Feb 2019 00:21:58 -0800" total_classes="0" referenced_classes="0" total_bugs="0" total_size="0" num_packages="0" java_version="11" vm_version="11+28" cpu_seconds="8.92" clock_seconds="1.21" peak_mbytes="500.82" alloc_mbytes="1024.00" gc_seconds="0.12">
+    <FindBugsProfile>
+      <ClassProfile name="de.tobject.findbugs.builder.FindBugs2Eclipse" totalMilliseconds="920" invocations="2" avgMicrosecondsPerInvocation="460373" maxMicrosecondsPerInvocation="657372" standardDeviationMicrosecondsPerInvocation="196999"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History>
+    <AppVersion sequence="0" timestamp="1550737319577" release="" codeSize="0" numClasses="0"/>
+  </History>
+</BugCollection>

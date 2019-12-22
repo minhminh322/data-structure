@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename local variable &apos;totaltime&apos; in &apos;programs.WordMain.main(...)&apos; to &apos;treeTime&apos;&#x0A;- Original project: &apos;minh1212-assignment4&apos;&#x0A;- Original element: &apos;programs.WordMain.main(String[]).totaltime&apos;&#x0A;- Renamed element: &apos;totaltime&apos;&#x0A;- Update references to refactored element" description="Rename local variable &apos;totaltime&apos;" id="org.eclipse.jdt.ui.rename.local.variable" input="/src&lt;programs{WordMain.java[WordMain~main~\[QString;@totaltime!2353!2371!2358!2366!J!0!false" name="treeTime" references="true" stamp="1551344808591" version="1.0"/>
+</session>

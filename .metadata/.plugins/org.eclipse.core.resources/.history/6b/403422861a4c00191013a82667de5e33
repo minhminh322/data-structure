@@ -1,0 +1,67 @@
+/* Allysen Arntsen
+ * Object Oriented Programming
+ * Monica Sobolewska
+ * Project 4
+ */
+
+import java.util.Map;
+import java.util.Scanner;
+import java.util.Set;
+import java.util.HashMap;
+import java.util.HashSet;
+
+public class WorldMap {
+	Map<Integer, HashSet<String>> world;
+
+	public WorldMap() {
+		world = new HashMap<Integer, HashSet<String>>();
+	}
+	
+	public void readFile(Scanner input) {
+		String word = "";
+		while (input.hasNext()) {
+			word = input.next();
+			Integer key = word.length();
+			if (world.containsKey(key)) {
+				HashSet<String> values = world.get(key);
+				values.add(word);
+				world.put(key, values);
+			} else {
+				HashSet<String> value = new HashSet<String>();
+				value.add(word);
+				world.put(key, value);
+			}
+		}
+	}
+	
+	public String toString() {
+		String output = "";
+		Set<Integer> keys = new HashSet<Integer>(world.keySet());
+		
+		for (Integer k : keys) {
+			if (world.get(k) != null) {
+				output += k + "\t\t" + world.get(k) + "\n";
+			}
+		}
+		
+		return output;
+	}
+	
+	public Set<String> getWords(int letters) {
+		// HashSet because order is not important and there is a lot to process (saves time)
+		Set<String> output = new HashSet<String>();
+		output = world.get(letters);
+		return output;
+	}
+	
+	public boolean inMap(String word) {
+		Set<Integer> keys = world.keySet();
+		for (int key : keys) {
+			if (world.get(key).contains(word)) {
+				return true;
+			}
+		}
+		return false;
+	}
+	
+}

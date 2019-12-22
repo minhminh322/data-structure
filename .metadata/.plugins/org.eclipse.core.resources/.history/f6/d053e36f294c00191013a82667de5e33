@@ -1,0 +1,84 @@
+package id18;
+
+import java.util.*;
+
+/**
+ * @author Sam Wong
+ * TCSS 143
+ */
+
+public class WordMap {
+	
+	public Map<Integer,Set<String>> words;
+	
+	public WordMap() {
+		
+		words = new HashMap<Integer,Set<String>>();
+		
+	}
+	
+	public void readFile(Scanner in) {
+		
+		while( in.hasNextLine() ) {
+			
+			String bird = in.nextLine();
+			int kit = bird.length();
+			//the key is the length of the word
+			//if the key already exists, just add it to the set (so there won't be duplicates)
+			if (words.containsKey(kit)) {
+				Set<String> sap= words.get(kit);
+				sap.add(bird);
+			}
+			//if the key doesn't already exist, make a new set and add it on
+			else {
+				Set<String> sap= new LinkedHashSet<String>();
+				sap.add(bird);
+				words.put(kit,sap);
+			}
+		}
+		
+	}
+	
+	public String toString() {
+		
+		String map = "";
+		for(Integer key : words.keySet() ) {
+			map+= key+"="+words.get(key);
+				
+		}
+		
+		return map;
+	}
+	// creates what I can only hope is a deep copy of every word of the same length as a set
+	public Set<String> deepLen(int l) {
+		
+		 Set<String> lost = new LinkedHashSet<String>();
+		 for (String boid : words.get(l) ) {
+			 lost.add( new String(boid) );
+		 }
+		 
+		
+		return lost;
+	}
+	
+	// goes through all of the words of this length and sees if that word is here or not
+	public boolean findWord(String quest) {
+		
+		int lock = quest.length();
+		for (String box : words.get(lock)) {
+			if ( quest.equalsIgnoreCase(box) ) {
+				return true;
+				
+			}			
+		}
+		
+		return false;
+	}
+
+	public Map<Integer, Set<String>> getInternalMap() {
+		// TODO Auto-generated method stub
+		return words;
+	}
+	
+
+}

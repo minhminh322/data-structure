@@ -1,0 +1,122 @@
+
+package tests;
+
+import static org.junit.Assert.*;
+
+import org.junit.Before;
+import org.junit.Test;
+import structures.LinkedOutputRestrictedDeque;
+import structures.LinkedQueue;
+
+/**
+ * Unit tests of the LinkedOutputRestrictedDeque class.
+ * 
+ * @author minhphan
+ * @version Winter 2019
+ *
+ */
+public class OutputRestrictedDequeTest {
+
+    /**
+     * A GenericLinkedOutputRestrictedDeque to test.
+     */
+    private LinkedOutputRestrictedDeque<Integer> myQueue;
+    
+  //  private LinkedQueue<Integer> myQueue;
+    
+
+    /**
+     * @throws java.lang.Exception
+     */
+    @Before
+    public void setUp() {
+        myQueue = new LinkedOutputRestrictedDeque<>();
+       // myQueue = new LinkedQueue<>();
+    }
+    
+    /**
+     * Test method for {@link structures.ArrayStack#ArrayStack()}.
+     */
+    @Test
+    public void testLinkedQueue() {
+        assertNotNull("myQueue was not instantiated!", myQueue);
+        assertEquals("myQueue should be size zero!", 0, myQueue.size());
+        assertTrue("myQueue should be empty!", myQueue.isEmpty());
+    }
+    
+    /**
+     * Test method for {@link structures.ArrayStack#push(java.lang.Object)}.
+     */
+    @Test
+    public void testEnqueue() {
+        // using toString() in tests means that the format of toString() is specified
+        // OR it means we are doing white box testing
+        // The advantage of using toString() is that we can test all contents in one shot
+        String test = "";
+        for (int i = 0; i <= 10; i++) {
+            test = i + "\n" + test;
+            myQueue.enqueue(i);
+//            assertEquals("push() failed to update the contents of the Stack as expected!",
+//                         "front -> " + test, myQueue.toString());
+            assertEquals("push() failed to update the size of the Stack.",
+                         i + 1, myQueue.size());
+            
+        }
+        
+        
+      System.out.print(myQueue.toString());
+    }
+    
+    /**
+     * Test method for {@link structures.QRDT#EnqueueFront(java.lang.Object)}.
+     */
+    @Test
+    public void testEnqueueFront() {
+        // using toString() in tests means that the format of toString() is specified
+        // OR it means we are doing white box testing
+        // The advantage of using toString() is that we can test all contents in one shot
+        String test = "";
+        for (int i = 0; i <= 10; i++) {
+            test = i + "\n" + test;
+            myQueue.enqueueAtFront(i);
+//            assertEquals("push() failed to update the contents of the Stack as expected!",
+//                         "front -> " + test, myQueue.toString());
+            assertEquals("push() failed to update the size of the Stack.",
+                         i + 1, myQueue.size());
+            
+        }
+        
+    }
+    
+    
+    /**
+     * Test method for {@link structures.ArrayStack#pop()}.
+     */
+    @Test
+    public void testDequeue() {
+        String test = "";
+        for (int i = 0; i <= 10; i++) {
+            test = i + "\n" + test;
+            myQueue.enqueue(i);
+        }
+        
+//        myQueue.dequeue();
+//        myQueue.dequeue();
+//        System.out.print(myQueue.toString());
+        for (int i = 0; i <= 10; i++) {
+            assertEquals("pop() returned an unexpected result!", i, (int) myQueue.dequeue());
+            assertEquals("pop() did not update the size of the stack as expected",
+                         10-i, myQueue.size());
+            test = test.substring(test.indexOf('\n') + 1);
+            assertEquals("pop() failed to update the contents of the Stack as expected!",
+                         test, myQueue.toString());
+        }
+
+        assertEquals("pop() returned an unexpected result!", 0, (int) myQueue.dequeue());
+        assertEquals("pop() did not update the size of the stack as expected",
+                     0, myQueue.size());
+        assertEquals("pop() failed to update the contents of the Stack as expected!",
+                     "Empty Stack", myQueue.toString());
+    }
+
+}

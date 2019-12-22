@@ -1,0 +1,43 @@
+package id01;
+
+import java.io.*;
+import java.util.*;
+
+public class Project4Driver {
+	public static void main(String[] args) throws FileNotFoundException {
+		LengthMap x = new LengthMap();
+		Distance1Map d = new Distance1Map();
+		File file = new File("files/dict1.txt");
+		Scanner y = new Scanner(file);
+		x.read(y);
+		String one;
+		String two;
+		int length;
+		ArrayList<String> z;
+		Scanner input = new Scanner(System.in);
+		do {
+			System.out.println("Please input a string that is in the dictionary");
+			do {
+				one = input.next();
+				if (!x.hasWord(one)) {
+					System.out.println("Please put in a string that is in the dictionary provided");
+				}
+			} while (!x.hasWord(one));
+			System.out.println("Please input another word that is in the dictionary and has the same length");
+			do {
+				two = input.next();
+				if (!x.hasWord(two)) {
+					System.out.println("Please put in a string that is in the dictionary provided");
+				}
+			} while (!x.hasWord(two));
+			if (one.length() != two.length())
+			{
+				System.out.println("Please enter two strings again and follow instructions");
+			}
+		} while (one.length() != two.length());
+		length = one.length();
+		z = x.grab(length);
+		d.create(z);
+		System.out.println("The distance between these 2 words are: " + d.distance(one, two) + "\n" + d.getPath());
+	}
+}
